@@ -1,0 +1,68 @@
+/* ==============================
+   TOKENS DE DESIGN — SWIFT
+   Paleta baseada nas imagens enviadas:
+   - tons escuros: #1D1916, #231F20, #3B3531
+   - tons claros:  #FEFCFD, #F9F9F9, #F0F0F0, #E3E3E3, #DBDBDB
+   - laranjas:     (escuros) #B24107, #DC4405, #DB4404, #DC4206, #DD4307, #CC4D2B, #DC5126, #E55125
+                   (interm.) #FE4300, #FE4202, #FE400A, #F64205, #FF4200, #FF5000
+                   (claros)  #FF6712, #FF7001, #FF6B01, #FF7600
+   - outros claros: #E9C05B, #F2D992
+   Tipografia: Barlow Condensed (títulos), Inter (corpo)
+   ============================== */
+:root{
+  /* principal */
+  --brand-900: #B24107;
+  --brand-800: #DC4405;
+  --brand-700: #DD4307;
+  --brand-600: #E55125;
+  --brand-500: #FE4300; /* primária */
+  --brand-400: #FF4200;
+  --brand-300: #FF5000;
+  --brand-200: #FF6712;
+  --brand-100: #FF7001;
+
+  /* neutros */
+  --neutral-950:#1D1916;
+  --neutral-900:#231F20;
+  --neutral-800:#3B3531;
+  --neutral-300:#E3E3E3;
+  --neutral-200:#DBDBDB;
+  --neutral-100:#F0F0F0;
+  --neutral-50:#F9F9F9;
+  --neutral-25:#FEFCFD;
+
+  /* extras */
+  --accent-success:#28A745;
+  --accent-warning:#FFC107;
+  --accent-danger:#DC3545;
+  --accent-gold-1:#E9C05B;
+  --accent-gold-2:#F2D992;
+
+  /* tipografia */
+  --font-heading:"Barlow Condensed", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body:"Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* spacing & radius */
+  --radius-lg:16px;
+  --radius-md:10px;
+  --radius-sm:6px;
+
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px;
+
+  /* convenience */
+  --bg-body:var(--neutral-50);
+  --bg-surface:#fff;
+  --text-color:var(--neutral-900);
+  --brand:var(--brand-500);
+  --brand-hover:var(--brand-800);
+  --brand-50:#FFF2EC; /* faixa clarinha para seções */
+}
+
+/* helpers */
+.bg-brand { background:var(--brand) !important; }
+.text-brand { color:var(--brand) !important; }
+.text-brand-900 { color:var(--brand-900) !important; }
+.bg-surface { background:var(--bg-surface) !important; }
+.bg-brand-50 { background:var(--brand-50) !important; }
+.link-brand { color:var(--brand); font-weight:600; text-decoration:none; }
+.link-brand:hover { color:var(--brand-hover); }

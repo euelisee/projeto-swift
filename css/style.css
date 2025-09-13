@@ -1,0 +1,545 @@
+/* =========================================================
+   STYLES — PROJETO SWIFT
+   Regra: sempre usar variáveis do tokens.css
+   ========================================================= */
+
+
+/* =========================================================
+   1) BASE / TIPOGRAFIA
+   ========================================================= */
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg-body);
+  color: var(--text-color);
+  font-family: var(--font-body);
+}
+
+/* Títulos com Barlow Condensed */
+h1, h2, h3,
+.display-1, .display-2, .display-3, .display-4, .display-5 {
+  font-family: var(--font-heading);
+  letter-spacing: .2px;
+}
+
+
+/* =========================================================
+   2) COMPONENTES GERAIS (BOTÕES, BADGES, LINKS)
+   ========================================================= */
+
+/* Botão de marca padrão */
+.btn-brand {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 18px;
+  font-weight: 600;
+}
+.btn-brand:hover { background: var(--brand-hover); color: #fff; }
+
+/* Botão contorno suave (usado no header) */
+.btn-outline-soft {
+  border: 1px solid var(--neutral-200);
+  background: #fff;
+}
+.btn-outline-soft:hover { background: var(--neutral-100); }
+
+/* Badge do carrinho */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 999px;
+  font-size: .75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+/* Atalhos genéricos (se usar em outras sessões) */
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 10px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.shortcut:hover { background: var(--neutral-100); }
+
+
+/* =========================================================
+   3) CATEGORIAS (NAV SCROLL HORIZONTAL)
+   ========================================================= */
+
+.categories {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: thin;               /* Firefox */
+}
+.categories::-webkit-scrollbar { height: 8px; }      /* Chrome/Edge */
+.categories::-webkit-scrollbar-thumb {
+  background: var(--neutral-200);
+  border-radius: 8px;
+}
+
+.cat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: var(--text-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.cat-item:hover { background: var(--neutral-100); }
+
+/* Seletor de loja (chip laranja) */
+.store-chip {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: .95rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background .2s;
+}
+.store-chip:hover { background: var(--brand-hover); }
+.store-chip .cep { font-weight: 400; font-size: .85rem; opacity: .9; }
+
+
+/* =========================================================
+   4) BANNERS HERO (IMAGENS + CTAs SOBREPOSTOS)
+   ========================================================= */
+
+.hero-banner { position: relative; }
+.hero-banner img { display: block; }
+
+/* CTA do banner de pontos */
+.btn-programa {
+  position: absolute;
+  bottom: 60px;       /* ajuste conforme a arte */
+  left: 300px;        /* ajuste conforme a arte */
+  background: #fff;
+  color: var(--brand);
+  font-weight: 800;
+  border-radius: 12px;
+  padding: 12px 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  letter-spacing: .05em;
+  transition: all .2s ease;
+}
+.btn-programa:hover { color: var(--brand-hover); transform: translateY(-2px); }
+
+/* CTA do banner Swift Box */
+.swift-box {
+  position: absolute;
+  bottom: 60px;       /* ajuste conforme a arte */
+  right: 300px;       /* ajuste conforme a arte */
+  background: #fff;
+  color: var(--brand);
+  font-weight: 800;
+  border-radius: 12px;
+  padding: 12px 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  letter-spacing: .05em;
+  transition: all .2s ease;
+}
+.swift-box:hover { color: var(--brand-hover); transform: translateY(-2px); }
+
+/* Responsivo dos CTAs sobrepostos */
+@media (max-width: 767.98px) {
+  .btn-programa,
+  .swift-box {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   5) SEÇÃO: SELEÇÃO DE PRODUTOS (GRADIENTE + CARROSSEL)
+   ========================================================= */
+
+.selection-wrap {
+  background: linear-gradient(140deg, #B24107 0%, #FE4300 40%, #FF6712 100%);
+  min-height: 420px;
+}
+
+.selection-title {
+  color: #fff;
+  line-height: .95;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  letter-spacing: .6px;
+}
+
+.btn-selection {
+  border-radius: 14px;
+  padding: 10px 16px;
+  background: #fff;
+  color: #333;
+  border: none;
+  font-weight: 700;
+}
+.btn-selection.active {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.25);
+}
+
+/* Setas do carrossel */
+.selection-control {
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.85);
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.06);
+}
+.selection-control .carousel-control-prev-icon,
+.selection-control .carousel-control-next-icon {
+  filter: invert(35%) sepia(64%) saturate(3614%) hue-rotate(359deg) brightness(102%) contrast(103%);
+}
+
+/* Card de produto (comum) */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--neutral-200);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.product-card:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.08); }
+
+.product-img { width: 100%; height: 210px; object-fit: cover; }
+
+.product-body { padding: 14px; display: grid; gap: 8px; }
+
+.product-name {
+  font-size: .92rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.product-price { font-size: 1.35rem; font-weight: 800; }
+.product-price small { font-size: .75rem; font-weight: 700; color: #666; }
+
+/* Faixinha verde (oferta) */
+.deal-ribbon {
+  position: relative;
+  background: #41B853;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 14px 14px 0 0;
+  margin: 8px 8px -8px 8px;     /* cola na imagem superior */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: 38px;
+}
+.deal-ribbon strong { font-size: .8rem; letter-spacing: .4px; }
+.deal-ribbon span {
+  font-size: .78rem;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  padding: 3px 6px;
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   6) SEÇÃO: CHURRASCO NO PONTO
+   ========================================================= */
+
+.churrasco-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: .08em;
+  color: #222;
+  text-transform: uppercase;
+}
+
+/* Setas do carrossel */
+.bbq-control {
+  width: 42px;
+  height: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.08);
+}
+.bbq-control .carousel-control-prev-icon,
+.bbq-control .carousel-control-next-icon {
+  filter: invert(43%) sepia(73%) saturate(2804%) hue-rotate(3deg) brightness(103%) contrast(101%);
+}
+
+/* Card BBQ */
+.bbq-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 2px dashed rgba(0,0,0,.12);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.bbq-card:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.08); }
+
+.bbq-img { width: 100%; height: 210px; object-fit: cover; }
+
+.bbq-ribbon {
+  position: relative;
+  background: #41B853;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 12px 12px 0 0;
+  margin: 10px 10px -10px 10px;  /* cola na imagem */
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.bbq-ribbon strong { font-size: .78rem; letter-spacing: .3px; }
+.bbq-ribbon span {
+  margin-top: 4px;
+  font-size: .76rem;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  padding: 3px 6px;
+  display: inline-block;
+}
+
+.bbq-body { padding: 14px; display: grid; gap: 10px; }
+.bbq-name {
+  font-size: .9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  line-height: 1.2;
+  margin: 0;
+}
+.bbq-price { font-size: 1.6rem; font-weight: 900; }
+.bbq-price small { font-size: .75rem; font-weight: 700; color: #666; }
+
+.btn-buy {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-weight: 900;
+  letter-spacing: .06em;
+}
+.btn-buy:hover { background: var(--brand-hover); color: #fff; }
+
+
+/* =========================================================
+   7) SEÇÃO: RECEITAS (cards + CTA)
+   ========================================================= */
+
+.receitas-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  letter-spacing: .05em;
+  color: #222;
+  text-transform: uppercase;
+}
+.receitas-title span { color: var(--brand); }
+
+.receita-card {
+  border: 1px dashed var(--neutral-300);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.receita-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(0,0,0,.08); }
+
+.receita-img { width: 100%; height: 180px; object-fit: cover; }
+
+.receita-body { padding: 14px; display: grid; gap: 6px; }
+
+.receita-name {
+  font-size: .9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.receita-porcoes { font-size: .85rem; font-weight: 700; color: var(--brand); margin: 0; }
+
+.receita-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #444;
+}
+.receita-info .dif { color: var(--brand); }
+.receita-info .dif-inter { color: #e67e22; }
+.receita-info .tempo { color: #444; }
+
+.btn-receitas {
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+.btn-receitas:hover { background: var(--brand-hover); color: #fff; }
+
+
+/* =========================================================
+   8) FOOTER — LAYOUT, LINKS E CTAs
+   ========================================================= */
+
+.footer-swift {
+  background: var(--bg-body);
+  color: var(--text-color);
+  padding: 40px 0 24px;
+}
+.footer-swift .container { display:flex; flex-direction:column; gap:28px; }
+
+/* topo: grid de colunas */
+.footer-top {
+  display:grid;
+  grid-template-columns: 1.3fr 1.6fr 1fr 1fr 1fr;
+  gap: 28px;
+}
+.f-col { min-width: 0; }
+.f-logo { height: 28px; margin-bottom: 16px; }
+.f-heading { margin:0 0 12px; font-weight:800; text-transform:uppercase; letter-spacing:.02em; color: var(--text-color); }
+.f-title { margin:0 0 6px; font-weight:600; color: var(--text-color); }
+.f-block { margin-bottom:18px; }
+
+.pay-logos { display:flex; align-items:center; gap:10px; }
+.pay-logos img { height:24px; width:auto; }
+
+.f-item { display:flex; gap:12px; align-items:flex-start; margin-bottom:14px; }
+.f-item img { width:28px; height:28px; }
+
+.f-item small,
+.f-item strong,
+.f-txt {
+  color: var(--text-color);
+}
+
+.f-link { color: var(--brand); text-decoration:none; font-weight:600; }
+.f-link:hover { color: var(--brand-hover); }
+
+.f-links { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.f-links a { color: var(--text-color); text-decoration:none; }
+.f-links a:hover { color: var(--brand-hover); }
+
+/* CTAs */
+.footer-cta {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* card base */
+.cta-card {
+  border-radius: 12px;
+  padding: 18px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  text-decoration:none;
+  border:1px dashed rgba(0,0,0,.15);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+/* laranja (WhatsApp) */
+.cta-whatsapp {
+  background: var(--brand);
+  color:#fff;
+}
+.cta-whatsapp .cta-right .cta-arrow { background:#fff; color: var(--brand); }
+
+/* branco (TeleVendas) */
+.cta-tele {
+  background: #fff;
+  color: var(--brand);
+}
+.cta-tele .cta-right .cta-arrow { background: var(--brand); color:#fff; }
+
+/* conteúdo */
+.cta-left { display:flex; align-items:center; gap:14px; }
+.cta-left img { width:36px; height:36px; }
+.cta-left strong { display:block; font-size:1.05rem; }
+.cta-left small { display:block; opacity:.9; }
+
+.cta-right .cta-arrow {
+  display:inline-grid; place-items:center;
+  width:40px; height:40px; border-radius:10px; font-weight:900;
+}
+
+/* hover */
+.cta-card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,.18); }
+
+/* horários */
+.footer-hours { color: var(--text-color); }
+.footer-hours .hours { color: var(--text-color); margin:8px 0 0; }
+.footer-hours strong { color: var(--text-color); }
+
+/* base inferior */
+.footer-bottom {
+  display:flex; align-items:center; justify-content:space-between; gap:18px;
+  border-top:1px solid rgba(0,0,0,.08); padding-top:14px;
+}
+.socials { display:flex; gap:10px; }
+.socials a { display:inline-flex; width:32px; height:32px; border-radius:6px; background:var(--neutral-200); align-items:center; justify-content:center; }
+.socials img { width:16px; height:16px; }
+.copy { color: var(--text-color); }
+
+/* Responsivo */
+@media (max-width: 991.98px) {
+  .footer-top {
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    gap: 24px;
+  }
+  .f-col:nth-child(4),
+  .f-col:nth-child(5) { display: none; }
+
+  .footer-cta { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
+}   

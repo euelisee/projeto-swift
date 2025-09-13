@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swift — Home</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Design Tokens + Estilos -->
+    <link href="css/tokens.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-body">
+    <!-- ================= HEADER ================= -->
+    <header class="shadow-sm bg-white">
+      <!-- Linha 1: logo / loja / busca / conta / carrinho -->
+      <div class="container py-3">
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <!-- LOGO -->
+          <a href="index.html" class="navbar-brand p-0 me-auto me-lg-0">
+            <img src="img/banners/swift logo 1.png" alt="Swift" width="96" />
+          </a>
+
+          <!-- Seletor de loja/CEP -->
+          <button class="store-chip" id="btnStore" type="button">
+            Swift - Oscar Freire<br />
+            <span class="cep">CEP: 01426-000</span>
+          </button>
+
+          <!-- Busca -->
+          <form
+            class="flex-grow-1 d-none d-md-flex"
+            role="search"
+            onsubmit="return false;"
+          >
+            <div class="input-group">
+              <input
+                class="form-control form-control-lg"
+                type="search"
+                placeholder="Procure por proteína, cortes, etc..."
+                aria-label="Buscar produtos"
+              />
+              <button
+                class="btn btn-brand"
+                id="btnSearch"
+                aria-label="Buscar"
+                type="button"
+              >
+                <img
+                  src="img/icones/material-symbols_search.png"
+                  width="18"
+                  height="18"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+          </form>
+
+          <!-- Conta / Carrinho -->
+          <div class="d-flex align-items-center gap-2 ms-auto">
+            <a
+              href="pages/login.html"
+              class="btn btn-outline-soft d-flex align-items-center gap-2"
+            >
+              <img
+                src="img/icones/basil_user-outline.png"
+                width="18"
+                height="18"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="d-none d-lg-inline">Bem-vindo(a)</span>
+            </a>
+
+            <a
+              href="pages/carrinho.html"
+              class="btn btn-outline-soft position-relative d-flex align-items-center gap-2"
+            >
+              <img
+                src="img/icones/map_grocery-or-supermarket.png"
+                width="18"
+                height="18"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="d-none d-lg-inline">Carrinho</span>
+              <span
+                class="cart-badge"
+                id="cartBadge"
+                aria-label="Itens no carrinho"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BANNER INICIAL ================= -->
+      <section class="container my-4">
+        <div class="hero-banner rounded-4 overflow-hidden">
+          <!-- coloque suas imagens em /img/hero.jpg e /img/hero-mobile.jpg -->
+          <img
+            src="img/banners/banner-swift.png"
+            alt="Promoções Swift"
+            class="w-100 d-none d-md-block"
+          />
+          <img
+            src="img/hero-mobile.jpg"
+            alt="Promoções Swift"
+            class="w-100 d-md-none"
+          />
+        </div>
+      </section>
+
+      <!-- Linha 2: categorias (scroll horizontal) -->
+      <nav class="border-top border-bottom bg-white">
+        <div class="container">
+          <div class="categories scroller-x py-2">
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-bovino.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Bovinos</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-aves.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Aves</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-pescados.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Pescados</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-suinos.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Suínos</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-linguicas.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Linguíças</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-churrasco.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Churrasco</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-especiais.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Cortes Especiais</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-vegetais.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>100% vegetais</small>
+            </a>
+            <a href="pages/produtos.html" class="cat-item">
+              <img
+                src="img/icones/icon-variados.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Variados</small>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =============== BANNER SELEÇÃO DE PRODUTOS ================= -->
+    <section class="container my-5">
+      <div class="selection-wrap rounded-4 overflow-hidden">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-4 p-4 p-lg-5 text-white">
+            <h2 class="selection-title display-6 mb-4">
+              UMA SELEÇÃO <br />INCRÍVEL DE <br />PRODUTOS <br />SWIFT
+            </h2>
+
+            <div class="d-flex gap-3">
+              <button
+                class="btn btn-selection active"
+                type="button"
+                data-filter="lancamentos"
+              >
+                Lançamentos
+              </button>
+              <button
+                class="btn btn-selection"
+                type="button"
+                data-filter="mais-vendidos"
+              >
+                Mais vendidos
+              </button>
+            </div>
+          </div>
+
+          <!-- Coluna direita: carrossel -->
+          <div class="col-lg-8 p-3 position-relative">
+            <div
+              id="selectionCarousel"
+              class="carousel slide"
+              data-bs-ride="false"
+              data-bs-interval="0"
+            >
+              <div class="carousel-inner">
+                <!-- SLIDE 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <!-- CARD 1 -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                      <a
+                        href="pages/detalhe-produto.html"
+                        class="product-card d-block h-100"
+                      >
+                        <div class="deal-ribbon">
+                          <strong>9% OFF</strong>
+                          <span>2ª unidade por <b>R$ 19,90</b> cada</span>
+                        </div>
+                        <img
+                          src="img/produtos/máscara patinho.png"
+                          class="product-img"
+                          alt="Espetinho de Panceta Swift 500g"
+                        />
+                        <div class="product-body">
+                          <h3 class="product-name">
+                            Espetinho de Panceta Swift 500g
+                          </h3>
+                          <div class="product-price">
+                            R$ 21,90 <small>un</small>
+                          </div>
+                          <button class="btn btn-brand w-100">Adicionar</button>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                      <a
+                        href="pages/detalhe-produto.html"
+                        class="product-card d-block h-100"
+                      >
+                        <div class="deal-ribbon">
+                          <strong>5% OFF</strong>
+                          <span>2ª unidade por <b>R$ 34,90</b> cada</span>
+                        </div>
+                        <img
+                          src="img/produtos/máscara patinho(1).png"
+                          class="product-img"
+                          alt="Filé de Tilápia Swift 800g"
+                        />
+                        <div class="product-body">
+                          <h3 class="product-name">
+                            Filé de Tilápia Swift 800g
+                          </h3>
+                          <div class="product-price">
+                            R$ 36,90 <small>un</small>
+                          </div>
+                          <button class="btn btn-brand w-100">Adicionar</button>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                      <a
+                        href="pages/detalhe-produto.html"
+                        class="product-card d-block h-100"
+                      >
+                        <div class="deal-ribbon">
+                          <strong>7% OFF</strong>
+                          <span>2ª unidade por <b>R$ 24,90</b> cada</span>
+                        </div>
+                        <img
+                          src="img/produtos/máscara patinho(2).png"
+                          class="product-img"
+                          alt="Carne Moída de Patinho Swift 500g"
+                        />
+                        <div class="product-body">
+                          <h3 class="product-name">
+                            Carne Moída de Patinho Swift 500g
+                          </h3>
+                          <div class="product-price">
+                            R$ 26,90 <small>un</small>
+                          </div>
+                          <button class="btn btn-brand w-100">Adicionar</button>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6 col-xl-4">
+                      <a
+                        href="pages/detalhe-produto.html"
+                        class="product-card d-block h-100"
+                      >
+                        <div class="deal-ribbon">
+                          <strong>10% OFF</strong><span>Na compra de 2</span>
+                        </div>
+                        <img
+                          src="img/produtos/máscara patinho(1).png"
+                          class="product-img"
+                          alt="Produto 4"
+                        />
+                        <div class="product-body">
+                          <h3 class="product-name">Produto 4</h3>
+                          <div class="product-price">
+                            R$ 37,90 <small>un</small>
+                          </div>
+                          <button class="btn btn-brand w-100">Adicionar</button>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                      <a
+                        href="pages/detalhe-produto.html"
+                        class="product-card d-block h-100"
+                      >
+                        <div class="deal-ribbon">
+                          <strong>8% OFF</strong><span>Na compra de 3</span>
+                        </div>
+                        <img
+                          src="img/produtos/máscara patinho.png"
+                          class="product-img"
+                          alt="Produto 5"
+                        />
+                        <div class="product-body">
+                          <h3 class="product-name">Produto 5</h3>
+                          <div class="product-price">
+                            R$ 45,90 <small>un</small>
+                          </div>
+                          <button class="btn btn-brand w-100">Adicionar</button>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                      <a
+                        href="pages/detalhe-produto.html"
+                        class="product-card d-block h-100"
+                      >
+                        <div class="deal-ribbon">
+                          <strong>12% OFF</strong><span>Combo família</span>
+                        </div>
+                        <img
+                          src="img/produtos/máscara patinho(2).png"
+                          class="product-img"
+                          alt="Produto 6"
+                        />
+                        <div class="product-body">
+                          <h3 class="product-name">Produto 6</h3>
+                          <div class="product-price">
+                            R$ 39,90 <small>un</small>
+                          </div>
+                          <button class="btn btn-brand w-100">Adicionar</button>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CONTROLES (setas) -->
+              <button
+                class="carousel-control-prev selection-control"
+                type="button"
+                data-bs-target="#selectionCarousel"
+                data-bs-slide="prev"
+                aria-label="Anterior"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next selection-control"
+                type="button"
+                data-bs-target="#selectionCarousel"
+                data-bs-slide="next"
+                aria-label="Próximo"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================ CHURRASCO NO PONTO ================ -->
+    <section class="container my-5">
+      <h2 class="churrasco-title text-center mb-4">
+        CHURRASCO NO PONTO, SABOR DE VERDADE!
+      </h2>
+
+      <div
+        id="bbqCarousel"
+        class="carousel slide"
+        data-bs-ride="false"
+        data-bs-interval="0"
+      >
+        <div class="carousel-inner">
+          <!-- SLIDE 1 -->
+          <div class="carousel-item active">
+            <div class="row g-3">
+              <!-- CARD 1 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <a
+                  href="pages/detalhe-produto.html"
+                  class="bbq-card d-block h-100"
+                >
+                  <div class="bbq-ribbon">
+                    <strong>4% OFF</strong>
+                    <span>2ª unidade por <b>R$ 27,90</b> cada</span>
+                  </div>
+
+                  <img
+                    src="img/produtos/queijo_coalho.png"
+                    class="bbq-img"
+                    alt="Espetinho de queijo coalho Swift 385g"
+                  />
+
+                  <div class="bbq-body">
+                    <h3 class="bbq-name">
+                      ESPETINHO DE QUEIJO COALHO SWIFT 385G
+                    </h3>
+                    <div class="bbq-price">R$ 28,90 <small>un</small></div>
+                    <button class="btn btn-buy w-100" type="button">
+                      COMPRAR
+                    </button>
+                  </div>
+                </a>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <a
+                  href="pages/detalhe-produto.html"
+                  class="bbq-card d-block h-100"
+                >
+                  <div class="bbq-ribbon">
+                    <strong>4% OFF</strong>
+                    <span>2ª unidade por <b>R$ 27,90</b> cada</span>
+                  </div>
+                  <img
+                    src="img/produtos/queijo_coalho.png"
+                    class="bbq-img"
+                    alt="Espetinho de queijo coalho Swift 385g"
+                  />
+                  <div class="bbq-body">
+                    <h3 class="bbq-name">
+                      ESPETINHO DE QUEIJO COALHO SWIFT 385G
+                    </h3>
+                    <div class="bbq-price">R$ 28,90 <small>un</small></div>
+                    <button class="btn btn-buy w-100" type="button">
+                      COMPRAR
+                    </button>
+                  </div>
+                </a>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <a
+                  href="pages/detalhe-produto.html"
+                  class="bbq-card d-block h-100"
+                >
+                  <div class="bbq-ribbon">
+                    <strong>4% OFF</strong>
+                    <span>2ª unidade por <b>R$ 27,90</b> cada</span>
+                  </div>
+                  <img
+                    src="img/produtos/queijo_coalho.png"
+                    class="bbq-img"
+                    alt="Espetinho de queijo coalho Swift 385g"
+                  />
+                  <div class="bbq-body">
+                    <h3 class="bbq-name">
+                      ESPETINHO DE QUEIJO COALHO SWIFT 385G
+                    </h3>
+                    <div class="bbq-price">R$ 28,90 <small>un</small></div>
+                    <button class="btn btn-buy w-100" type="button">
+                      COMPRAR
+                    </button>
+                  </div>
+                </a>
+              </div>
+
+              <!-- CARD 4 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <a
+                  href="pages/detalhe-produto.html"
+                  class="bbq-card d-block h-100"
+                >
+                  <div class="bbq-ribbon">
+                    <strong>4% OFF</strong>
+                    <span>2ª unidade por <b>R$ 27,90</b> cada</span>
+                  </div>
+                  <img
+                    src="img/produtos/queijo_coalho.png"
+                    class="bbq-img"
+                    alt="Espetinho de queijo coalho Swift 385g"
+                  />
+                  <div class="bbq-body">
+                    <h3 class="bbq-name">
+                      ESPETINHO DE QUEIJO COALHO SWIFT 385G
+                    </h3>
+                    <div class="bbq-price">R$ 28,90 <small>un</small></div>
+                    <button class="btn btn-buy w-100" type="button">
+                      COMPRAR
+                    </button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- FIM SLIDE 1 -->
+        </div>
+
+        <!-- CONTROLES -->
+        <button
+          class="carousel-control-prev bbq-control"
+          type="button"
+          data-bs-target="#bbqCarousel"
+          data-bs-slide="prev"
+          aria-label="Anterior"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next bbq-control"
+          type="button"
+          data-bs-target="#bbqCarousel"
+          data-bs-slide="next"
+          aria-label="Próximo"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= BANNER PROGRAMA DE PONTOS ================= -->
+    <section class="container my-4">
+      <div class="hero-banner rounded-4 overflow-hidden position-relative">
+        <!-- Imagem desktop -->
+        <img
+          src="img/banners/banner-pontos.png"
+          alt="Programa de Pontos Swift"
+          class="w-100 d-none d-md-block"
+        />
+        <!-- Imagem mobile -->
+        <img
+          src="img/hero-mobile.jpg"
+          alt="Programa de Pontos Swift"
+          class="w-100 d-md-none"
+        />
+
+        <!-- Botão clicável em cima do botão da arte -->
+        <a href="pages/pontos.html" class="btn btn-cta btn-programa"
+          >CONHECER O PROGRAMA</a
+        >
+      </div>
+    </section>
+
+    <!-- ================= BANNER SWIFT BOX ================= -->
+    <section class="container my-4">
+      <div class="hero-banner rounded-4 overflow-hidden position-relative">
+        <!-- Imagem desktop -->
+        <img
+          src="img/banners/banner-box.png"
+          alt="Programa de Swiftbox"
+          class="w-100 d-none d-md-block"
+        />
+        <!-- Imagem mobile -->
+        <img
+          src="img/hero-mobile.jpg"
+          alt="Programa de Swiftbox"
+          class="w-100 d-md-none"
+        />
+
+        <!-- Botão clicável em cima do botão da arte -->
+        <a href="pages/pontos.html" class="btn btn-cta btn-programa"
+          >CONHECER O SWIFTBOX</a
+        >
+      </div>
+    </section>
+<!-- ================= RECEITAS ================= -->
+<section class="container my-5 receitas-section">
+  <h2 class="receitas-title text-center mb-4">
+    CONFIRA AS MELHORES <span>RECEITAS</span>
+  </h2>
+
+  <div class="row g-4">
+    <!-- CARD 1 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <a href="pages/receita-mignon.html" class="receita-card d-block h-100">
+        <img src="img/produtos/receita-contra-file.png" class="receita-img" alt="Centro de Mignon grelhado com manteiga de ervas">
+        <div class="receita-body">
+          <h3 class="receita-name">CENTRO DE MIGNON GRELHADO COM MANTEIGA DE ERVAS</h3>
+          <p class="receita-porcoes">4 PORÇÕES</p>
+          <div class="receita-info">
+            <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+            <span class="tempo"><i class="icon-time"></i> 80 MIN</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <a href="pages/receita-contra-file.html" class="receita-card d-block h-100">
+        <img src="img/produtos/receita-carne.png" class="receita-img" alt="Bife de contra filé grelhado com arroz e feijão">
+        <div class="receita-body">
+          <h3 class="receita-name">BIFE DE CONTRA FILÉ GRELHADO COM ARROZ E FEIJÃO</h3>
+          <p class="receita-porcoes">4 PORÇÕES</p>
+          <div class="receita-info">
+            <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+            <span class="tempo"><i class="icon-time"></i> 20 MIN</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <a href="pages/receita-costela.html" class="receita-card d-block h-100">
+        <img src="img/produtos/receita-file.png" class="receita-img" alt="Costela suína brown sugar + acompanhamentos">
+        <div class="receita-body">
+          <h3 class="receita-name">COSTELA SUÍNA BROWN SUGAR + ACOMPANHAMENTOS</h3>
+          <p class="receita-porcoes">4 PORÇÕES</p>
+          <div class="receita-info">
+            <span class="dif dif-inter"><i class="icon-diff"></i> INTERMEDIÁRIO</span>
+            <span class="tempo"><i class="icon-time"></i> 70 MIN</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <a href="pages/receita-babybeef.html" class="receita-card d-block h-100">
+        <img src="img/produtos/receita-file.png" class="receita-img" alt="Baby beef com salada de beterraba e queijo de cabra">
+        <div class="receita-body">
+          <h3 class="receita-name">BABY BEEF COM SALADA DE BETERRABA E QUEIJO DE CABRA</h3>
+          <p class="receita-porcoes">4 PORÇÕES</p>
+          <div class="receita-info">
+            <span class="dif dif-inter"><i class="icon-diff"></i> INTERMEDIÁRIO</span>
+            <span class="tempo"><i class="icon-time"></i> 45 MIN</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Botão CTA -->
+  <div class="text-center mt-4">
+    <a href="pages/receitas.html" class="btn btn-receitas">VER TODAS AS RECEITAS</a>
+  </div>
+</section>
+
+      <!-- ================= BANNER GALERIA - VER COMO FAZ DEPOIS ================= -->
+      <section class="container my-4">
+        <div class="hero-banner rounded-4 overflow-hidden">
+          <!-- coloque suas imagens em /img/hero.jpg e /img/hero-mobile.jpg -->
+          <img
+            src="img/banners/sessão 6 (banners).png"
+            alt="Promoções Swift"
+            class="w-100 d-none d-md-block"
+          />
+          <img
+            src="img/hero-mobile.jpg"
+            alt="Promoções Swift"
+            class="w-100 d-md-none"
+          />
+        </div>
+      </section>
+
+
+    <!-- ================= BANNER FOOTER ================= -->
+    <footer class="footer-swift text-light">
+  <div class="container">
+
+    <!-- topo: colunas -->
+    <div class="footer-top">
+      <!-- Coluna 1: marca + formas de pagamento -->
+      <div class="f-col">
+        <img src="img/banners/swift logo 1.png" alt="Swift" class="f-logo" />
+        <div class="f-block">
+          <p class="f-title">Formas de pagamento</p>
+          <div class="pay-logos">
+            <img src="img/icones/logos_mastercard.png" alt="Mastercard">
+            <img src="img/icones/logos_visa.png" alt="Visa">
+            <img src="img/icones/ic_baseline-pix.png" alt="Pix">
+            <img src="img/icones/simple-icons_picpay.png" alt="Picpay">
+            <img src="img/icones/logos_elo.png" alt="Elo">
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Fale Conosco -->
+      <div class="f-col">
+        <p class="f-heading">Fale conosco</p>
+
+        <div class="f-item">
+          <img src="img/icones/ic_round-phone.png" alt="" aria-hidden="true">
+          <div>
+            <small>Ligue para</small>
+            <strong>0800 400 2892</strong>
+          </div>
+        </div>
+
+        <div class="f-item">
+          <div>
+            <small>Horários de funcionamento:</small>
+            <p class="f-txt">
+              Segunda à Sexta-feira das 9h às 18h<br>
+              Sábados e feriados das 9h às 15h
+            </p>
+          </div>
+        </div>
+
+        <div class="f-item">
+          <img src="img/icones/clarity_email-solid.png" alt="" aria-hidden="true">
+          <div>
+            <small>Email:</small>
+            <a href="mailto:atendimento@swift.com.br" class="f-link">Clique aqui</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna 3: Ajuda e Informações -->
+      <div class="f-col">
+        <p class="f-heading">Ajuda e Informações</p>
+        <ul class="f-links">
+          <li><a href="#">Trabalhe Conosco</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Dúvidas Frequentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Sua compra -->
+      <div class="f-col">
+        <p class="f-heading">Sua Compra</p>
+        <ul class="f-links">
+          <li><a href="#">Seus Pedidos</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Regulamentos</a></li>
+          <li><a href="#">App Swift</a></li>
+          <li><a href="#">Encarte Digital</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 5: Institucional -->
+      <div class="f-col">
+        <p class="f-heading">Institucional</p>
+        <ul class="f-links">
+          <li><a href="#">Nossa história</a></li>
+          <li><a href="#">Encontre nossas lojas</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- middle: CTAs + horários -->
+    <div class="footer-cta">
+      <a href="https://wa.me/551140208558" target="_blank" rel="noopener" class="cta-card cta-whatsapp">
+        <span class="cta-left">
+          <img src="img/icones/refactoring-whatsapp-icone.png" alt="" aria-hidden="true">
+          <span>
+            <strong>Compre pelo WhatsApp</strong>
+            <small>(11) 4020-85588</small>
+          </span>
+        </span>
+        <span class="cta-right">
+          <span class="cta-arrow" aria-hidden="true">➜</span>
+        </span>
+      </a>
+
+      <a href="tel:11402085588" class="cta-card cta-tele">
+        <span class="cta-left">
+          <img src="img/icones/wpf_headset.png" alt="" aria-hidden="true">
+          <span>
+            <strong>Compre pelo TeleVendas</strong>
+            <small>(11) 4020-85588</small>
+          </span>
+        </span>
+        <span class="cta-right">
+          <span class="cta-arrow" aria-hidden="true">➜</span>
+        </span>
+      </a>
+
+      <div class="footer-hours">
+        <p class="f-heading">HORÁRIOS DE FUNCIONAMENTO:</p>
+        <p class="hours">
+          <strong>Segunda à Sexta-feira</strong> das 7h às 19h<br>
+          <strong>Sábados</strong> das 7h às 18h<br>
+          <strong>Feriados</strong> das 7h às 15h
+        </p>
+      </div>
+    </div>
+
+    <!-- bottom: redes + direitos -->
+    <div class="footer-bottom">
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><img src="img/icones/Icone Instagram.png" alt=""></a>
+        <a href="#" aria-label="Facebook"><img src="img/icones/cib_facebook.png" alt=""></a>
+        <a href="#" aria-label="LinkedIn"><img src="img/icones/Icone Linkedin.png" alt=""></a>
+        <a href="#" aria-label="YouTube"><img src="img/icones/Icone youtube.png" alt=""></a>
+      </div>
+      <p class="copy small mb-0">
+        &copy; 2025 Swift — Todos os direitos reservados
+      </p>
+    </div>
+
+  </div>
+</footer>
