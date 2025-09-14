@@ -8,6 +8,7 @@ Este é um projeto front-end desenvolvido como parte do **Challenge FIAP** para 
 - Google Fonts (Barlow Condensed & Inter)
 ---
 ## Estrutura do projeto
+```bash
 /
 ├── css/
 │ ├── bootstrap.min.css
@@ -19,6 +20,7 @@ Este é um projeto front-end desenvolvido como parte do **Challenge FIAP** para 
 │ └── main.js
 ├── index.html # página inicial
 └── README.md
+```
 
 ---
 ## Como executar
