@@ -34,6 +34,71 @@ if (page.endsWith("/index.html") || page.endsWith("/")) {
   });
 }
 
+//---------- CADASTRO (pages/cadastro.html)
+// Toggle password visibility
+function togglePassword(inputI, iconElement) {
+    const input = document.getElementById(inputI);
+    //input entre "password" e "text"
+    if (input.type === "password") {
+        input.type = "text";
+        iconElement.textContent = "visibility_off";
+    } else {
+        input.type = "password";
+        iconElement.textContent = "visibility";
+    }
+}
+
+// Form validation and submission
+document.getElementById("cadastroForm").addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    const senha = document.getElementById("senha").value
+    const confirmarSenha = document.getElementById("confirmarSenha").value
+    const termosPrivacidade = document.getElementById("termosPrivacidade").checked
+
+    // Validate password match
+    if (senha !== confirmarSenha) {
+        alert("As senhas não coincidem. Por favor, verifique.")
+        return
+    }
+
+    // Validate password length
+    if (senha.length < 8) {
+        alert("A senha deve ter pelo menos 8 caracteres.")
+        return
+    }
+
+    // Validate terms acceptance
+    if (!termosPrivacidade) {
+        alert("Você deve aceitar os Termos da Política de Privacidade para prosseguir.")
+        return
+    }
+
+    // If all validations pass
+    alert("Cadastro realizado com sucesso!")
+    //adicionando redirecionamento para a home
+    window.location.href="index.html"
+    // Here you would typically send the data to your server
+})
+
+// Format CPF input
+document.getElementById("cpf").addEventListener("input", (e) => {
+    let value = e.target.value.replace(/\D/g, "")
+    value = value.replace(/(\d{3})(\d)/, "$1.$2")
+    value = value.replace(/(\d{3})(\d)/, "$1.$2")
+    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+    e.target.value = value
+})
+
+// Format phone input
+document.getElementById("telefone").addEventListener("input", (e) => {
+    let value = e.target.value.replace(/\D/g, "")
+    value = value.replace(/(\d{2})(\d)/, "($1) $2")
+    value = value.replace(/(\d{5})(\d)/, "$1-$2")
+    e.target.value = value
+})
+
+
 // --------- PRODUTOS (pages/produtos.html)
 // INSERIR SUA LÓGICA: filtros, paginação mock etc.
 
