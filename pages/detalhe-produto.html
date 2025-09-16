@@ -1,12 +1,11 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Swift — Detalhe do produto</title>
+    <title>Swift — produto</title>
 
-    <!-- CSS (mesmos do index) -->
+    <!-- CSS (página dentro de /pages) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
@@ -16,7 +15,7 @@
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
+    <!-- ================= HEADER ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
@@ -25,8 +24,8 @@
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
 
-          <!-- Seletor de loja/CEP -->
-          <button class="store-chip" id="btnStore" type="button">
+          <!-- Loja / CEP -->
+          <button class="store-chip" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
@@ -44,12 +43,7 @@
                 placeholder="Procure por proteína, cortes, etc..."
                 aria-label="Buscar produtos"
               />
-              <button
-                class="btn btn-brand"
-                id="btnSearch"
-                aria-label="Buscar"
-                type="button"
-              >
+              <button class="btn btn-brand" aria-label="Buscar" type="button">
                 <img
                   src="../img/icones/material-symbols_search.png"
                   width="18"
@@ -76,7 +70,6 @@
               />
               <span class="d-none d-lg-inline">Bem-vindo(a)</span>
             </a>
-
             <a
               href="./carrinho.html"
               class="btn btn-outline-soft position-relative d-flex align-items-center gap-2"
@@ -100,122 +93,372 @@
         </div>
       </div>
 
-      <!-- NAV de categorias (mesma do index) -->
+      <!-- Categorias -->
       <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
-            <a href="./produtos.html" class="cat-item">
-              <img
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-bovino.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Bovinos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>Bovinos</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-aves.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Aves</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>Aves</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-pescados.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Pescados</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>Pescados</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-suinos.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Suínos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>Suínos</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-linguicas.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Linguíças</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>Linguíças</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-churrasco.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Churrasco</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>Churrasco</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-especiais.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Cortes Especiais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>Cortes Especiais</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-vegetais.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>100% vegetais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
+              /><small>100% vegetais</small></a
+            >
+            <a href="./produtos.html" class="cat-item"
+              ><img
                 src="../img/icones/icon-variados.png"
                 width="22"
                 height="22"
                 alt=""
                 aria-hidden="true"
-              />
-              <small>Variados</small>
-            </a>
+              /><small>Variados</small></a
+            >
           </div>
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
 
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
-    <main class="container my-5">
-      <h1 class="h3 mb-4">Título da Página</h1>
-      <!--  insira aqui o conteúdo da página -->
+    <!-- ================== CONTEÚDO ================== -->
+    <main class="container my-4">
+      <div class="row g-4">
+        <!-- Imagem -->
+        <div class="col-lg-5">
+          <img
+            src="../img/produtos/Product Details Images.png"
+            alt="Imagem do produto/receita"
+            class="w-100 rounded-3 border"
+          />
+        </div>
+
+        <!-- Título / Preço / CTA -->
+        <div class="col-lg-7">
+          <h1 class="h3 mb-2">Almôndegas Bovinas Swift 500g</h1>
+
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="h4 m-0">
+              R$18,90 <small class="text-muted">un</small>
+            </div>
+            <span class="badge text-bg-success">2ª un por R$ 16,90</span>
+          </div>
+
+          <p class="text-muted mb-3">
+            Muito suculentas, as Almôndegas Swift ficam ótimas na grelha,
+            assadas ou acompanhando molhos. Ideais para facilitar a rotina do
+            dia a dia.
+          </p>
+
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <div class="input-group" style="max-width: 120px">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                aria-label="Diminuir quantidade"
+              >
+                -
+              </button>
+              <input
+                type="text"
+                class="form-control text-center"
+                value="1"
+                aria-label="Quantidade"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                aria-label="Aumentar quantidade"
+              >
+                +
+              </button>
+            </div>
+            <a href="./carrinho.html" class="btn btn-brand"
+              >Adicionar ao carrinho</a
+            >
+          </div>
+        </div>
+        <!-- /col-lg-7 -->
+      </div>
+      <!-- /row -->
+
+      <!-- ===== Abas (Descrição, Modo de Preparo, Receitas) ===== -->
+      <section class="mt-5">
+        <ul class="nav nav-tabs" id="tabProduto" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="tab-desc"
+              type="button"
+              role="tab"
+              data-bs-toggle="tab"
+              data-bs-target="#pane-desc"
+              aria-controls="pane-desc"
+              aria-selected="true"
+            >
+              Descrição
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="tab-preparo"
+              type="button"
+              role="tab"
+              data-bs-toggle="tab"
+              data-bs-target="#pane-preparo"
+              aria-controls="pane-preparo"
+              aria-selected="false"
+            >
+              Modo de preparo
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="tab-receitas"
+              type="button"
+              role="tab"
+              data-bs-toggle="tab"
+              data-bs-target="#pane-receitas"
+              aria-controls="pane-receitas"
+              aria-selected="false"
+            >
+              Receitas
+            </button>
+          </li>
+        </ul>
+
+        <div
+          class="tab-content border border-top-0 rounded-bottom p-3"
+          id="tabProdutoContent"
+        >
+          <!-- Descrição -->
+          <div
+            class="tab-pane fade show active"
+            id="pane-desc"
+            role="tabpanel"
+            aria-labelledby="tab-desc"
+            tabindex="0"
+          >
+            <p><strong>Conservação doméstica:</strong></p>
+            <ul>
+              <li>Geladeira (0 a 4ºC): consumir em até 48h após aberto.</li>
+              <li>
+                Freezer (-12ºC): consumir até a data indicada na embalagem.
+              </li>
+            </ul>
+            <p>
+              <strong>Ingredientes:</strong> Carne bovina (15%), proteína de
+              soja, condimentos, estabilizantes.
+            </p>
+            <small class="text-muted"
+              >Contém glúten. Alérgicos: contém derivados de trigo e
+              soja.</small
+            >
+          </div>
+
+          <!-- Modo de Preparo -->
+          <div
+            class="tab-pane fade"
+            id="pane-preparo"
+            role="tabpanel"
+            aria-labelledby="tab-preparo"
+            tabindex="0"
+          >
+            <p class="fw-semibold text-uppercase text-danger">Frigideira:</p>
+            <p>
+              Retire as almôndegas congeladas da embalagem. Em óleo quente,
+              frite por 5 min, virando de vez em quando.
+            </p>
+
+            <p class="fw-semibold text-uppercase text-danger">Forno:</p>
+            <p>
+              Retire as almôndegas congeladas da embalagem. Em forno
+              pré-aquecido, asse em assadeira por 15 min a 180ºC.
+            </p>
+
+            <p>
+              <strong>Obs.:</strong> ajuste o tempo conforme o tipo de forno.
+            </p>
+            <small class="text-muted"
+              >Não recomendamos preparo em micro-ondas.</small
+            >
+          </div>
+
+          <!-- Receitas -->
+          <div
+            class="tab-pane fade"
+            id="pane-receitas"
+            role="tabpanel"
+            aria-labelledby="tab-receitas"
+            tabindex="0"
+          >
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <a href="./receita.html" class="receita-card d-block h-100">
+                  <img
+                    src="../img/produtos/receita-carne.png"
+                    class="receita-img"
+                    alt="Macarronada à bolonhesa"
+                  />
+                  <div class="receita-body">
+                    <h3 class="receita-name">
+                      Macarronada à bolonhesa com almôndegas
+                    </h3>
+                    <p class="receita-porcoes">6 porções</p>
+                    <div class="receita-info">
+                      <span class="dif">Iniciante</span
+                      ><span class="tempo">40 min</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a href="./receita.html" class="receita-card d-block h-100">
+                  <img
+                    src="../img/produtos/receita-file.png"
+                    class="receita-img"
+                    alt="Almôndegas ao molho vermelho"
+                  />
+                  <div class="receita-body">
+                    <h3 class="receita-name">Almôndegas ao molho vermelho</h3>
+                    <p class="receita-porcoes">6 porções</p>
+                    <div class="receita-info">
+                      <span class="dif">Iniciante</span
+                      ><span class="tempo">30 min</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= RECOMENDAÇÕES (fora das abas, antes do footer) ========= -->
+      <hr class="my-5" />
+      <section aria-labelledby="titulo-recomenda">
+        <h2 id="titulo-recomenda" class="h5 mb-3">Recomendações para você</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <a href="./detalhe-produto.html" class="product-card d-block h-100">
+              <img
+                src="../img/produtos/máscara patinho.png"
+                class="product-img"
+                alt="Espetinho de Panceta 500g"
+              />
+              <div class="product-body">
+                <h3 class="product-name">Espetinho de Panceta 500g</h3>
+                <div class="product-price">R$ 21,90 <small>un</small></div>
+                <button class="btn btn-brand w-100" type="button">
+                  Adicionar
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a href="./detalhe-produto.html" class="product-card d-block h-100">
+              <img
+                src="../img/produtos/máscara patinho(1).png"
+                class="product-img"
+                alt="Filé de Tilápia 800g"
+              />
+              <div class="product-body">
+                <h3 class="product-name">Filé de Tilápia 800g</h3>
+                <div class="product-price">R$ 36,90 <small>un</small></div>
+                <button class="btn btn-brand w-100" type="button">
+                  Adicionar
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a href="./detalhe-produto.html" class="product-card d-block h-100">
+              <img
+                src="../img/produtos/máscara patinho(2).png"
+                class="product-img"
+                alt="Carne Moída de Patinho 500g"
+              />
+              <div class="product-body">
+                <h3 class="product-name">Carne Moída de Patinho 500g</h3>
+                <div class="product-price">R$ 26,90 <small>un</small></div>
+                <button class="btn btn-brand w-100" type="button">
+                  Adicionar
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
-    <footer class="footer-swift text-light">
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-swift text-light mt-5">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -237,10 +480,8 @@
             </div>
           </div>
 
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
-
             <div class="f-item">
               <img
                 src="../img/icones/ic_round-phone.png"
@@ -252,7 +493,6 @@
                 <strong>0800 400 2892</strong>
               </div>
             </div>
-
             <div class="f-item">
               <div>
                 <small>Horários de funcionamento:</small>
@@ -262,7 +502,6 @@
                 </p>
               </div>
             </div>
-
             <div class="f-item">
               <img
                 src="../img/icones/clarity_email-solid.png"
@@ -278,7 +517,6 @@
             </div>
           </div>
 
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -288,7 +526,6 @@
             </ul>
           </div>
 
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -300,7 +537,6 @@
             </ul>
           </div>
 
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -311,7 +547,6 @@
           </div>
         </div>
 
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -325,10 +560,10 @@
                 alt=""
                 aria-hidden="true"
               />
-              <span>
-                <strong>Compre pelo WhatsApp</strong>
-                <small>(11) 4020-85588</small>
-              </span>
+              <span
+                ><strong>Compre pelo WhatsApp</strong
+                ><small>(11) 4020-85588</small></span
+              >
             </span>
             <span class="cta-right"
               ><span class="cta-arrow" aria-hidden="true">➜</span></span
@@ -342,10 +577,10 @@
                 alt=""
                 aria-hidden="true"
               />
-              <span>
-                <strong>Compre pelo TeleVendas</strong>
-                <small>(11) 4020-85588</small>
-              </span>
+              <span
+                ><strong>Compre pelo TeleVendas</strong
+                ><small>(11) 4020-85588</small></span
+              >
             </span>
             <span class="cta-right"
               ><span class="cta-arrow" aria-hidden="true">➜</span></span
@@ -362,7 +597,6 @@
           </div>
         </div>
 
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"
@@ -384,5 +618,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- JS -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
