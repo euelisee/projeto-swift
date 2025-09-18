@@ -60,9 +60,11 @@
 
 /* helpers */
 .bg-brand { background:var(--brand) !important; }
-.bg-brand-800 { background:var(--brand-900) !important; }
+.bg-brand-900 { background:var(--brand-900) !important; }
+.bg-brand-800 { background:var(--brand-800) !important; }
 .text-brand { color:var(--brand) !important; }
 .text-brand-900 { color:var(--brand-900) !important; }
+.text-brand-800 { color:var(--brand-800) !important; }
 .bg-surface { background:var(--bg-surface) !important; }
 .bg-brand-50 { background:var(--brand-50) !important; }
 .link-brand { color:var(--brand); font-weight:600; text-decoration:none; }
