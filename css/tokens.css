@@ -60,6 +60,7 @@
 
 /* helpers */
 .bg-brand { background:var(--brand) !important; }
+.bg-brand-800 { background:var(--brand-900) !important; }
 .text-brand { color:var(--brand) !important; }
 .text-brand-900 { color:var(--brand-900) !important; }
 .bg-surface { background:var(--bg-surface) !important; }

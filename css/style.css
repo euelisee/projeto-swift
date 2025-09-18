@@ -698,3 +698,55 @@ h1, h2, h3,
     font-size: 1.75rem;
   }
 }
+
+/* =========================================================
+   10) PAGE: Produtos
+   ========================================================= */
+
+.banner-produtos {
+  width: 100%;
+  border-top-right-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  background-image: linear-gradient(to right, white, #f2f2f2);
+}
+
+.categorias-produtos {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+
+.brand-format {
+  border-bottom-left-radius: 50%; /* Canto inferior esquerdo redondo */
+  border-top-left-radius: 50%;    /* Canto superior esquerdo redondo */
+  border-bottom-right-radius: 50%;/* Canto inferior direito redondo */
+  border-top-right-radius: 0;
+}
+
+
+.btn-round-2 {
+        width: 110px;      
+        height: 110px;     
+        border-radius: 50%;
+        font-weight: bold; 
+        font-size: 1rem;
+        text-align: center;
+}
+.btn-round-3 {
+        width: 90px;      
+        height: 90px;     
+        border-radius: 50%;
+        font-weight: bold; 
+        font-size: 0.8rem;
+        text-align: center;
+}
+.btn-laranja {
+  background-color: var(--brand-700);
+  border-color: var(--brand-700);    
+  color: white;             
+}
+.btn-laranja:hover {
+  background-color: var(--brand-900);
+  border-color: var(--brand-900);
+  color: white;
+}
