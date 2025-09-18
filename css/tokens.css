@@ -62,7 +62,9 @@
 .bg-brand { background:var(--brand) !important; }
 .text-brand { color:var(--brand) !important; }
 .text-brand-900 { color:var(--brand-900) !important; }
+.text-brand-800 { color:var(--brand-800) !important; }
 .bg-surface { background:var(--bg-surface) !important; }
 .bg-brand-50 { background:var(--brand-50) !important; }
 .link-brand { color:var(--brand); font-weight:600; text-decoration:none; }
 .link-brand:hover { color:var(--brand-hover); }
+.radius-sm { border-radius:var(--radius-sm) !important; }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Swift — produto</title>
+    <title>Swift — receita</title>
 
     <!-- CSS (página dentro de /pages) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -189,7 +189,7 @@
         <!-- Imagem -->
         <div class="col-lg-5">
           <img
-            src="../img/produtos/Product Details Images.png"
+            src="../img/produtos/receita-macarrao.png"
             alt="Imagem do produto/receita"
             class="w-100 rounded-3 border"
           />
@@ -197,47 +197,50 @@
 
         <!-- Título / Preço / CTA -->
         <div class="col-lg-7">
-          <h1 class="h3 mb-2">Almôndegas Bovinas Swift 500g</h1>
+          <div class="justify-content-center h-100 d-flex flex-column">
+            <h1 class="h3 mb-2">Macarronada à bolonhesa com almôndegas</h1>
 
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="h4 m-0">
-              R$18,90 <small class="text-muted">un</small>
-            </div>
-            <span class="badge text-bg-success">2ª un por R$ 16,90</span>
-          </div>
-
-          <p class="text-muted mb-3">
-            Muito suculentas, as Almôndegas Swift ficam ótimas na grelha,
-            assadas ou acompanhando molhos. Ideais para facilitar a rotina do
-            dia a dia.
-          </p>
-
-          <div class="d-flex align-items-center gap-2 mb-4">
-            <div class="input-group" style="max-width: 120px">
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                aria-label="Diminuir quantidade"
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <span class="bagde bg-brand-50 px-3 py-1 radius-sm"
+                ><img
+                  src="../img/icones/smile-emoji.png"
+                  alt="Icone de emoji sorrindo"
+                /><small class="p-2 text-brand-800">Iniciante</small></span
               >
-                -
-              </button>
-              <input
-                type="text"
-                class="form-control text-center"
-                value="1"
-                aria-label="Quantidade"
-              />
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                aria-label="Aumentar quantidade"
+              <span class="bagde bg-brand-50 px-3 py-1 radius-sm"
+                ><img
+                  src="../img/icones/icon-clock.png"
+                  alt="Icone de emoji sorrindo"
+                /><small class="p-2 text-brand-800"
+                  >Tempo de Preparo: 40min</small
+                ></span
               >
-                +
-              </button>
             </div>
-            <a href="./carrinho.html" class="btn btn-brand"
-              >Adicionar ao carrinho</a
-            >
+
+            <p class="text-muted mb-1">
+              categoria:
+              <a href="./produtos.html" class="link-brand text-brand-800"
+                >Bovinos</a
+              >
+            </p>
+            <p class="text-muted mb-4">
+              tags:
+              <a href="./produtos.html" class="link-brand text-brand-800"
+                >Almôndegas</a
+              >,
+              <a href="./produtos.html" class="link-brand text-brand-800"
+                >Carne Moída</a
+              >,
+              <a href="./produtos.html" class="link-brand text-brand-800"
+                >Macarrão</a
+              >
+            </p>
+
+            <div class="d-flex align-items-center gap-2 mb-lg-4 mb-1">
+              <a href="./detalhe-produto.html" class="btn btn-brand w-50"
+                >Comprar Produto</a
+              >
+            </div>
           </div>
         </div>
         <!-- /col-lg-7 -->
@@ -249,7 +252,7 @@
         <ul class="nav nav-tabs" id="tabProduto" role="tablist">
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link active"
+              class="nav-link link-brand active"
               id="tab-desc"
               type="button"
               role="tab"
@@ -258,12 +261,12 @@
               aria-controls="pane-desc"
               aria-selected="true"
             >
-              Descrição
+              Ingredientes
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link"
+              class="nav-link link-brand"
               id="tab-preparo"
               type="button"
               role="tab"
@@ -273,20 +276,6 @@
               aria-selected="false"
             >
               Modo de preparo
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="tab-receitas"
-              type="button"
-              role="tab"
-              data-bs-toggle="tab"
-              data-bs-target="#pane-receitas"
-              aria-controls="pane-receitas"
-              aria-selected="false"
-            >
-              Receitas
             </button>
           </li>
         </ul>
@@ -303,21 +292,17 @@
             aria-labelledby="tab-desc"
             tabindex="0"
           >
-            <p><strong>Conservação doméstica:</strong></p>
+            <h3 class="p-3"><strong>Ingredientes necessários:</strong></h3>
             <ul>
-              <li>Geladeira (0 a 4ºC): consumir em até 48h após aberto.</li>
-              <li>
-                Freezer (-12ºC): consumir até a data indicada na embalagem.
-              </li>
+              <li>500 g de almôndegas bovinas Swift</li>
+              <li>250 g de macarrão (espaguete ou penne)</li>
+              <li>2 colheres (sopa) de azeite</li>
+              <li>2 dentes de alho picados</li>
+              <li>1 cebola pequena picada</li>
+              <li>1 lata de molho de tomate (340 g)</li>
+              <li>Sal e pimenta a gosto</li>
+              <li>Queijo parmesão ralado e manjericão fresco para finalizar</li>
             </ul>
-            <p>
-              <strong>Ingredientes:</strong> Carne bovina (15%), proteína de
-              soja, condimentos, estabilizantes.
-            </p>
-            <small class="text-muted"
-              >Contém glúten. Alérgicos: contém derivados de trigo e
-              soja.</small
-            >
           </div>
 
           <!-- Modo de Preparo -->
@@ -328,21 +313,30 @@
             aria-labelledby="tab-preparo"
             tabindex="0"
           >
-            <p class="fw-semibold text-uppercase text-danger">Frigideira:</p>
-            <p>
-              Retire as almôndegas congeladas da embalagem. Em óleo quente,
-              frite por 5 min, virando de vez em quando.
-            </p>
-
-            <p class="fw-semibold text-uppercase text-danger">Forno:</p>
-            <p>
-              Retire as almôndegas congeladas da embalagem. Em forno
-              pré-aquecido, asse em assadeira por 15 min a 180ºC.
-            </p>
-
-            <p>
-              <strong>Obs.:</strong> ajuste o tempo conforme o tipo de forno.
-            </p>
+            <h3 class="p-3"><strong>Modo de Preparo:</strong></h3>
+            <ol>
+              <li>
+                Cozinhe o macarrão em água com sal até ficar al dente. Reserve.
+              </li>
+              <li>
+                Em uma panela, aqueça o azeite e refogue a cebola e o alho.
+              </li>
+              <li>
+                Adicione o molho de tomate, tempere com sal e pimenta e deixe
+                apurar por 5 minutos.
+              </li>
+              <li>
+                Em uma frigideira, grelhe as almôndegas Swift até dourarem.
+              </li>
+              <li>
+                Transfira as almôndegas para o molho e cozinhe por mais 10
+                minutos.
+              </li>
+              <li>
+                Sirva o macarrão com o molho e finalize com parmesão e
+                manjericão fresco.
+              </li>
+            </ol>
             <small class="text-muted"
               >Não recomendamos preparo em micro-ondas.</small
             >
@@ -358,9 +352,9 @@
           >
             <div class="row g-3">
               <div class="col-sm-6">
-                <a href="./detalhe-receita.html" class="receita-card d-block h-100">
+                <a href="./receita.html" class="receita-card d-block h-100">
                   <img
-                    src="../img/produtos/receita-macarrao.png"
+                    src="../img/produtos/receita-carne.png"
                     class="receita-img"
                     alt="Macarronada à bolonhesa"
                   />
