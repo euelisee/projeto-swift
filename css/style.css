@@ -797,3 +797,33 @@ h1, h2, h3,
 .bg-mais-vendidos{
   background-color:#AE2431;
 }
+.elemento-escuro {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 70%;
+  border-top-left-radius: 9999px;
+  background-color:#3B3531;
+  z-index: -2;
+}
+.elemento-vermelho {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 40%;
+  background-color: #D73240;
+  z-index: -1;
+  border-top-right-radius: 9999px;
+}
+.sobrepor {
+  position: relative;
+  bottom: -160px; /* Ajuste conforme necessário */
+  z-index: 1; /* Garante que fique acima de outros elementos */
+}
+@media (max-width: 992px) {
+  .sobrepor {
+    top: 0;
+  }
+}
