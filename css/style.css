@@ -1474,6 +1474,10 @@ h3,
   border-width: 3px !important;
 }
 
+#payment-option {
+  min-width: 100vh;
+}
+
 /* Classe genérica para todos os formulários escondidos */
 .payment-details-form {
     max-height: 0;

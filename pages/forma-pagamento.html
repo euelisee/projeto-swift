@@ -109,14 +109,14 @@
        >> Use .container para manter o grid alinhado ao restante do site.
   ========================================================== -->
     <main class="container">
-      <section class="container my-5 row">
+      <section class="container my-5 d-flex flex-wrap ">
         <!-- FORMAS DE PAGAMENTO -->
         <div class="col-12 col-md-6 col-lg-8 d-flex flex-column align-items-start" id="payment-container">
             <h2 class="display-1 fs-1">Escolha a forma de pagamento</h2>
             
             <button type="button" class="btn text-brand fs-4 mb-3" id="back-to-options" style="display: none;">&lt; Ver outras formas de pagamento</button>
 
-            <div id="payment-options">
+            <div id="payment-options" class="col-11">
                 <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
                     <input type="radio" class="form-check-input m-0" id="pix" name="forma-pagamento" value="pix" checked>
                     <label for="pix" class="w-100 cursor-pointer">
@@ -134,27 +134,29 @@
                         </label>
                     </div>
                     <div class="payment-details-form debit-card-details">
-                        <div class="row g-3 px-4 pb-4">
-                            <div class="col-6 row g-3 my-2 px-4">
-                                <div class="col-12">
-                                    <label for="nome-titular" class="form-label">Nome do titular</label>
-                                    <input type="text" class="form-control" id="nome-titular" placeholder="Nome impresso no cartão">
-                                </div>
-                                <div class="col-12">
-                                    <label for="numero-cartao" class="form-label">Número do cartão</label>
-                                    <input type="text" class="form-control" id="numero-cartao" placeholder="0000 0000 0000 0000">
-                                </div>
-                                <div class="col-6">
-                                    <label for="data-validade" class="form-label">Validade</label>
-                                    <input type="text" class="form-control" id="data-validade" placeholder="MM/AA">
-                                </div>
-                                <div class="col-6">
-                                    <label for="codigo-seguranca" class="form-label">CVV</label>
-                                    <input type="text" class="form-control" id="codigo-seguranca" placeholder="123" inputmode="numeric" maxlength="4">
-                                </div>
-                                <div class="col-12">
-                                    <label for="cpf" class="form-label">CPF do titular</label>
-                                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="11">
+                        <div class="d-flex px-4 pb-4">
+                            <div class="col-6">
+                                <div class="d-flex flex-column my-2 px-4">
+                                    <div class="col-12">
+                                        <label for="nome-titular" class="form-label">Nome do titular</label>
+                                        <input type="text" class="form-control" id="nome-titular" placeholder="Nome impresso no cartão">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="numero-cartao" class="form-label">Número do cartão</label>
+                                        <input type="text" class="form-control" id="numero-cartao" placeholder="0000 0000 0000 0000">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="data-validade" class="form-label">Validade</label>
+                                        <input type="text" class="form-control" id="data-validade" placeholder="MM/AA">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="codigo-seguranca" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="codigo-seguranca" placeholder="123" inputmode="numeric" maxlength="4">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="cpf" class="form-label">CPF do titular</label>
+                                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="11">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-6 d-flex flex-column align-items-center justify-content-center">
@@ -173,8 +175,9 @@
                         </label>
                     </div>
                     <div class="payment-details-form credit-card-details">
-                        <div class="row g-3 px-4 pb-4">
-                            <div class="col-6 row g-3 my-2 px-4">
+                        <div class="d-flex px-4 pb-4">
+                          <div class="col-6">
+                            <div class="d-flex flex-column my-2 px-4">
                                 <div class="col-12">
                                     <label for="nome-titular" class="form-label">Nome do titular</label>
                                     <input type="text" class="form-control" id="nome-titular" placeholder="Nome impresso no cartão">
@@ -196,7 +199,8 @@
                                     <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="11">
                                 </div>
                             </div>
-                            <div class="col-6 d-flex flex-column gap-4 align-items-center justify-content-center">
+                          </div>
+                            <div class="col-6 d-flex flex-column gap-4 align-items-center">
                                 <img src="../img/icones/card-icon.svg" alt="Icone cartão">
                                 <div>
                                     <label for="numero-parcelas" class="form-label">Número de parcelas</label>
