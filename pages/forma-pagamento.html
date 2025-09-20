@@ -14,6 +14,7 @@
     />
     <link href="../css/tokens.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/main.js" defer></script>
   </head>
   <body class="bg-body-secondary">
     <!-- ================= HEADER NÃO ALTERAR ================= -->
@@ -110,34 +111,106 @@
     <main class="container">
       <section class="container my-5 row">
         <!-- FORMAS DE PAGAMENTO -->
-        <div class="col-12 col-md-6 col-lg-8">
-          <h2 class="display-1 fs-1">Escolha a forma de pagamento</h2>
-        
-          <div class="">
-            <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
-              <input type="radio" class="form-check-input m-0" id="pix" name="forma-pagamento" value="pix" checked>
-              <label for="pix" class="w-100">
-                <p class="m-0 p-0 fw-bold fs-5">Pix</p>
-                <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
-              </label>
+        <div class="col-12 col-md-6 col-lg-8 d-flex flex-column align-items-start" id="payment-container">
+            <h2 class="display-1 fs-1">Escolha a forma de pagamento</h2>
+            
+            <button type="button" class="btn text-brand fs-4 mb-3" id="back-to-options" style="display: none;">&lt; Ver outras formas de pagamento</button>
+
+            <div id="payment-options">
+                <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+                    <input type="radio" class="form-check-input m-0" id="pix" name="forma-pagamento" value="pix" checked>
+                    <label for="pix" class="w-100 cursor-pointer">
+                        <p class="m-0 p-0 fw-bold fs-5">Pix</p>
+                        <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
+                    </label>
+                </div>
+
+                <div class="payment-option border bg-body rounded-4 ps-4 py-3 mb-4">
+                    <div class="gap-4 d-flex text-start align-items-center">
+                        <input type="radio" class="form-check-input m-0" id="debito" name="forma-pagamento" value="debito" data-target=".debit-card-details">
+                        <label for="debito" class="w-100 cursor-pointer">
+                            <p class="m-0 p-0 fw-bold fs-5">Cartão de Débito</p>
+                            <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
+                        </label>
+                    </div>
+                    <div class="payment-details-form debit-card-details">
+                        <div class="row g-3 px-4 pb-4">
+                            <div class="col-6 row g-3 my-2 px-4">
+                                <div class="col-12">
+                                    <label for="nome-titular" class="form-label">Nome do titular</label>
+                                    <input type="text" class="form-control" id="nome-titular" placeholder="Nome impresso no cartão">
+                                </div>
+                                <div class="col-12">
+                                    <label for="numero-cartao" class="form-label">Número do cartão</label>
+                                    <input type="text" class="form-control" id="numero-cartao" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="col-6">
+                                    <label for="data-validade" class="form-label">Validade</label>
+                                    <input type="text" class="form-control" id="data-validade" placeholder="MM/AA">
+                                </div>
+                                <div class="col-6">
+                                    <label for="codigo-seguranca" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="codigo-seguranca" placeholder="123" inputmode="numeric" maxlength="4">
+                                </div>
+                                <div class="col-12">
+                                    <label for="cpf" class="form-label">CPF do titular</label>
+                                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="11">
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                                <img src="../img/icones/card-icon.svg" alt="Icone cartão">                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-option border bg-body rounded-4 ps-4 py-3 mb-4">
+                    <div class="gap-4 d-flex text-start align-items-center">
+                        <input type="radio" class="form-check-input m-0" id="credito" name="forma-pagamento" value="credito" data-target=".credit-card-details">
+                        <label for="credito" class="w-100 cursor-pointer">
+                            <p class="m-0 p-0 fw-bold fs-5">Cartão de Crédito</p>
+                            <p class="m-0 p-0 text-secondary">Até 3x sem juros</p>
+                        </label>
+                    </div>
+                    <div class="payment-details-form credit-card-details">
+                        <div class="row g-3 px-4 pb-4">
+                            <div class="col-6 row g-3 my-2 px-4">
+                                <div class="col-12">
+                                    <label for="nome-titular" class="form-label">Nome do titular</label>
+                                    <input type="text" class="form-control" id="nome-titular" placeholder="Nome impresso no cartão">
+                                </div>
+                                <div class="col-12">
+                                    <label for="numero-cartao" class="form-label">Número do cartão</label>
+                                    <input type="text" class="form-control" id="numero-cartao" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="col-6">
+                                    <label for="data-validade" class="form-label">Validade</label>
+                                    <input type="text" class="form-control" id="data-validade" placeholder="MM/AA">
+                                </div>
+                                <div class="col-6">
+                                    <label for="codigo-seguranca" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="codigo-seguranca" placeholder="123" inputmode="numeric" maxlength="4">
+                                </div>
+                                <div class="col-12">
+                                    <label for="cpf" class="form-label">CPF do titular</label>
+                                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="11">
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex flex-column gap-4 align-items-center justify-content-center">
+                                <img src="../img/icones/card-icon.svg" alt="Icone cartão">
+                                <div>
+                                    <label for="numero-parcelas" class="form-label">Número de parcelas</label>
+                                    <select class="form-select" id="numero-parcelas">
+                                        <option selected value="1">1x de R$ 239,50 (à vista)</option>
+                                        <option value="2">2x de R$ 119,75 sem juros</option>
+                                        <option value="3">3x de R$ 79,83 sem juros</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
-            <input type="radio" class="form-check-input m-0" id="debito" name="forma-pagamento" value="debito">
-            <label for="debito" class="w-100">
-              <p class="m-0 p-0 fw-bold fs-5">Cartão de Débito</p>
-              <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
-            </label>
-          </div>
-
-          <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
-            <input type="radio" class="form-check-input m-0" id="credito" name="forma-pagamento" value="credito">
-            <label for="credito" class="w-100">
-              <p class="m-0 p-0 fw-bold fs-5">Cartão de Crédito</p>
-              <p class="m-0 p-0 text-secondary">Até 3x sem juros</p>
-            </label>
-          </div>
         </div>
 
         <!-- RESUMO DO PEDIDO -->

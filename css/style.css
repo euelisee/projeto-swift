@@ -1146,3 +1146,30 @@ h3,
   border-color: var(--brand-500) !important;
   border-width: 3px !important;
 }
+
+/* Classe genérica para todos os formulários escondidos */
+.payment-details-form {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out, opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+/* Classe para expandir o formulário */
+.payment-details-form.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Classe para esconder as outras opções suavemente */
+.payment-option.hidden {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}

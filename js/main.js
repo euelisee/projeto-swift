@@ -170,8 +170,53 @@ function startCountdown() {
   tick();
 }
 
+// =====================================
+// ENTREGA E RETIRADA (pages/entrega.html)
+// =====================================
 
+document.addEventListener('DOMContentLoaded', function() {
+    const paymentRadios = document.querySelectorAll('input[name="forma-pagamento"]');
+    const paymentOptions = document.querySelectorAll('.payment-option');
+    const allForms = document.querySelectorAll('.payment-details-form');
+    const backButton = document.getElementById('back-to-options');
 
+    // Função para resetar a visão para o estado inicial
+    function showAllOptions() {
+        paymentOptions.forEach(option => option.classList.remove('hidden'));
+        allForms.forEach(form => form.classList.remove('expanded'));
+        backButton.style.display = 'none';
+        
+        // Desmarca qualquer radio que estava ativo
+        const activeRadio = document.querySelector('input[name="forma-pagamento"]:checked');
+        if (activeRadio) activeRadio.checked = false;
+        
+        document.getElementById('pix').checked = true;
+    }
+
+    backButton.addEventListener('click', showAllOptions);
+
+    paymentRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            const targetSelector = this.dataset.target;
+
+            // Se o radio clicado tiver um 'data-target' (é expansível)
+            if (targetSelector) {
+                const targetForm = document.querySelector(targetSelector);
+
+                // Esconde as outras opções
+                paymentOptions.forEach(option => {
+                    if (!option.contains(this)) {
+                        option.classList.add('hidden');
+                    }
+                });
+
+                // Mostra o formulário e o botão de voltar
+                if (targetForm) targetForm.classList.add('expanded');
+                backButton.style.display = 'block';
+            } 
+        });
+    });
+});
 
 // =====================================
 // PRODUTOS / DETALHE / CARRINHO / CHECKOUT / PAGAMENTO / PONTOS
