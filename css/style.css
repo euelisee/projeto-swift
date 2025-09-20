@@ -1126,3 +1126,23 @@ h3,
   text-align: center;
   margin: 2rem 0;   
 }
+
+/* =========================================================
+   13) PAYMENT PAGE 
+   ========================================================= */
+
+.payment-option {
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+
+.payment-option:hover {
+  border-color: var(--brand-500) !important;
+  border-width: 2px !important;
+}
+
+.payment-option:has(input:checked) {
+  border-color: var(--brand-500) !important;
+  border-width: 3px !important;
+}

@@ -109,18 +109,21 @@
   ========================================================== -->
     <main class="container">
       <section class="container my-5 row">
+        <!-- FORMAS DE PAGAMENTO -->
         <div class="col-12 col-md-6 col-lg-8">
           <h2 class="display-1 fs-1">Escolha a forma de pagamento</h2>
         
-          <div class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
-            <input type="radio" class="form-check-input m-0" id="pix" name="forma-pagamento" value="pix" checked>
-            <label for="pix" class="w-100">
-              <p class="m-0 p-0 fw-bold fs-5">Pix</p>
-              <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
-            </label>
+          <div class="">
+            <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+              <input type="radio" class="form-check-input m-0" id="pix" name="forma-pagamento" value="pix" checked>
+              <label for="pix" class="w-100">
+                <p class="m-0 p-0 fw-bold fs-5">Pix</p>
+                <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
+              </label>
+            </div>
           </div>
 
-          <div class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+          <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
             <input type="radio" class="form-check-input m-0" id="debito" name="forma-pagamento" value="debito">
             <label for="debito" class="w-100">
               <p class="m-0 p-0 fw-bold fs-5">Cartão de Débito</p>
@@ -128,7 +131,7 @@
             </label>
           </div>
 
-          <div class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+          <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
             <input type="radio" class="form-check-input m-0" id="credito" name="forma-pagamento" value="credito">
             <label for="credito" class="w-100">
               <p class="m-0 p-0 fw-bold fs-5">Cartão de Crédito</p>
@@ -136,10 +139,11 @@
             </label>
           </div>
         </div>
+
+        <!-- RESUMO DO PEDIDO -->
         <div class="col-12 col-md-6 col-lg-4 d-flex align-itens-between flex-column ">
-          <div class="border bg-body rounded-4 p-5">
-            <p class="fw-bold fs-5 mb-4">Resumo do pedido</p>
-            <div class="border border-1 mb-4"></div>
+          <div class="border bg-body rounded-4 p-4">
+            <p class="fw-bold display-1 fs-5 mb-4">Resumo do pedido</p>
             <label for="" class="w-100 d-flex flex-column gap-2">
               <div class="d-flex justify-content-between">
                 <p class="m-0">Produtos (5)</p>
@@ -151,19 +155,18 @@
               </div>
               <div class="d-flex justify-content-between">
                 <p class="m-0 text-success">Descontos</p>
-                <p class="m-0 fw-bold text-success">R$ 10<sup>00</sup></p>
+                <p class="m-0 fw-bold text-success">R$ 10,00</p>
               </div>
             </label>
-            <div class="my-5 mx-0 fw-bold d-flex justify-content-between">
+            <div class="border border-1 my-4"></div>
+            <div class="my-4 mx-0 fw-bold d-flex justify-content-between">
               <p class="m-0 p-0">Total</p>            
               <p class="m-0 p-0">R$ 239<sup>50</sup></p>
             </div>
+            <button class="btn btn-laranja rounded-3 py-3 col-12" type="button" data-filter="continuarCompra">
+              Continuar a Compra
+            </button>
           </div>
-        </div>
-        <div class="container text-center">
-          <button class="btn btn-laranja rounded-3 py-2 col-3" type="button" data-filter="continuarCompra">
-            Continuar a Compra
-          </button>
         </div>
       </section>
     </main>
