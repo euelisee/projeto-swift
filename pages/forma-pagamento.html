@@ -15,7 +15,7 @@
     <link href="../css/tokens.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
   </head>
-  <body class="bg-body">
+  <body class="bg-body-secondary">
     <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
@@ -99,104 +99,6 @@
           </div>
         </div>
       </div>
-
-      <!-- NAV de categorias (mesma do index) -->
-      <nav class="border-top border-bottom bg-white">
-        <div class="container">
-          <div class="categories scroller-x py-2">
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-bovino.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Bovinos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-aves.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Aves</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-pescados.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Pescados</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-suinos.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Suínos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-linguicas.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Linguíças</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-churrasco.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Churrasco</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-especiais.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Cortes Especiais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-vegetais.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>100% vegetais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-variados.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Variados</small>
-            </a>
-          </div>
-        </div>
-      </nav>
     </header>
     <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
 
@@ -205,9 +107,65 @@
        >> Troque o título e coloque aqui os componentes da tela.
        >> Use .container para manter o grid alinhado ao restante do site.
   ========================================================== -->
-    <main class="container my-5">
-      <h1 class="h3 mb-4">Título da Página</h1>
-      <!--  insira aqui o conteúdo da página -->
+    <main class="container">
+      <section class="container my-5 row">
+        <div class="col-12 col-md-6 col-lg-8">
+          <h2 class="display-1 fs-1">Escolha a forma de pagamento</h2>
+        
+          <div class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+            <input type="radio" class="form-check-input m-0" id="pix" name="forma-pagamento" value="pix" checked>
+            <label for="pix" class="w-100">
+              <p class="m-0 p-0 fw-bold fs-5">Pix</p>
+              <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
+            </label>
+          </div>
+
+          <div class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+            <input type="radio" class="form-check-input m-0" id="debito" name="forma-pagamento" value="debito">
+            <label for="debito" class="w-100">
+              <p class="m-0 p-0 fw-bold fs-5">Cartão de Débito</p>
+              <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
+            </label>
+          </div>
+
+          <div class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+            <input type="radio" class="form-check-input m-0" id="credito" name="forma-pagamento" value="credito">
+            <label for="credito" class="w-100">
+              <p class="m-0 p-0 fw-bold fs-5">Cartão de Crédito</p>
+              <p class="m-0 p-0 text-secondary">Até 3x sem juros</p>
+            </label>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-itens-between flex-column ">
+          <div class="border bg-body rounded-4 p-5">
+            <p class="fw-bold fs-5 mb-4">Resumo do pedido</p>
+            <div class="border border-1 mb-4"></div>
+            <label for="" class="w-100 d-flex flex-column gap-2">
+              <div class="d-flex justify-content-between">
+                <p class="m-0">Produtos (5)</p>
+                <p class="m-0 fw-bold">R$ 249<sup>50</sup></p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="m-0">Frete</p>
+                <p class="m-0 fw-bold text-success">Grátis</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="m-0 text-success">Descontos</p>
+                <p class="m-0 fw-bold text-success">R$ 10<sup>00</sup></p>
+              </div>
+            </label>
+            <div class="my-5 mx-0 fw-bold d-flex justify-content-between">
+              <p class="m-0 p-0">Total</p>            
+              <p class="m-0 p-0">R$ 239<sup>50</sup></p>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center">
+          <button class="btn btn-laranja rounded-3 py-2 col-3" type="button" data-filter="continuarCompra">
+            Continuar a Compra
+          </button>
+        </div>
+      </section>
     </main>
 
     <!-- ================= RODAPÉ NAO ALTERAR ================= -->
