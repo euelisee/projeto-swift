@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Swift — Login</title>
+    <title>Swift — Checkout</title>
 
     <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -14,13 +14,8 @@
     />
     <link href="../css/tokens.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
   </head>
-  <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
+  <body class="bg-body" onload="startCountdown()">
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
@@ -202,118 +197,41 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
+    <main class="bg-body">
+      <div class="container mock-center">
+        <div
+          class="card shadow-sm text-center p-4 p-md-5 mx-auto"
+          style="max-width: 520px"
+        >
+          <img
+            src="../img/icones/icone_google.png"
+            alt=""
+            width="40"
+            height="40"
+            class="mb-3"
+            aria-hidden="true"
+          />
 
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
-    <main class="login-hero">
-      <div class="container">
-        <div class="login-panel mx-auto">
-          <div class="card login-card shadow-sm">
-            <div class="card-body p-4 p-md-5">
-              <h1 class="h3 fw-bold text-center text-brand mb-4">
-                Bem-vindo(a)
-              </h1>
-
-              <form id="loginForm" novalidate>
-                <!-- E-mail -->
-                <div class="mb-3">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    class="form-control"
-                    placeholder="Digite seu e-mail"
-                    required
-                  />
-                </div>
-
-                <!-- Senha + olhinho -->
-                <div class="mb-2">
-                  <label for="password" class="form-label">Senha</label>
-                  <div class="input-group">
-                    <input
-                      id="password"
-                      name="password"
-                      type="password"
-                      class="form-control"
-                      placeholder="Digite sua senha"
-                      required
-                    />
-                    <button
-                      type="button"
-                      class="btn btn-outline-soft btn-eye"
-                      id="togglePassword"
-                      aria-label="Mostrar/ocultar senha"
-                      aria-pressed="false"
-                    >
-                      <i class="bi bi-eye" aria-hidden="true"></i>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Ações principais -->
-                <a
-                  href="./index-logado.html"
-                  class="btn btn-brand btn-lg w-100"
-                >
-                  <span>Continuar</span>
-                </a>
-
-                <!-- Opções auxiliares -->
-                <div
-                  class="d-flex align-items-center justify-content-between mb-3"
-                >
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="rememberMe"
-                    />
-                    <label class="form-check-label" for="rememberMe"
-                      >Lembre-se de mim</label
-                    >
-                  </div>
-                  <a href="#" class="link-brand fw-semibold"
-                    >Esqueci a minha senha</a
-                  >
-                </div>
-
-                <!-- Divisor -->
-                <div class="divider my-3"><span>ou</span></div>
-
-                <!-- Botão Google (mockado) -->
-                <a
-                  href="./mock-login-google.html"
-                  class="btn btn-login-google w-100"
-                >
-                  <img
-                    class="google-icon"
-                    src="../img/icones/icone_google.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Fazer Login com o Google</span>
-                </a>
-
-                <p class="text-center mt-4 mb-0">
-                  Novo na Swift?
-                  <a href="./cadastro.html" class="link-brand fw-semibold"
-                    >Cadastre-se</a
-                  >
-                </p>
-              </form>
-            </div>
+          <h1 class="h4 fw-bold text-brand mb-2">Login com Google simulado</h1>
+          <p class="text-muted mb-4">
+            Tudo certo! Estamos preparando seu acesso…
+          </p>
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <div
+              class="spinner-border text-warning"
+              role="status"
+              aria-label="Carregando"
+            ></div>
+            <small class="text-muted">
+              Você será redirecionado em <span id="mockCountdown">3</span>s
+            </small>
+          </div>
+          <div class="mt-4">
+            <a href="./index-logado.html" class="btn btn-brand">Ir agora</a>
           </div>
         </div>
       </div>
     </main>
-
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">
       <div class="container">
         <!-- topo: colunas -->
@@ -487,5 +405,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
