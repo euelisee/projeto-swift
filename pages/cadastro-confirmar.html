@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Swift — Cadastro</title>
+    <title>Swift — Checkout</title>
 
     <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -198,170 +198,32 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-    <!-- Tela de Cadastro -->
-    <main class="cadastro-container">
-      <div class="form-card">
-        <h1 class="form-title">Criar Conta</h1>
+  <main class="cadastro-container">
+    <div class="form-card text-center">
+      <h1 class="form-title">Criar Conta</h1>
 
-        <form id="cadastroForm" novalidate>
-          <!-- Nome Completo -->
-          <div class="mb-3">
-            <label for="nomeCompleto" class="form-label"
-              >Nome Completo<span class="required">*</span></label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="nomeCompleto"
-              name="nomeCompleto"
-              required
-            />
-          </div>
+      <p class="mb-3">Confirme o seu e-mail</p>
+      <p class="text-muted small mb-4">
+        Enviamos um código de confirmação para o e-mail cadastrado, insira-o no campo abaixo:
+      </p>
 
-          <!-- Data de Nascimento -->
-          <div class="mb-3">
-            <label for="dataNascimento" class="form-label"
-              >Data de Nascimento<span class="required">*</span></label
-            >
-            <input
-              type="date"
-              class="form-control"
-              id="dataNascimento"
-              name="dataNascimento"
-              placeholder="dd/mm/aaaa"
-              required
-            />
-          </div>
+      <form id="confirmarEmailForm" novalidate>
+        <div class="mb-4">
+          <input type="text" class="form-control text-center" id="codigoConfirmacao" name="codigoConfirmacao" placeholder="Digite o código" required />
+        </div>
 
-          <!-- Telefone -->
-          <div class="mb-3">
-            <label for="telefone" class="form-label"
-              >Telefone<span class="required">*</span></label
-            >
-            <input
-              type="tel"
-              class="form-control"
-              id="telefone"
-              name="telefone"
-              placeholder="(11) 99999-9999"
-              required
-            />
-          </div>
-
-          <!-- CPF -->
-          <div class="mb-3">
-            <label for="cpf" class="form-label"
-              >CPF<span class="required">*</span></label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="cpf"
-              name="cpf"
-              placeholder="000.000.000-00"
-              required
-            />
-          </div>
-
-          <!-- E-mail -->
-          <div class="mb-3">
-            <label for="email" class="form-label"
-              >E-mail<span class="required">*</span></label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              placeholder="seu@email.com"
-              required
-            />
-          </div>
-
-          <!--Senha-->
-          <div class="mb-3">
-            <label for="Senha" class="form-label"
-              >Senha<span class="required">*</span></label
-            >
-            <div class="password-field">
-              <input
-                type="password"
-                class="form-control"
-                id="senha"
-                name="senha"
-                required
-              />
-              <span
-                class="password-toggle material-symbols-outlined"
-                onclick="togglePassword('senha', this)"
-              >
-                visibility
-              </span>
-            </div>
-            <div class="password-hint">Mínimo 8 caracteres.</div>
-          </div>
-
-          <!-- Confirmar Senha -->
-          <div class="mb-3">
-            <label for="confirmarSenha" class="form-label"
-              >Confirmar Senha<span class="required">*</span></label
-            >
-            <div class="password-field">
-              <input
-                type="password"
-                class="form-control"
-                id="confirmarSenha"
-                name="confirmarSenha"
-                required
-              />
-              <span
-                class="password-toggle material-symbols-outlined"
-                onclick="togglePassword('confirmarSenha', this)"
-              >
-                visibility
-              </span>
-            </div>
-          </div>
-
-          <!-- Checkboxes -->
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="termosPrivacidade"
-              name="termosPrivacidade"
-              required
-            />
-            <label class="form-check-label" for="termosPrivacidade">
-              Li e concordo com os Termos da
-              <a href="#" class="link-brand">Política de Privacidade</a
-              ><span class="required">*</span>
-            </label>
-          </div>
-
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="promocoes"
-              name="promocoes"
-            />
-            <label class="form-check-label" for="promocoes">
-              Quero ficar por dentro das novidades e receber as promoções por
-              e-mail.
-            </label>
-          </div>
-
-          <p class="campos-obrigatorios">
-            <span class="required">*</span>Campos obrigatórios.
-          </p>
-          <a href="./cadastro-confirmar.html" class="btn btn-brand btn-lg w-100">
+          <a href="./cadastro-email-confirmado.html" class="btn btn-brand btn-lg w-100">
             <span>Continuar</span>
           </a>
-        </form>
-      </div>
-    </main>
+          <div class="mt-3">
+          <a href="./cadastro.html" class="btn btn-brand btn-lg w-100">
+            <span>Retornar</span>
+          </a>
+      </form>
+    </div>
+  </main>
+
+    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">
       <div class="container">
         <!-- topo: colunas -->
@@ -535,5 +397,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

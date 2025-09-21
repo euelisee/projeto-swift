@@ -2,21 +2,23 @@
    STYLES — PROJETO SWIFT
    Regra: sempre usar variáveis do tokens.css
    ========================================================= */
-
-/* =========================================================
-   1) BASE / TIPOGRAFIA
-   ========================================================= */
-html,
-body {
-  height: 100%;
+/* Fonte padrão do site */
+html, body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color, #333);
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  background: var(--bg-body);
-  color: var(--text-color);
-  font-family: var(--font-body);
+/* Títulos */
+h1, h2, h3, h4, h5, h6,
+.form-title, .section-title {
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
-
 /* Títulos com Barlow Condensed */
 h1,
 h2,
@@ -28,6 +30,11 @@ h3,
 .display-5 {
   font-family: var(--font-heading);
   letter-spacing: 0.2px;
+}
+
+.btn, .btn-prosseguir, .btn-brand,
+.footer-swift, .navbar, .store-chip {
+  font-family: inherit;
 }
 
 /* =========================================================
@@ -1110,4 +1117,12 @@ h3,
 .text-brand{
   color: var(--brand);
   font-family: var(--font-heading);
+}
+/* Mensagem de sucesso centralizada */
+.msg-sucesso {
+  font-weight: 600;     
+  color: var(--neutral-700); 
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 2rem 0;   
 }
