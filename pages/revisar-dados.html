@@ -99,104 +99,6 @@
           </div>
         </div>
       </div>
-
-      <!-- NAV de categorias (mesma do index) -->
-      <nav class="border-top border-bottom bg-white">
-        <div class="container">
-          <div class="categories scroller-x py-2">
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-bovino.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Bovinos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-aves.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Aves</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-pescados.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Pescados</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-suinos.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Suínos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-linguicas.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Linguíças</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-churrasco.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Churrasco</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-especiais.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Cortes Especiais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-vegetais.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>100% vegetais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-variados.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Variados</small>
-            </a>
-          </div>
-        </div>
-      </nav>
     </header>
     <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
 
@@ -205,9 +107,115 @@
        >> Troque o título e coloque aqui os componentes da tela.
        >> Use .container para manter o grid alinhado ao restante do site.
   ========================================================== -->
-    <main class="container my-5">
-      <h1 class="h3 mb-4">Título da Página</h1>
-      <!--  insira aqui o conteúdo da página -->
+    <main class="container">
+      <section class="container my-5 row">
+        <div class="col-12 col-md-6 col-lg-8">
+          <h2 class="display-1 fs-1">Revise e Confirme</h2>
+
+          <div
+            class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4"
+          >
+            <div class="row w-100 align-items-center">
+              <label for="dadosPessoais" class="w-100">
+                <p class="m-0 p-0 fw-bold fs-5">Dados Pessoais</p>
+                <p class="m-0 p-0 text-secondary">Darth Vader da Silva</p>
+                <p class="m-0 p-0 text-secondary">000.000.000-00</p>
+              </label>
+              <a href="./cadastro.html" class="link-brand my-2">Alterar</a>
+            </div>
+          </div>
+
+          <div
+            class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4"
+          >
+            <div class="row w-100 align-items-center">
+              <label for="detalheEntrega" class="w-100">
+                <p class="m-0 p-0 fw-bold fs-5">Detalhes da Entrega</p>
+                <p class="m-0 p-0 text-secondary">
+                  Retirar na loja Swift Ipiranga
+                </p>
+                <p class="m-0 p-0 text-secondary">A partir das 15h</p>
+              </label>
+              <a href="./carrinho-entrega.html" class="link-brand my-2"
+                >Alterar</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4"
+          >
+            <div class="row w-100 align-items-center">
+              <label for="formaPagamento" class="w-100">
+                <p class="m-0 p-0 fw-bold fs-5">Forma de Pagamento</p>
+                <p class="m-0 p-0 text-secondary">Cartão de débito</p>
+                <p class="m-0 p-0 text-secondary">À vista</p>
+              </label>
+              <a href="./forma-pagamento.html" class="link-brand my-2"
+                >Alterar</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-md-6 col-lg-4 d-flex align-itens-between flex-column"
+        >
+          <div>
+            <div class="border bg-body rounded-4 p-5">
+              <p class="fw-bold fs-5 mb-4">Resumo do pedido</p>
+              <div class="border border-1 mb-4"></div>
+              <label for="" class="w-100 d-flex flex-column gap-2">
+                <div class="d-flex justify-content-between">
+                  <p class="m-0">Produtos (5)</p>
+                  <p class="m-0 fw-bold">R$ 249<sup>50</sup></p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="m-0">Frete</p>
+                  <p class="m-0 fw-bold text-success">Grátis</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="m-0 text-success">Descontos</p>
+                  <p class="m-0 fw-bold text-success">R$ 10<sup>00</sup></p>
+                </div>
+              </label>
+              <div class="my-5 mx-0 fw-bold d-flex justify-content-between">
+                <p class="m-0 p-0">Total</p>
+                <p class="m-0 p-0">R$ 239<sup>50</sup></p>
+              </div>
+
+              <div>
+            <button
+              class="btn btn-laranja rounded-3 py-2 w-100"
+              type="button"
+              data-filter="continuarCompra"
+            >
+              Confirmar a Compra
+            </button>
+            </div>
+          </div>
+        
+          </div>
+          <div class="container my-4 bg-brand p-3 rounded-3">
+            <div class="d-flex justify-content-center mb-2">
+              <img
+                src="../img/icones/icone-premium.png"
+                width="16"
+                alt="Premium"
+              />
+            </div>
+            <p class="fw-bold fs-6 text-light mb-1 text-center">
+              ASSINANTE PROGRAMA DE PONTOS SWIFT
+            </p>
+            <hr class="text-light" />
+
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="mb-0 fw-bold text-light">Pontos Acumulados:</p>
+              <p class="fs-5 fw-bold mb-0 text-light">2.395 pts</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ================= RODAPÉ NAO ALTERAR ================= -->
