@@ -37,6 +37,14 @@ h3,
   font-family: inherit;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
 /* =========================================================
    2) COMPONENTES GERAIS (BOTÕES, BADGES, LINKS)
    ========================================================= */
@@ -1125,4 +1133,324 @@ h3,
   font-size: 1.1rem;
   text-align: center;
   margin: 2rem 0;   
+}
+
+/* =========================================================
+   12) ENTREGA - RETIRADA NO PONTO (mapa + instruções)
+   ========================================================= */
+
+.container-fluid {
+  padding: 0;
+  min-height: 100vh;
+}
+
+.row {
+  margin: 0;
+  min-height: 100vh;
+}
+   /* Seção de entrega */
+.delivery-section {
+  background-color: var(--swift-white);
+  padding: 2rem;
+}
+
+.delivery-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.delivery-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--swift-gray-dark);
+}
+
+.delivery-option {
+  background-color: var(--swift-gray-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.delivery-option:hover {
+  border-color: var(--swift-orange);
+}
+
+.delivery-option.active {
+  border-color: var(--swift-orange);
+  background-color: #fff5f0;
+}
+
+.form-check {
+  margin: 0;
+}
+
+.form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.125rem;
+  border: 2px solid var(--swift-gray-medium);
+}
+
+.form-check-input:checked {
+  background-color: var(--swift-orange);
+  border-color: var(--swift-orange);
+}
+
+.delivery-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.delivery-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--swift-gray-dark);
+}
+
+.address {
+  color: var(--swift-gray-medium);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.delivery-price {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.delivery-price.free {
+  color: var(--swift-green);
+}
+
+/* Seção de busca de loja */
+.store-search-section {
+  margin-top: 1.5rem;
+  display: none;
+}
+
+.store-search-section.show {
+  display: block;
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  border: 1px solid var(--swift-border);
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  flex: 1;
+  height: auto;
+}
+
+.search-input:focus {
+  border-color: var(--swift-orange);
+  box-shadow: 0 0 0 0.2rem rgba(210, 105, 30, 0.25);
+}
+
+.search-btn {
+  background: var(--brand);
+  border: 1px solid var(--swift-orange);
+  color: var(--swift-white);
+  padding: 0.75rem 1rem;
+
+  
+}
+
+.search-btn:hover {
+  background: var(--brand-hover);
+  border-color: var(--swift-orange-hover);
+}
+
+/* Container do mapa */
+.map-container {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--swift-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--swift-border);
+}
+
+.store-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.store-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--swift-gray-dark);
+}
+
+.store-address {
+  color: var(--swift-gray-medium);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.store-hours {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.store-hours li {
+  font-size: 0.9rem;
+  color: var(--swift-gray-medium);
+  margin-bottom: 0.25rem;
+}
+
+.btn-select {
+  background: var(--brand);
+  border: none;
+  color: var(--swift-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-select:hover {
+  background: var(--brand-hover);
+}
+
+/* Substituindo .map-placeholder por .google-map para o Google Maps */
+.google-map {
+  flex: 1;
+  min-height: 300px;
+  background-color: var(--swift-gray-light);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Seção do resumo */
+.summary-section {
+  background-color: var(--swift-white);
+  padding: 2rem;
+}
+
+.order-summary {
+  background-color: var(--swift-gray-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 2rem;
+}
+
+.order-summary h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--swift-gray-dark);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.summary-item.discount {
+  color: var(--swift-green);
+}
+
+.price {
+  font-weight: 500;
+}
+
+.price.free {
+  color: var(--swift-green);
+}
+
+.price sup {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.summary-divider {
+  border: none;
+  border-top: 1px solid var(--swift-border);
+  margin: 1.5rem 0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.total-price {
+  color: var(--swift-gray-dark);
+  font-size: 1.2rem;
+}
+
+.total-price sup {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.btn-continue {
+  width: 100%;
+  background: var(--brand);
+  border: none;
+  color: var(--swift-white);
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-continue:hover {
+  background: var(--brand-hover);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .delivery-section,
+  .summary-section {
+    padding: 1rem;
+  }
+
+  .map-container {
+    flex-direction: column;
+  }
+
+  .delivery-title {
+    font-size: 1.5rem;
+  }
+
+  .order-summary {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .delivery-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .delivery-price {
+    align-self: flex-end;
+  }
 }
