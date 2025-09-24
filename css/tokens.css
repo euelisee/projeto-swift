@@ -20,6 +20,16 @@
   --brand-300: #FF5000;
   --brand-200: #FF6712;
   --brand-100: #FF7001;
+  --swift-orange: #d2691e; /*lais add */
+  --swift-orange-hover: #b8621a;
+  --swift-green: #28a745;
+  --swift-gray-light: #f8f9fa;
+  --swift-gray-medium: #6c757d;
+  --swift-gray-dark: #343a40;
+  --swift-white: #ffffff;
+  --swift-border: #dee2e6;
+
+
 
   /* neutros */
   --neutral-950:#1D1916;
@@ -30,6 +40,12 @@
   --neutral-100:#F0F0F0;
   --neutral-50:#F9F9F9;
   --neutral-25:#FEFCFD;
+  --swift-gray-light: #f8f9fa; /*lais add */
+  --swift-gray-medium: #6c757d;
+  --swift-gray-dark: #343a40;
+  --swift-white: #ffffff;
+  --swift-border: #dee2e6;
+
 
   /* extras */
   --accent-success:#28A745;
@@ -37,6 +53,8 @@
   --accent-danger:#DC3545;
   --accent-gold-1:#E9C05B;
   --accent-gold-2:#F2D992;
+  
+
 
   /* tipografia */
   --font-heading:"Barlow Condensed", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -70,3 +88,5 @@
 .link-brand { color:var(--brand); font-weight:600; text-decoration:none; }
 .link-brand:hover { color:var(--brand-hover); }
 .radius-sm { border-radius:var(--radius-sm) !important; }
+
+
