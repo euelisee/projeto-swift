@@ -173,6 +173,8 @@ function startCountdown() {
 // =====================================
 // ENTREGA E RETIRADA (pages/entrega.html)
 // =====================================
+(() => {
+  if (!page.endsWith("/entrega.html")) return;
 document.addEventListener("DOMContentLoaded", () => {
   const homeDeliveryRadio = document.getElementById("homeDelivery")
   const storePickupRadio = document.getElementById("storePickup")
@@ -389,7 +391,8 @@ const storeIcon = L.icon({
   // Inicializar estado
   updateDeliveryOptions()
   initMap()
-})
+});
+})();
 
 
 
