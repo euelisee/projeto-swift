@@ -1035,7 +1035,7 @@ h3,
    11) LOGIN PAGE (imagem de fundo + card)
    ========================================================= */
 .login-hero {
-  background: url("../img/banners/fundo\ decoração.png") no-repeat center center;
+  background: #CC4D2B;
   background-size: cover;
   min-height: 100vh;
   display: flex;
