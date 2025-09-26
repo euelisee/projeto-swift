@@ -108,13 +108,13 @@
        >> Troque o título e coloque aqui os componentes da tela.
        >> Use .container para manter o grid alinhado ao restante do site.
   ========================================================== -->
-      <main class="container">
-      <section class="container my-5 row">
+      <main class="container" id="paginaAcompanharPedido">
+      <section class="my-5 row tracking-section">
         <div class="col-12 col-md-6 col-lg-8">
           <h2 class="display-1 fs-1">Acompanhe seu pedido</h2>
             <div class="border bg-body rounded-4 ps-4 py-3 text-start mb-4">
                 <div>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center blur-ativo">
                         <img src="../img/icones/icon-ready.png" width="32" alt="" class="me-3">
                         <p class="fw-semibold mb-0">O seu pedido foi confirmado</p>
                     </div>
@@ -123,7 +123,7 @@
                         <img src="../img/icones/icon-lineDots.png" width="32" alt="" class="my-2">
                     </div>
                     
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center blur-ativo">
                         <img src="../img/icones/icon-package.png" width="32" alt="" class="me-3">
                         <p class="fw-semibold mb-0">O seu pedido está sendo preparado</p>
                     </div>
@@ -131,12 +131,12 @@
                         <img src="../img/icones/icon-lineDots.png" width="32" alt="" class="my-2">
                     </div>
                     
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center blur-ativo">
                         <img src="../img/icones/rnk-icone-entrega-rapida-swift-home 1.png" width="32" alt="" class="me-3">
                         <p class="fw-semibold mb-0">Ótima notícia! O seu pedido já pode ser retirado!</p>
                     </div>
                 </div>
-                <div class="align-items-center text-center d-flex flex-column mt-4">
+                <div class="align-items-center text-center d-flex flex-column mt-4 blur-ativo">
                     <p>Informe o codigo de seguranca no momento da retirada:</p>
                     <div class="border rounded-3 p-2 ms-3">
                         <span class="fw-bold fs-4">123456</span></div>
@@ -146,8 +146,8 @@
             
         </div>
 
-    
-           <div class="col-lg-4 col-md-5 summary-section">
+            
+           <div class="col-lg-4 col-md-5">
                 <div class="order-summary">
                     <h2>Resumo da compra</h2>
                     
@@ -173,11 +173,68 @@
                         <span class="total-price">R$239<sup>50</sup></span>
                     </div>
                     
-                    <button class="btn btn-continue">Continuar a compra</button>
                 </div>
             </div>
+        
+              <!-- ========= RECOMENDAÇÕES (fora das abas, antes do footer) ========= -->
+      <hr class="my-5" />
+      <section aria-labelledby="titulo-recomenda" class="container">
+        <h2 id="titulo-recomenda" class="h5 mb-3">Recomendações para você</h2>
+        <div class="row g-3 tracking-section">
+          <div class="col-6 col-md-3">
+            <a href="./detalhe-produto.html" class="product-card d-block h-100">
+              <img
+                src="../img/produtos/máscara patinho.png"
+                class="product-img"
+                alt="Espetinho de Panceta 500g"
+              />
+              <div class="product-body">
+                <h3 class="product-name">Espetinho de Panceta 500g</h3>
+                <div class="product-price">R$ 21,90 <small>un</small></div>
+                <button class="btn btn-brand w-100" type="button">
+                  Adicionar
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a href="./detalhe-produto.html" class="product-card d-block h-100">
+              <img
+                src="../img/produtos/máscara patinho(1).png"
+                class="product-img"
+                alt="Filé de Tilápia 800g"
+              />
+              <div class="product-body">
+                <h3 class="product-name">Filé de Tilápia 800g</h3>
+                <div class="product-price">R$ 36,90 <small>un</small></div>
+                <button class="btn btn-brand w-100" type="button">
+                  Adicionar
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a href="./detalhe-produto.html" class="product-card d-block h-100">
+              <img
+                src="../img/produtos/máscara patinho(2).png"
+                class="product-img"
+                alt="Carne Moída de Patinho 500g"
+              />
+              <div class="product-body">
+                <h3 class="product-name">Carne Moída de Patinho 500g</h3>
+                <div class="product-price">R$ 26,90 <small>un</small></div>
+                <button class="btn btn-brand w-100" type="button">
+                  Adicionar
+                </button>
+              </div>
+            </a>
+          </div>
         </div>
-    </div>
+      </section>
+
+      </section>
+      
+    </main>
 
     <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">
@@ -353,5 +410,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

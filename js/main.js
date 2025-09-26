@@ -392,6 +392,28 @@ const storeIcon = L.icon({
 })
 
 
+// =====================================
+// ACOMPANHAR PEDIDO (pages/acompanhar-pedido.html)
+// =====================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('#paginaAcompanharPedido')) {
+
+        const intervaloDeTempo = 3000; 
+        const itensParaRevelar = document.querySelectorAll('.blur-ativo');
+
+        function revelarItem(index) {
+            if (index >= itensParaRevelar.length) return;
+            setTimeout(() => revelarItem(index + 1), intervaloDeTempo);
+            itensParaRevelar[index].classList.remove('blur-ativo');
+        }
+
+        revelarItem(0);
+    }
+});
+
+
+
 
 
 
