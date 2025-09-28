@@ -398,11 +398,36 @@ const storeIcon = L.icon({
 // PAYMENT PAGE (pages/formas-pagamento.html)
 // =====================================
 
+<<<<<<< HEAD
+// =====================================
+// ACOMPANHAR PEDIDO (pages/acompanhar-pedido.html)
+// =====================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('#paginaAcompanharPedido')) {
+
+        const intervaloDeTempo = 3000; 
+        const itensParaRevelar = document.querySelectorAll('.blur-ativo');
+
+        function revelarItem(index) {
+            if (index >= itensParaRevelar.length) return;
+            setTimeout(() => revelarItem(index + 1), intervaloDeTempo);
+            itensParaRevelar[index].classList.remove('blur-ativo');
+        }
+
+        revelarItem(0);
+    }
+});
+
+
+
+=======
 document.addEventListener('DOMContentLoaded', function() {
     const paymentRadios = document.querySelectorAll('input[name="forma-pagamento"]');
     const paymentOptions = document.querySelectorAll('.payment-option');
     const allForms = document.querySelectorAll('.payment-details-form');
     const backButton = document.getElementById('back-to-options');
+>>>>>>> origin/main
 
     // Função para resetar a visão para o estado inicial
     function showAllOptions() {
