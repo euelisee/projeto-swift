@@ -151,8 +151,8 @@ const page = window.location.pathname;
 function startCountdown() {
   console.log("Página de mock de login via Google (simulação).");
 
-  const target  = "../pages/index-logado.html";      
-  const span    = document.getElementById("mockCountdown");
+  const target = "../pages/index-logado.html";
+  const span = document.getElementById("mockCountdown");
 
   let left = 3;
 
@@ -175,298 +175,276 @@ function startCountdown() {
 // =====================================
 (() => {
   if (!page.endsWith("/entrega.html")) return;
-document.addEventListener("DOMContentLoaded", () => {
-  const homeDeliveryRadio = document.getElementById("homeDelivery")
-  const storePickupRadio = document.getElementById("storePickup")
-  const storeSearchSection = document.getElementById("storeSearchSection")
-  const deliveryOptions = document.querySelectorAll(".delivery-option")
-  const locationSearch = document.getElementById("locationSearch")
-  const selectStoreBtn = document.getElementById("selectStoreBtn")
-  const continueBtn = document.querySelector(".btn-continue")
+  document.addEventListener("DOMContentLoaded", () => {
+    const homeDeliveryRadio = document.getElementById("homeDelivery")
+    const storePickupRadio = document.getElementById("storePickup")
+    const storeSearchSection = document.getElementById("storeSearchSection")
+    const deliveryOptions = document.querySelectorAll(".delivery-option")
+    const locationSearch = document.getElementById("locationSearch")
+    const selectStoreBtn = document.getElementById("selectStoreBtn")
+    const continueBtn = document.querySelector(".btn-continue")
 
-  // Função para atualizar a aparência das opções
-  function updateDeliveryOptions() {
-    deliveryOptions.forEach((option) => {
-      option.classList.remove("active")
-    })
-
-    if (homeDeliveryRadio.checked) {
-      homeDeliveryRadio.closest(".delivery-option").classList.add("active")
-      storeSearchSection.classList.remove("show")
-    } else if (storePickupRadio.checked) {
-      storePickupRadio.closest(".delivery-option").classList.add("active")
-      storeSearchSection.classList.add("show");
-
-      if (map){
-        map.invalidateSize(); // Corrige problemas de renderização do mapa ao mostrar a seção
-      }
-    }
-  }
-
-  // Event listeners para os radio buttons
-  homeDeliveryRadio.addEventListener("change", updateDeliveryOptions)
-  storePickupRadio.addEventListener("change", updateDeliveryOptions)
-
-  const swiftStores = [
-    {
-      id: 1,
-      name: "São Paulo - Ipiranga",
-      address: "Rua Bom Pastor, 2260",
-      lat: -23.5928,
-      lng: -46.6097,
-      hours: [
-        "Segunda a Sábado: 8h - 21h",
-        "Domingo: 8h - 15h",
-        "Feriados: Horário normal de acordo com o dia da semana.",
-      ],
-    },
-    {
-      id: 2,
-      name: "São Paulo - Liberdade",
-      address: "Rua da Liberdade, 150",
-      lat: -23.5587,
-      lng: -46.6347,
-      hours: [
-        "Segunda a Sábado: 9h - 20h",
-        "Domingo: 10h - 16h",
-        "Feriados: Horário normal de acordo com o dia da semana.",
-      ],
-    },
-    {
-      id: 3,
-      name: "São Paulo - Mooca",
-      address: "Av. Paes de Barros, 890",
-      lat: -23.5505,
-      lng: -46.5995,
-      hours: [
-        "Segunda a Sábado: 8h - 21h",
-        "Domingo: 9h - 17h",
-        "Feriados: Horário normal de acordo com o dia da semana.",
-      ],
-    },
-    {
-      id: 4,
-      name: "São Paulo - Vila Prudente",
-      address: "Av. Prof. Luiz Ignácio Anhaia Mello, 1200",
-      lat: -23.5825,
-      lng: -46.5825,
-      hours: [
-        "Segunda a Sábado: 8h - 21h",
-        "Domingo: 8h - 15h",
-        "Feriados: Horário normal de acordo com o dia da semana.",
-      ],
-    },
-    {
-      id: 5,
-      name: "São Paulo - Chácara Inglesa",
-      address: "Rua Vergueiro, 3456",
-      lat: -23.6178,
-      lng: -46.6394,
-      hours: [
-        "Segunda a Sábado: 9h - 20h",
-        "Domingo: 10h - 16h",
-        "Feriados: Horário normal de acordo com o dia da semana.",
-      ],
-    },
-  ]
-
-  let map
-  let markers = []
-  let selectedStore = swiftStores[0] // Loja padrão selecionada
-
-  function initMap() {
-    // Centralizar o mapa em São Paulo
-    const saoPaulo = [-23.5505, -46.6333]
-
-    map = L.map("map").setView(saoPaulo, 12)
-
-    // Adicionar camada base (tiles do OpenStreetMap)
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map)
-
-    // Criar ícone personalizado
-const storeIcon = L.icon({
-  iconUrl: '../img/pinmapa.png', // caminho do seu PNG
-  iconSize: [60, 60],          // tamanho do ícone (ajuste conforme seu PNG)
-  iconAnchor: [20, 40],        // ponto do ícone que "encosta" no mapa
-  popupAnchor: [0, -40]        // onde aparece o popup em relação ao ícone
-})
-
-    // Criar marcadores para todas as lojas
-    swiftStores.forEach((store) => {
-      const marker = L.marker([store.lat, store.lng], { icon: storeIcon })
-        .addTo(map)
-        .bindPopup(`<b>${store.name}</b><br>${store.address}`)
-
-      marker.on("click", () => {
-        selectStore(store)
+    // Função para atualizar a aparência das opções
+    function updateDeliveryOptions() {
+      deliveryOptions.forEach((option) => {
+        option.classList.remove("active")
       })
 
-      markers.push(marker)
-    })
+      if (homeDeliveryRadio.checked) {
+        homeDeliveryRadio.closest(".delivery-option").classList.add("active")
+        storeSearchSection.classList.remove("show")
+      } else if (storePickupRadio.checked) {
+        storePickupRadio.closest(".delivery-option").classList.add("active")
+        storeSearchSection.classList.add("show");
 
-    // Selecionar a primeira loja por padrão
-    selectStore(selectedStore)
-  }
-
-  function selectStore(store) {
-    selectedStore = store
-
-    // Atualizar informações da loja selecionada
-    document.getElementById("selectedStoreName").textContent = store.name
-    document.getElementById("selectedStoreAddress").textContent = store.address
-
-    const hoursContainer = document.getElementById("selectedStoreHours")
-    hoursContainer.innerHTML = ""
-    store.hours.forEach((hour) => {
-      const li = document.createElement("li")
-      li.textContent = hour
-      hoursContainer.appendChild(li)
-    })
-
-    // Centralizar o mapa na loja selecionada
-    if (map) {
-      map.setView([store.lat, store.lng], 15)
-    }
-
-    // Resetar botão de seleção
-    const selectBtn = document.getElementById("selectStoreBtn")
-    selectBtn.textContent = "Selecionar"
-    selectBtn.style.backgroundColor = ""
-    selectBtn.disabled = false
-  }
-
-  function searchStores(query) {
-    const filteredStores = swiftStores.filter(
-      (store) =>
-        store.name.toLowerCase().includes(query.toLowerCase()) ||
-        store.address.toLowerCase().includes(query.toLowerCase()),
-    )
-
-    if (filteredStores.length > 0) {
-      selectStore(filteredStores[0])
-    }
-  }
-
-  // Busca em tempo real
-  locationSearch.addEventListener("input", function () {
-    const searchValue = this.value.toLowerCase()
-    if (searchValue.length > 2) {
-      searchStores(searchValue)
-    }
-  })
-
-  // Botão de busca
-  document.querySelector(".search-btn").addEventListener("click", () => {
-    const searchValue = locationSearch.value
-    if (searchValue.trim()) {
-      searchStores(searchValue)
-    }
-  })
-
-
-
-  // Selecionar loja
-  selectStoreBtn.addEventListener("click", function () {
-    console.log(`[Leaflet] Loja selecionada: ${selectedStore.name}`)
-    this.textContent = "Selecionado"
-    this.style.backgroundColor = "var(--swift-green)"
-    this.disabled = true
-
-    // Habilitar botão continuar
-    continueBtn.disabled = false
-  })
-
-  // Continuar compra
-  continueBtn.addEventListener("click", () => {
-    const selectedMethod = document.querySelector('input[name="deliveryMethod"]:checked').value
-    if (selectedMethod === "home") {
-      alert("Entrega no endereço selecionada!")
-    } else {
-      alert("Retirada na loja selecionada!")
-    }
-  })
-
-  // Inicializar estado
-  updateDeliveryOptions()
-  initMap()
-});
-})();
-
-// =====================================
-// PAYMENT PAGE (pages/formas-pagamento.html)
-// =====================================
-
-<<<<<<< HEAD
-// =====================================
-// ACOMPANHAR PEDIDO (pages/acompanhar-pedido.html)
-// =====================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.querySelector('#paginaAcompanharPedido')) {
-
-        const intervaloDeTempo = 3000; 
-        const itensParaRevelar = document.querySelectorAll('.blur-ativo');
-
-        function revelarItem(index) {
-            if (index >= itensParaRevelar.length) return;
-            setTimeout(() => revelarItem(index + 1), intervaloDeTempo);
-            itensParaRevelar[index].classList.remove('blur-ativo');
+        if (map) {
+          map.invalidateSize(); // Corrige problemas de renderização do mapa ao mostrar a seção
         }
-
-        revelarItem(0);
+      }
     }
-});
+
+    // Event listeners para os radio buttons
+    homeDeliveryRadio.addEventListener("change", updateDeliveryOptions)
+    storePickupRadio.addEventListener("change", updateDeliveryOptions)
+
+    const swiftStores = [
+      {
+        id: 1,
+        name: "São Paulo - Ipiranga",
+        address: "Rua Bom Pastor, 2260",
+        lat: -23.5928,
+        lng: -46.6097,
+        hours: [
+          "Segunda a Sábado: 8h - 21h",
+          "Domingo: 8h - 15h",
+          "Feriados: Horário normal de acordo com o dia da semana.",
+        ],
+      },
+      {
+        id: 2,
+        name: "São Paulo - Liberdade",
+        address: "Rua da Liberdade, 150",
+        lat: -23.5587,
+        lng: -46.6347,
+        hours: [
+          "Segunda a Sábado: 9h - 20h",
+          "Domingo: 10h - 16h",
+          "Feriados: Horário normal de acordo com o dia da semana.",
+        ],
+      },
+      {
+        id: 3,
+        name: "São Paulo - Mooca",
+        address: "Av. Paes de Barros, 890",
+        lat: -23.5505,
+        lng: -46.5995,
+        hours: [
+          "Segunda a Sábado: 8h - 21h",
+          "Domingo: 9h - 17h",
+          "Feriados: Horário normal de acordo com o dia da semana.",
+        ],
+      },
+      {
+        id: 4,
+        name: "São Paulo - Vila Prudente",
+        address: "Av. Prof. Luiz Ignácio Anhaia Mello, 1200",
+        lat: -23.5825,
+        lng: -46.5825,
+        hours: [
+          "Segunda a Sábado: 8h - 21h",
+          "Domingo: 8h - 15h",
+          "Feriados: Horário normal de acordo com o dia da semana.",
+        ],
+      },
+      {
+        id: 5,
+        name: "São Paulo - Chácara Inglesa",
+        address: "Rua Vergueiro, 3456",
+        lat: -23.6178,
+        lng: -46.6394,
+        hours: [
+          "Segunda a Sábado: 9h - 20h",
+          "Domingo: 10h - 16h",
+          "Feriados: Horário normal de acordo com o dia da semana.",
+        ],
+      },
+    ]
+
+    let map
+    let markers = []
+    let selectedStore = swiftStores[0] // Loja padrão selecionada
+
+    function initMap() {
+      // Centralizar o mapa em São Paulo
+      const saoPaulo = [-23.5505, -46.6333]
+
+      map = L.map("map").setView(saoPaulo, 12)
+
+      // Adicionar camada base (tiles do OpenStreetMap)
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map)
+
+      // Criar ícone personalizado
+      const storeIcon = L.icon({
+        iconUrl: '../img/pinmapa.png', // caminho do seu PNG
+        iconSize: [60, 60],          // tamanho do ícone (ajuste conforme seu PNG)
+        iconAnchor: [20, 40],        // ponto do ícone que "encosta" no mapa
+        popupAnchor: [0, -40]        // onde aparece o popup em relação ao ícone
+      })
+
+      // Criar marcadores para todas as lojas
+      swiftStores.forEach((store) => {
+        const marker = L.marker([store.lat, store.lng], { icon: storeIcon })
+          .addTo(map)
+          .bindPopup(`<b>${store.name}</b><br>${store.address}`)
+
+        marker.on("click", () => {
+          selectStore(store)
+        })
+
+        markers.push(marker)
+      })
+
+      // Selecionar a primeira loja por padrão
+      selectStore(selectedStore)
+    }
+
+    function selectStore(store) {
+      selectedStore = store
+
+      // Atualizar informações da loja selecionada
+      document.getElementById("selectedStoreName").textContent = store.name
+      document.getElementById("selectedStoreAddress").textContent = store.address
+
+      const hoursContainer = document.getElementById("selectedStoreHours")
+      hoursContainer.innerHTML = ""
+      store.hours.forEach((hour) => {
+        const li = document.createElement("li")
+        li.textContent = hour
+        hoursContainer.appendChild(li)
+      })
+
+      // Centralizar o mapa na loja selecionada
+      if (map) {
+        map.setView([store.lat, store.lng], 15)
+      }
+
+      // Resetar botão de seleção
+      const selectBtn = document.getElementById("selectStoreBtn")
+      selectBtn.textContent = "Selecionar"
+      selectBtn.style.backgroundColor = ""
+      selectBtn.disabled = false
+    }
+
+    function searchStores(query) {
+      const filteredStores = swiftStores.filter(
+        (store) =>
+          store.name.toLowerCase().includes(query.toLowerCase()) ||
+          store.address.toLowerCase().includes(query.toLowerCase()),
+      )
+
+      if (filteredStores.length > 0) {
+        selectStore(filteredStores[0])
+      }
+    }
+
+    // Busca em tempo real
+    locationSearch.addEventListener("input", function () {
+      const searchValue = this.value.toLowerCase()
+      if (searchValue.length > 2) {
+        searchStores(searchValue)
+      }
+    })
+
+    // Botão de busca
+    document.querySelector(".search-btn").addEventListener("click", () => {
+      const searchValue = locationSearch.value
+      if (searchValue.trim()) {
+        searchStores(searchValue)
+      }
+    })
 
 
 
-=======
-document.addEventListener('DOMContentLoaded', function() {
+    // Selecionar loja
+    selectStoreBtn.addEventListener("click", function () {
+      console.log(`[Leaflet] Loja selecionada: ${selectedStore.name}`)
+      this.textContent = "Selecionado"
+      this.style.backgroundColor = "var(--swift-green)"
+      this.disabled = true
+
+      // Habilitar botão continuar
+      continueBtn.disabled = false
+    })
+
+    // Continuar compra
+    continueBtn.addEventListener("click", () => {
+      const selectedMethod = document.querySelector('input[name="deliveryMethod"]:checked').value
+      if (selectedMethod === "home") {
+        alert("Entrega no endereço selecionada!")
+      } else {
+        alert("Retirada na loja selecionada!")
+      }
+    })
+
+    // Inicializar estado
+    updateDeliveryOptions()
+    initMap()
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
     const paymentRadios = document.querySelectorAll('input[name="forma-pagamento"]');
     const paymentOptions = document.querySelectorAll('.payment-option');
     const allForms = document.querySelectorAll('.payment-details-form');
     const backButton = document.getElementById('back-to-options');
->>>>>>> origin/main
+
+    if (document.querySelector('#paginaAcompanharPedido')) {
+      const intervaloDeTempo = 3000;
+      const itensParaRevelar = document.querySelectorAll('.blur-ativo');
+
+      function revelarItem(index) {
+        if (index >= itensParaRevelar.length) return;
+        setTimeout(() => revelarItem(index + 1), intervaloDeTempo);
+        itensParaRevelar[index].classList.remove('blur-ativo');
+      }
+
+      revelarItem(0);
+    }
 
     // Função para resetar a visão para o estado inicial
     function showAllOptions() {
-        paymentOptions.forEach(option => option.classList.remove('hidden'));
-        allForms.forEach(form => form.classList.remove('expanded'));
-        backButton.style.display = 'none';
-        
-        // Desmarca qualquer radio que estava ativo
-        const activeRadio = document.querySelector('input[name="forma-pagamento"]:checked');
-        if (activeRadio) activeRadio.checked = false;
-        
-        document.getElementById('pix').checked = true;
+      paymentOptions.forEach(option => option.classList.remove('hidden'));
+      allForms.forEach(form => form.classList.remove('expanded'));
+      backButton.style.display = 'none';
+
+      // Desmarca qualquer radio que estava ativo
+      const activeRadio = document.querySelector('input[name="forma-pagamento"]:checked');
+      if (activeRadio) activeRadio.checked = false;
+
+      document.getElementById('pix').checked = true;
     }
     backButton.addEventListener('click', showAllOptions);
 
     paymentRadios.forEach(radio => {
-        radio.addEventListener('change', function() {
-            const targetSelector = this.dataset.target;
+      radio.addEventListener('change', function () {
+        const targetSelector = this.dataset.target;
 
-            // Se o radio clicado tiver um 'data-target' (é expansível)
-            if (targetSelector) {
-                const targetForm = document.querySelector(targetSelector);
+        // Se o radio clicado tiver um 'data-target' (é expansível)
+        if (targetSelector) {
+          const targetForm = document.querySelector(targetSelector);
 
-                // Esconde as outras opções
-                paymentOptions.forEach(option => {
-                    if (!option.contains(this)) {
-                        option.classList.add('hidden');
-                    }
-                });
+          // Esconde as outras opções
+          paymentOptions.forEach(option => {
+            if (!option.contains(this)) {
+              option.classList.add('hidden');
+            }
+          });
 
-                // Mostra o formulário e o botão de voltar
-                if (targetForm) targetForm.classList.add('expanded');
-                backButton.style.display = 'block';
-            } 
-        });
+          // Mostra o formulário e o botão de voltar
+          if (targetForm) targetForm.classList.add('expanded');
+          backButton.style.display = 'block';
+        }
+      });
     });
-});
-
-// =====================================
-// PRODUTOS / DETALHE / CARRINHO / CHECKOUT / PAGAMENTO / PONTOS
-// (coloque suas lógicas, sempre com guards de existência)
-// =====================================
+  });
