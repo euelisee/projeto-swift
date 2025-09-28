@@ -14,8 +14,9 @@
     />
     <link href="../css/tokens.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/main.js" defer></script>
   </head>
-  <body class="bg-body">
+  <body class="bg-body-secondary">
     <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
@@ -99,104 +100,6 @@
           </div>
         </div>
       </div>
-
-      <!-- NAV de categorias (mesma do index) -->
-      <nav class="border-top border-bottom bg-white">
-        <div class="container">
-          <div class="categories scroller-x py-2">
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-bovino.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Bovinos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-aves.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Aves</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-pescados.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Pescados</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-suinos.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Suínos</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-linguicas.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Linguíças</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-churrasco.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Churrasco</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-especiais.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Cortes Especiais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-vegetais.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>100% vegetais</small>
-            </a>
-            <a href="./produtos.html" class="cat-item">
-              <img
-                src="../img/icones/icon-variados.png"
-                width="22"
-                height="22"
-                alt=""
-                aria-hidden="true"
-              />
-              <small>Variados</small>
-            </a>
-          </div>
-        </div>
-      </nav>
     </header>
     <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
 
@@ -205,9 +108,144 @@
        >> Troque o título e coloque aqui os componentes da tela.
        >> Use .container para manter o grid alinhado ao restante do site.
   ========================================================== -->
-    <main class="container my-5">
-      <h1 class="h3 mb-4">Título da Página</h1>
-      <!--  insira aqui o conteúdo da página -->
+    <main class="container">
+      <section class="container my-5 d-flex flex-wrap ">
+        <!-- FORMAS DE PAGAMENTO -->
+        <div class="col-12 col-md-6 col-lg-8 d-flex flex-column align-items-start" id="payment-container">
+            <h2 class="display-1 fs-1">Escolha a forma de pagamento</h2>
+            
+            <button type="button" class="btn text-brand fs-4 mb-3" id="back-to-options" style="display: none;">&lt; Ver outras formas de pagamento</button>
+
+            <div id="payment-options" class="col-11">
+                <div class="payment-option border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4">
+                    <input type="radio" class="form-check-input m-0" id="pix" name="forma-pagamento" value="pix" checked>
+                    <label for="pix" class="w-100 cursor-pointer">
+                        <p class="m-0 p-0 fw-bold fs-5">Pix</p>
+                        <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
+                    </label>
+                </div>
+
+                <div class="payment-option border bg-body rounded-4 ps-4 py-3 mb-4">
+                    <div class="gap-4 d-flex text-start align-items-center">
+                        <input type="radio" class="form-check-input m-0" id="debito" name="forma-pagamento" value="debito" data-target=".debit-card-details">
+                        <label for="debito" class="w-100 cursor-pointer">
+                            <p class="m-0 p-0 fw-bold fs-5">Cartão de Débito</p>
+                            <p class="m-0 p-0 text-secondary">Aprovação imediata</p>
+                        </label>
+                    </div>
+                    <div class="payment-details-form debit-card-details">
+                        <div class="d-flex px-4 pb-4">
+                            <div class="col-6">
+                                <div class="d-flex flex-column my-2 px-4">
+                                    <div class="col-12">
+                                        <label for="nome-titular" class="form-label">Nome do titular</label>
+                                        <input type="text" class="form-control" id="nome-titular" placeholder="Nome impresso no cartão">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="numero-cartao" class="form-label">Número do cartão</label>
+                                        <input type="text" class="form-control" id="numero-cartao" placeholder="0000 0000 0000 0000">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="data-validade" class="form-label">Validade</label>
+                                        <input type="text" class="form-control" id="data-validade" placeholder="MM/AA">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="codigo-seguranca" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="codigo-seguranca" placeholder="123" inputmode="numeric" maxlength="4">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="cpf" class="form-label">CPF do titular</label>
+                                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="11">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                                <img src="../img/icones/card-icon.svg" alt="Icone cartão">                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-option border bg-body rounded-4 ps-4 py-3 mb-4">
+                    <div class="gap-4 d-flex text-start align-items-center">
+                        <input type="radio" class="form-check-input m-0" id="credito" name="forma-pagamento" value="credito" data-target=".credit-card-details">
+                        <label for="credito" class="w-100 cursor-pointer">
+                            <p class="m-0 p-0 fw-bold fs-5">Cartão de Crédito</p>
+                            <p class="m-0 p-0 text-secondary">Até 3x sem juros</p>
+                        </label>
+                    </div>
+                    <div class="payment-details-form credit-card-details">
+                        <div class="d-flex px-4 pb-4">
+                          <div class="col-6">
+                            <div class="d-flex flex-column my-2 px-4">
+                                <div class="col-12">
+                                    <label for="nome-titular" class="form-label">Nome do titular</label>
+                                    <input type="text" class="form-control" id="nome-titular" placeholder="Nome impresso no cartão">
+                                </div>
+                                <div class="col-12">
+                                    <label for="numero-cartao" class="form-label">Número do cartão</label>
+                                    <input type="text" class="form-control" id="numero-cartao" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="col-6">
+                                    <label for="data-validade" class="form-label">Validade</label>
+                                    <input type="text" class="form-control" id="data-validade" placeholder="MM/AA">
+                                </div>
+                                <div class="col-6">
+                                    <label for="codigo-seguranca" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="codigo-seguranca" placeholder="123" inputmode="numeric" maxlength="4">
+                                </div>
+                                <div class="col-12">
+                                    <label for="cpf" class="form-label">CPF do titular</label>
+                                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="11">
+                                </div>
+                            </div>
+                          </div>
+                            <div class="col-6 d-flex flex-column gap-4 align-items-center">
+                                <img src="../img/icones/card-icon.svg" alt="Icone cartão">
+                                <div>
+                                    <label for="numero-parcelas" class="form-label">Número de parcelas</label>
+                                    <select class="form-select" id="numero-parcelas">
+                                        <option selected value="1">1x de R$ 239,50 (à vista)</option>
+                                        <option value="2">2x de R$ 119,75 sem juros</option>
+                                        <option value="3">3x de R$ 79,83 sem juros</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUMO DO PEDIDO -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-itens-between flex-column ">
+          <div class="border bg-body rounded-4 p-4">
+            <p class="fw-bold display-1 fs-5 mb-4">Resumo do pedido</p>
+            <label for="" class="w-100 d-flex flex-column gap-2">
+              <div class="d-flex justify-content-between">
+                <p class="m-0">Produtos (5)</p>
+                <p class="m-0 fw-bold">R$ 249<sup>50</sup></p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="m-0">Frete</p>
+                <p class="m-0 fw-bold text-success">Grátis</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="m-0 text-success">Descontos</p>
+                <p class="m-0 fw-bold text-success">R$ 10,00</p>
+              </div>
+            </label>
+            <div class="border border-1 my-4"></div>
+            <div class="my-4 mx-0 fw-bold d-flex justify-content-between">
+              <p class="m-0 p-0">Total</p>            
+              <p class="m-0 p-0">R$ 239<sup>50</sup></p>
+            </div>
+            <button class="btn btn-laranja rounded-3 py-3 col-12" type="button" data-filter="continuarCompra">
+              Continuar a Compra
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ================= RODAPÉ NAO ALTERAR ================= -->
