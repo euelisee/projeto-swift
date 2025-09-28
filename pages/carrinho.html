@@ -207,8 +207,323 @@
   ========================================================== -->
     <main class="container my-5">
       <h1 class="h3 mb-4">Título da Página - CARRINHO</h1>
-      <!--  insira aqui o conteúdo da página -->
+      
+      <!-- Produtos -->
+	<section>
+        <div class="card">
+          <div class="card-header">
+            <div class="check-icon">✓</div>
+            <h3>Produtos</h3>
+          </div>
+
+          <div class="products-list" id="productsList">
+            <div class="product-row">
+              <div class="row-checkbox"><input type="checkbox" checked></div>
+              <div class="thumb" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="100" rx="8" fill="#dcdcdc"></rect>
+                  <circle cx="50" cy="48" r="22" fill="#cfcfcf"></circle>
+                </svg>
+              </div>
+              <div class="prod-info">
+                <strong>Produto e descrição do produto</strong>
+                <div class="meta">kg, quantidade</div>
+                <div class="prod-actions">
+                  <a href="#" onclick="event.preventDefault()">Excluir</a>
+                  <a href="#" onclick="event.preventDefault()">Salvar</a>
+                  <a href="#" onclick="event.preventDefault()">Alterar</a>
+                </div>
+              </div>
+
+              <div class="qty" aria-label="Quantidade">
+                <div class="qty-control">
+                  <button aria-label="Diminuir" onclick="changeQty(this,-1)">−</button>
+                  <input type="text" value="1" />
+                  <button aria-label="Aumentar" onclick="changeQty(this,1)">+</button>
+                </div>
+              </div>
+
+              <div class="price">R$ 49,90</div>
+            </div>
+
+            <div class="product-row">
+              <div class="row-checkbox"><input type="checkbox"></div>
+              <div class="thumb" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="100" rx="8" fill="#e0e0e0"></rect>
+                </svg>
+              </div>
+              <div class="prod-info">
+                <strong>Produto e descrição do produto</strong>
+                <div class="meta">kg, quantidade</div>
+                <div class="prod-actions">
+                  <a href="#" onclick="event.preventDefault()">Excluir</a>
+                  <a href="#" onclick="event.preventDefault()">Salvar</a>
+                  <a href="#" onclick="event.preventDefault()">Alterar</a>
+                </div>
+              </div>
+              <div class="qty">
+                <div class="qty-control">
+                  <button onclick="changeQty(this,-1)">−</button>
+                  <input type="text" value="1" />
+                  <button onclick="changeQty(this,1)">+</button>
+                </div>
+              </div>
+              <div class="price">R$ 49,90</div>
+            </div>
+
+            <div class="product-row">
+              <div class="row-checkbox"><input type="checkbox"></div>
+              <div class="thumb" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="100" rx="8" fill="#e7e7e7"></rect>
+                </svg>
+              </div>
+              <div class="prod-info">
+                <strong>Produto e descrição do produto</strong>
+                <div class="meta">kg, quantidade</div>
+                <div class="prod-actions">
+                  <a href="#" onclick="event.preventDefault()">Excluir</a>
+                  <a href="#" onclick="event.preventDefault()">Salvar</a>
+                  <a href="#" onclick="event.preventDefault()">Alterar</a>
+                </div>
+              </div>
+              <div class="qty">
+                <div class="qty-control">
+                  <button onclick="changeQty(this,-1)">−</button>
+                  <input type="text" value="1" />
+                  <button onclick="changeQty(this,1)">+</button>
+                </div>
+              </div>
+              <div class="price">R$ 49,90</div>
+            </div>
+
+            <div class="product-row">
+              <div class="row-checkbox"><input type="checkbox"></div>
+              <div class="thumb" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="100" rx="8" fill="#eaeaea"></rect>
+                </svg>
+              </div>
+              <div class="prod-info">
+                <strong>Produto e descrição do produto</strong>
+                <div class="meta">kg, quantidade</div>
+                <div class="prod-actions">
+                  <a href="#" onclick="event.preventDefault()">Excluir</a>
+                  <a href="#" onclick="event.preventDefault()">Salvar</a>
+                  <a href="#" onclick="event.preventDefault()">Alterar</a>
+                </div>
+              </div>
+              <div class="qty">
+                <div class="qty-control">
+                  <button onclick="changeQty(this,-1)">−</button>
+                  <input type="text" value="1" />
+                  <button onclick="changeQty(this,1)">+</button>
+                </div>
+              </div>
+              <div class="price">R$ 49,90</div>
+            </div>
+
+            <div class="product-row">
+              <div class="row-checkbox"><input type="checkbox"></div>
+              <div class="thumb" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="100" rx="8" fill="#f0f0f0"></rect>
+                </svg>
+              </div>
+              <div class="prod-info">
+                <strong>Produto e descrição do produto</strong>
+                <div class="meta">kg, quantidade</div>
+                <div class="prod-actions">
+                  <a href="#" onclick="event.preventDefault()">Excluir</a>
+                  <a href="#" onclick="event.preventDefault()">Salvar</a>
+                  <a href="#" onclick="event.preventDefault()">Alterar</a>
+                </div>
+              </div>
+              <div class="qty">
+                <div class="qty-control">
+                  <button onclick="changeQty(this,-1)">−</button>
+                  <input type="text" value="1" />
+                  <button onclick="changeQty(this,1)">+</button>
+                </div>
+              </div>
+              <div class="price">R$ 49,90</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="summary card" aria-label="Resumo da compra">
+        <h3 style="margin:0 0 10px 0; font-size:16px">Resumo da compra</h3>
+
+        <div class="line">
+			<span>Produtos (<span id="productCount">0</span>)</span>
+			<span id="subtotal">R$0,00</span>
+		</div>
+		<div class="line">
+			<span>Frete</span>
+			<span style="color:#36b37e" id="shipping">Grátis</span>
+		</div>
+		<div class="line">
+			<span>Descontos</span>
+			<span style="color:#36b37e" id="discount">R$0,00</span>
+		</div>
+			<hr style="border:none;border-top:1px solid #f0f0f0;margin:12px 0;">
+		<div class="line total">
+			<span>Total</span>
+			<span id="total">R$0,00</span>
+		</div>
+        <button class="btn" aria-label="Continuar a compra">Continuar a compra</button>
+      </aside>
     </main>
+  
+    <!-- Recomendações -->
+    <section class="carousel-block" aria-label="Recomendações para você">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="carousel-title">Recomendações para você</div>
+      </div>
+
+      <div class="position-relative" style="margin-top:8px;">
+		<button class="btn btn-outline-orange ctrl left position-absolute top-50 start-0 translate-middle-y" aria-label="Anterior">
+			<i class="bi bi-chevron-left"></i>
+		</button>
+
+        <div class="recommendations-wrapper" style="padding:8px 56px;"> 
+          <div class="recommendation-card">
+            <img src="img/prod1.png" alt="">
+            <div>
+              <div class="label">ESPETINHO DE PANCRETA</div>
+              <div class="price">R$ 21,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod2.png" alt="">
+            <div>
+              <div class="label">FILÉ DE TILÁPIA</div>
+              <div class="price">R$ 36,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod3.png" alt="">
+            <div>
+              <div class="label">CARNE MOÍDA</div>
+              <div class="price">R$ 26,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod4.png" alt="">
+            <div>
+              <div class="label">PALMITO - CORTE</div>
+              <div class="price">R$ 37,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod5.png" alt="">
+            <div>
+              <div class="label">BIFE DE PATRONIO</div>
+              <div class="price">R$ 45,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod6.png" alt="">
+            <div>
+              <div class="label">CARNE MOÍDA BOV.</div>
+              <div class="price">R$ 38,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+        </div>
+
+		<button class="btn btn-outline-orange ctrl right position-absolute top-50 end-0 translate-middle-y" aria-label="Próximo">
+			<i class="bi bi-chevron-right"></i>
+		</button>
+      </div>
+    </section>
+
+    <!-- Interesses -->
+    <section class="carousel-block" aria-label="Produtos que te interessam">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="carousel-title">Produtos que te interessam</div>
+      </div>
+
+      <div class="position-relative" style="margin-top:8px;">
+		<button class="btn btn-outline-orange ctrl left position-absolute top-50 start-0 translate-middle-y" aria-label="Anterior">
+			<i class="bi bi-chevron-left"></i>
+		</button>
+
+        <div class="recommendations-wrapper" style="padding:8px 56px;">
+          <div class="recommendation-card">
+            <img src="img/prod1.png" alt="">
+            <div>
+              <div class="label">ESPETINHO DE PANCETA</div>
+              <div class="price">R$ 21,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod2.png" alt="">
+            <div>
+              <div class="label">FILÉ DE TILÁPIA</div>
+              <div class="price">R$ 36,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod3.png" alt="">
+            <div>
+              <div class="label">CARNE MOÍDA</div>
+              <div class="price">R$ 26,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod4.png" alt="">
+            <div>
+              <div class="label">PALMITO - CORTE</div>
+              <div class="price">R$ 37,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod5.png" alt="">
+            <div>
+              <div class="label">BIFE DE PATINHO</div>
+              <div class="price">R$ 45,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+
+          <div class="recommendation-card">
+            <img src="img/prod6.png" alt="">
+            <div>
+              <div class="label">CARNE MOÍDA BOV.</div>
+              <div class="price">R$ 38,90</div>
+            </div>
+            <button class="btn btn-sm btn-orange">ADICIONAR</button>
+          </div>
+        </div>
+		<button class="btn btn-outline-orange ctrl right position-absolute top-50 end-0 translate-middle-y" aria-label="Próximo">
+			<i class="bi bi-chevron-right"></i>
+		</button>
+      </div>
+    </section>
+  </div>
+<script src="main.js"></script>
+
 
     <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">

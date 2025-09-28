@@ -448,3 +448,85 @@ function startCountdown() {
       });
     });
   });
+
+// Carrinho
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cartRows = document.querySelectorAll(".product-row");
+  const productCountEl = document.getElementById("productCount");
+  const subtotalEl = document.getElementById("subtotal");
+  const discountEl = document.getElementById("discount");
+  const totalEl = document.getElementById("total");
+
+  const discountValue = 10.0; 
+  const shippingValue = 0.0; 
+
+  const unitPrices = [];
+  cartRows.forEach((row, index) => {
+    const priceEl = row.querySelector(".price");
+    const price = parseFloat(priceEl.textContent.replace("R$", "").replace(",", "."));
+    unitPrices[index] = price;
+  });
+
+  function formatPrice(num) {
+    return "R$" + num.toFixed(2).replace(".", ",");
+  }
+
+  function updateCartSummary() {
+    let totalProducts = 0;
+    let subtotal = 0;
+
+    cartRows.forEach((row, index) => {
+      const checkbox = row.querySelector(".row-checkbox input");
+      const qtyInput = row.querySelector(".qty input");
+
+      if (!checkbox.checked) return;
+
+      const qty = parseInt(qtyInput.value, 10) || 1;
+      subtotal += unitPrices[index] * qty;
+      totalProducts += 1;
+
+      const priceEl = row.querySelector(".price");
+      priceEl.textContent = formatPrice(unitPrices[index] * qty);
+    });
+
+    if (productCountEl) productCountEl.textContent = totalProducts;
+    if (subtotalEl) subtotalEl.textContent = formatPrice(subtotal);
+
+    const appliedDiscount = subtotal > 0 ? discountValue : 0;
+    if (discountEl) discountEl.textContent = formatPrice(appliedDiscount);
+
+    const total = subtotal > 0 ? subtotal - appliedDiscount + shippingValue : 0;
+    if (totalEl) totalEl.textContent = formatPrice(total);
+  }
+
+  window.changeQty = function(btn, delta) {
+    const qtyInput = btn.closest(".qty-control").querySelector("input");
+    let current = parseInt(qtyInput.value, 10) || 1;
+    current += delta;
+    if (current < 1) current = 1;
+    qtyInput.value = current;
+
+    updateCartSummary();
+  };
+
+  cartRows.forEach(row => {
+    const qtyInput = row.querySelector(".qty input");
+    const checkbox = row.querySelector(".row-checkbox input");
+
+    qtyInput.addEventListener("input", () => {
+      let value = parseInt(qtyInput.value, 10);
+      if (isNaN(value) || value < 1) value = 1;
+      qtyInput.value = value;
+
+      updateCartSummary();
+    });
+
+    checkbox.addEventListener("change", () => {
+      updateCartSummary();
+    });
+  });
+
+  updateCartSummary();
+});
+})
