@@ -1,43 +1,42 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Entrega</title>
-
-    <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <link href="../css/tokens.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" /> 
-    
-
-
+    <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
-
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -66,8 +65,6 @@
               </button>
             </div>
           </form>
-
-          <!-- Conta / Carrinho -->
           <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
@@ -105,8 +102,6 @@
           </div>
         </div>
       </div>
-
-      <!-- NAV de categorias (mesma do index) -->
       <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
@@ -204,123 +199,134 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
     <main class="container my-5">
-          <div class="container-fluid">
+      <div class="container-fluid">
         <div class="row">
-            <!-- Seção principal de entrega -->
-            <div class="col-lg-8 col-md-7 delivery-section">
-                <div class="delivery-container">
-                    <h1 class="delivery-title">Escolha a forma de entrega</h1>
-                    
-                    <!-- Opção 1: Enviar no endereço -->
-                    <div class="delivery-option">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="deliveryMethod" id="homeDelivery" value="home" checked>
-                            <label class="form-check-label delivery-label" for="homeDelivery">
-                                <div class="delivery-info">
-                                    <h3>Enviar no meu endereço</h3>
-                                    <p class="address">Av. fintech flap 575 - São Paulo</p>
-                                </div>
-                                <span class="delivery-price free">Grátis</span>
-                            </label>
-                        </div>
+          <div class="col-lg-8 col-md-7 delivery-section">
+            <div class="delivery-container">
+              <h1 class="delivery-title">Escolha a forma de entrega</h1>
+              <div class="delivery-option">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="deliveryMethod"
+                    id="homeDelivery"
+                    value="home"
+                    checked
+                  />
+                  <label
+                    class="form-check-label delivery-label"
+                    for="homeDelivery"
+                  >
+                    <div class="delivery-info">
+                      <h3>Enviar no meu endereço</h3>
+                      <p class="address">Av. fintech flap 575 - São Paulo</p>
                     </div>
-
-                    <!-- Opção 2: Retirar na loja -->
-                    <div class="delivery-option">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="deliveryMethod" id="storePickup" value="store">
-                            <label class="form-check-label delivery-label" for="storePickup">
-                                <div class="delivery-info">
-                                    <h3>Retirar na loja Swift mais próxima de mim</h3>
-                                </div>
-                                <span class="delivery-price free">Grátis</span>
-                            </label>
-                        </div>
-                        
-                        <!-- Seção de busca e mapa (inicialmente oculta) -->
-                        <div class="store-search-section" id="storeSearchSection">
-                            <div class="search-container">
-                                <div class="input-group">
-                                    <input type="text" class="form-control search-input" placeholder="Busque uma localização" id="locationSearch">
-                                    <button class="btn search-btn" type="button">
-                                        <span class="material-icons">search</span>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <!-- Mapa e informações da loja -->
-                            <div class="map-container">
-                                <div class="store-info">
-                                    <h4 id="selectedStoreName">São Paulo - Ipiranga</h4>
-                                    <p class="store-address" id="selectedStoreAddress">Rua Bom Pastor, 2260</p>
-                                    <ul class="store-hours" id="selectedStoreHours">
-                                        <li>Segunda a Sábado: 8h - 21h</li>
-                                        <li>Domingo: 8h - 15h</li>
-                                        <li>Feriados: Horário normal de acordo com o dia da semana.</li>
-                                    </ul>
-                                    <button class="btn btn-select" id="selectStoreBtn">Selecionar</button>
-                                </div>
-                                <!-- Substituindo imagem estática por mapa real do Google Maps -->
-                                <div id="map" class="google-map"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <span class="delivery-price free">Grátis</span>
+                  </label>
                 </div>
-            </div>
-
-            <!-- Resumo da compra -->
-            <div class="col-lg-4 col-md-5 summary-section">
-                <div class="order-summary">
-                    <h2>Resumo da compra</h2>
-                    
-                    <div class="summary-item">
-                        <span>Produtos(5)</span>
-                        <span class="price">R$249<sup>50</sup></span>
+              </div>
+              <div class="delivery-option">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="deliveryMethod"
+                    id="storePickup"
+                    value="store"
+                  />
+                  <label
+                    class="form-check-label delivery-label"
+                    for="storePickup"
+                  >
+                    <div class="delivery-info">
+                      <h3>Retirar na loja Swift mais próxima de mim</h3>
                     </div>
-                    
-                    <div class="summary-item">
-                        <span>Frete</span>
-                        <span class="price free">Grátis</span>
-                    </div>
-                    
-                    <div class="summary-item discount">
-                        <span>Descontos</span>
-                        <span class="price">R$10,00</span>
-                    </div>
-                    
-                    <hr class="summary-divider">
-                    
-                    <div class="summary-total">
-                        <span>Total</span>
-                        <span class="total-price">R$239<sup>50</sup></span>
-                    </div>
-                    
-                    <button class="btn btn-continue">Continuar a compra</button>
+                    <span class="delivery-price free">Grátis</span>
+                  </label>
                 </div>
+
+                <div class="store-search-section" id="storeSearchSection">
+                  <div class="search-container">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control search-input"
+                        placeholder="Busque uma localização"
+                        id="locationSearch"
+                      />
+                      <button class="btn search-btn" type="button">
+                        <span class="material-icons">search</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="map-container">
+                    <div class="store-info">
+                      <h4 id="selectedStoreName">São Paulo - Ipiranga</h4>
+                      <p class="store-address" id="selectedStoreAddress">
+                        Rua Bom Pastor, 2260
+                      </p>
+                      <ul class="store-hours" id="selectedStoreHours">
+                        <li>Segunda a Sábado: 8h - 21h</li>
+                        <li>Domingo: 8h - 15h</li>
+                        <li>
+                          Feriados: Horário normal de acordo com o dia da
+                          semana.
+                        </li>
+                      </ul>
+                      <button class="btn btn-select" id="selectStoreBtn">
+                        Selecionar
+                      </button>
+                    </div>
+                    <div id="map" class="google-map"></div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-5 summary-section">
+            <div class="order-summary">
+              <h2>Resumo da compra</h2>
+
+              <div class="summary-item">
+                <span>Produtos(5)</span>
+                <span class="price">R$249<sup>50</sup></span>
+              </div>
+
+              <div class="summary-item">
+                <span>Frete</span>
+                <span class="price free">Grátis</span>
+              </div>
+
+              <div class="summary-item discount">
+                <span>Descontos</span>
+                <span class="price">R$10,00</span>
+              </div>
+
+              <hr class="summary-divider" />
+
+              <div class="summary-total">
+                <span>Total</span>
+                <span class="total-price">R$239<sup>50</sup></span>
+              </div>
+
+              <a href="revisar-dados.html" class="btn btn-continue"
+                >Continuar a compra</a
+              >
+            </div>
+          </div>
         </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Adicionando API -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
-    <script src="../js/main.js"></script>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+      <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+      <script src="../js/main.js"></script>
     </main>
-
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -341,11 +347,8 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
-
             <div class="f-item">
               <img
                 src="../img/icones/ic_round-phone.png"
@@ -357,7 +360,6 @@
                 <strong>0800 400 2892</strong>
               </div>
             </div>
-
             <div class="f-item">
               <div>
                 <small>Horários de funcionamento:</small>
@@ -367,7 +369,6 @@
                 </p>
               </div>
             </div>
-
             <div class="f-item">
               <img
                 src="../img/icones/clarity_email-solid.png"
@@ -382,8 +383,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -392,8 +391,6 @@
               <li><a href="#">Dúvidas Frequentes</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -404,8 +401,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -415,8 +410,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -466,8 +459,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"

@@ -1,12 +1,9 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Checkout</title>
-
-    <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
@@ -15,23 +12,18 @@
     <link href="../css/tokens.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
   </head>
-  <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
+  <body class="bg-body" onload="startPaymentProcess()">
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
 
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -60,8 +52,6 @@
               </button>
             </div>
           </form>
-
-          <!-- Conta / Carrinho -->
           <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
@@ -100,7 +90,6 @@
         </div>
       </div>
 
-      <!-- NAV de categorias (mesma do index) -->
       <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
@@ -198,24 +187,60 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
     <main class="container my-5">
-      <h1 class="h3 mb-4">Título da Página</h1>
-      <!--  insira aqui o conteúdo da página -->
+      <div
+        class="d-flex align-items-center justify-content-center"
+        style="min-height: 50vh"
+      >
+        <div
+          id="payment-status-card"
+          class="card shadow-sm text-center p-4 p-md-5 mx-auto"
+          style="max-width: 520px"
+        >
+          <div id="processing-state">
+            <div
+              class="spinner-border text-warning mb-4"
+              style="width: 3rem; height: 3rem"
+              role="status"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <h1 class="h4 fw-bold">Processando seu pagamento...</h1>
+            <p class="text-muted">
+              Por favor, aguarde. Estamos confirmando sua compra.
+            </p>
+          </div>
+
+          <div id="success-state" class="d-none">
+            <svg
+              class="text-success mb-3"
+              width="64"
+              height="64"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+              />
+            </svg>
+            <h1 class="h4 fw-bold text-success">Pagamento Aprovado!</h1>
+            <p class="text-muted">
+              Seu pedido foi recebido. Você será redirecionado para a página de
+              acompanhamento em <span id="redirect-countdown">3</span>s.
+            </p>
+            <div class="mt-4">
+              <a href="revisar-dados.html" class="btn btn-brand"
+                >Acompanhar Pedido Agora</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -237,7 +262,6 @@
             </div>
           </div>
 
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
@@ -277,8 +301,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -288,7 +310,6 @@
             </ul>
           </div>
 
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -299,8 +320,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -310,8 +329,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -361,8 +378,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"
@@ -384,5 +399,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

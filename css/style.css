@@ -1,7 +1,6 @@
-/* =========================================================
-   STYLES — PROJETO SWIFT
-   Regra: sempre usar variáveis do tokens.css
-   ========================================================= */
+/* STYLES — PROJETO SWIFT
+   Regra: sempre usar variáveis do tokens.css */
+   
 /* Fonte padrão do site */
 html, body {
   font-family: 'Inter', Arial, sans-serif;
@@ -43,11 +42,6 @@ h3,
   box-sizing: border-box;
 }
 
-
-
-/* =========================================================
-   2) COMPONENTES GERAIS (BOTÕES, BADGES, LINKS)
-   ========================================================= */
 .btn-brand {
   background: var(--brand);
   color: #fff;
@@ -100,19 +94,14 @@ h3,
 .shortcut:hover {
   background: var(--neutral-100);
 }
-
-/* =========================================================
-   3) CATEGORIAS (NAV SCROLL HORIZONTAL)
-   ========================================================= */
 .categories {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin; /
 }
 .categories::-webkit-scrollbar {
   height: 8px;
-} /* Chrome/Edge */
 .categories::-webkit-scrollbar-thumb {
   background: var(--neutral-200);
   border-radius: 8px;
@@ -132,7 +121,6 @@ h3,
   background: var(--neutral-100);
 }
 
-/* Seletor de loja (chip laranja) */
 .store-chip {
   background: var(--brand);
   color: #fff;
@@ -153,10 +141,6 @@ h3,
   font-size: 0.85rem;
   opacity: 0.9;
 }
-
-/* =========================================================
-   4) BANNERS HERO (IMAGENS + CTAs SOBREPOSTOS)
-   ========================================================= */
 .hero-banner {
   position: relative;
 }
@@ -211,10 +195,6 @@ h3,
     text-align: center;
   }
 }
-
-/* =========================================================
-   5) SEÇÃO: SELEÇÃO DE PRODUTOS (GRADIENTE + CARROSSEL)
-   ========================================================= */
 .selection-wrap {
   background: linear-gradient(140deg, #b24107 0%, #fe4300 40%, #ff6712 100%);
   min-height: 420px;
@@ -330,9 +310,6 @@ h3,
   margin-top: 4px;
 }
 
-/* =========================================================
-   6) SEÇÃO: CHURRASCO NO PONTO
-   ========================================================= */
 .churrasco-title {
   font-family: var(--font-heading);
   font-weight: 800;
@@ -439,10 +416,6 @@ h3,
   background: var(--brand-hover);
   color: #fff;
 }
-
-/* =========================================================
-   7) SEÇÃO: RECEITAS (cards + CTA)
-   ========================================================= */
 .receitas-title {
   font-family: var(--font-heading);
   font-weight: 900;
@@ -524,10 +497,6 @@ h3,
   background: var(--brand-hover);
   color: #fff;
 }
-
-/* =========================================================
-   8) FOOTER — LAYOUT, LINKS E CTAs
-   ========================================================= */
 .footer-swift {
   background: var(--bg-body);
   color: var(--text-color);
@@ -744,10 +713,6 @@ h3,
     gap: 12px;
   }
 }
-
-/* =========================================================
-   9) PAGE: Cadastro (formulário)
-   ========================================================= */
 .cadastro-container {
   background: linear-gradient(
     135deg,
@@ -819,6 +784,7 @@ h3,
   color: #666;
   cursor: pointer;
   font-size: 1.1rem;
+  user-select: none;
 }
 
 .password-hint {
@@ -892,10 +858,6 @@ h3,
     font-size: 1.75rem;
   }
 }
-
-/* =========================================================
-   10) PAGE: Produtos
-   ========================================================= */
 .banner-produtos {
   width: 100%;
   border-top-right-radius: 20rem;
@@ -955,8 +917,6 @@ h3,
   border-color: var(--brand-900);
   color: #fff;
 }
-
-/* base para o hover que já existia */
 .btn-linhas {
   border: 1px dashed var(--brand-900);
   color: var(--brand-900);
@@ -1031,9 +991,6 @@ h3,
   }
 }
 
-/* =========================================================
-   11) LOGIN PAGE (imagem de fundo + card)
-   ========================================================= */
 .login-hero {
   background: #CC4D2B;
   background-size: cover;
@@ -1113,20 +1070,17 @@ h3,
   object-fit: contain;
 }
 
-/* Centraliza verticalmente o card do mock dentro do container */
 .mock-center{
-  min-height: 60vh;                 /* ocupa boa parte da tela */
+  min-height: 60vh;                 
   display: flex;
-  align-items: center;               /* centro vertical */
-  justify-content: center;           /* centro horizontal */
+  align-items: center;               
+  justify-content: center;           
 }
 
-/* Reaproveita seu padrão de cor/tipografia */
 .text-brand{
   color: var(--brand);
   font-family: var(--font-heading);
 }
-/* Mensagem de sucesso centralizada */
 .msg-sucesso {
   font-weight: 600;     
   color: var(--neutral-700); 
@@ -1135,18 +1089,12 @@ h3,
   margin: 2rem 0;   
 }
 
-/* =========================================================
-   12) ENTREGA - RETIRADA NO PONTO (mapa + instruções)
-   ========================================================= */
-
 .container-fluid {
   padding: 0;
-  min-height: 100vh;
 }
 
 .row {
   margin: 0;
-  min-height: 100vh;
 }
    /* Seção de entrega */
 .delivery-section {
@@ -1231,7 +1179,6 @@ h3,
   color: var(--swift-green);
 }
 
-/* Seção de busca de loja */
 .store-search-section {
   margin-top: 1.5rem;
   display: none;
@@ -1272,7 +1219,6 @@ h3,
   border-color: var(--swift-orange-hover);
 }
 
-/* Container do mapa */
 .map-container {
   display: flex;
   gap: 1.5rem;
@@ -1325,7 +1271,6 @@ h3,
   background: var(--brand-hover);
 }
 
-/* Substituindo .map-placeholder por .google-map para o Google Maps */
 .google-map {
   flex: 1;
   min-height: 300px;
@@ -1334,7 +1279,6 @@ h3,
   overflow: hidden;
 }
 
-/* Seção do resumo */
 .summary-section {
   background-color: var(--swift-white);
   padding: 2rem;
@@ -1455,7 +1399,7 @@ h3,
   }
 }
 
-/* Ajuste específico para a seção de acompanhamento de pedido */
+
 .tracking-section.row {
   min-height: auto;
 }
@@ -1465,4 +1409,91 @@ h3,
   pointer-events: none;
   user-select: none;
   transition: filter 0.3s ease;
+}
+
+.cart-product-image {
+  width: 80px;
+  height: 80px;
+  background-color: var(--neutral-100); 
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+.quantity-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-sm);
+  overflow: hidden; 
+}
+
+.quantity-stepper .form-control {
+  width: 45px;
+  height: 30px;
+  border: none; 
+  border-left: 1px solid var(--neutral-300); 
+  border-right: 1px solid var(--neutral-300); 
+  border-radius: 0; 
+  background-color: transparent;
+  padding: 0;
+  text-align: center;
+}
+.quantity-stepper .form-control:focus {
+  box-shadow: none;
+}
+
+.quantity-stepper .btn {
+  border: none;
+  border-radius: 0; 
+  padding: 0.2rem 0.6rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-color);
+  background-color: var(--neutral-50);
+}
+.quantity-stepper .btn:hover {
+  background-color: var(--neutral-100);
+}
+.font-heading-condensed {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+.btn-points-signup {
+  background-color: #fff;
+  color: var(--brand-800);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  border: none;
+}
+
+.btn-points-signup:hover {
+  background-color: var(--neutral-100);
+  color: var(--brand-900);
+  transform: translateY(-2px);
+}
+.btn-swiftbox-signup {
+  background-color: #fff;
+  color: var(--brand-800);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-swiftbox-signup:hover {
+  background-color: var(--neutral-100);
+  color: var(--brand-900);
+  transform: translateY(-2px);
 }

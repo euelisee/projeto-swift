@@ -1,40 +1,28 @@
-<!-- /pages/index-logado.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Home</title>
-
-    <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Design Tokens + Estilos -->
     <link href="../css/tokens.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER ================= -->
     <header class="shadow-sm bg-white">
-      <!-- Linha 1: logo / loja / busca / conta / carrinho -->
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
-
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -63,8 +51,6 @@
               </button>
             </div>
           </form>
-
-          <!-- Conta / Carrinho -->
           <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
@@ -96,17 +82,14 @@
                 class="cart-badge"
                 id="cartBadge"
                 aria-label="Itens no carrinho"
-                >0</span
+                >5</span
               >
             </a>
           </div>
         </div>
       </div>
-
-      <!-- ================= BANNER INICIAL ================= -->
       <section class="container my-4">
         <div class="hero-banner rounded-4 overflow-hidden">
-          <!-- coloque suas imagens em /img/hero.jpg e /img/hero-mobile.jpg -->
           <img
             src="../img/banners/banner-swift.png"
             alt="Promoções Swift"
@@ -119,8 +102,6 @@
           />
         </div>
       </section>
-
-      <!-- Linha 2: categorias (scroll horizontal) -->
       <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
@@ -218,8 +199,6 @@
         </div>
       </nav>
     </header>
-
-    <!-- =============== BANNER SELEÇÃO DE PRODUTOS ================= -->
     <section class="container my-5">
       <div class="selection-wrap rounded-4 overflow-hidden">
         <div class="row g-0 align-items-center">
@@ -245,8 +224,6 @@
               </button>
             </div>
           </div>
-
-          <!-- Coluna direita: carrossel -->
           <div class="col-lg-8 p-3 position-relative">
             <div
               id="selectionCarousel"
@@ -255,10 +232,8 @@
               data-bs-interval="0"
             >
               <div class="carousel-inner">
-                <!-- SLIDE 1 -->
                 <div class="carousel-item active">
                   <div class="row g-3">
-                    <!-- CARD 1 -->
                     <div class="col-12 col-md-6 col-xl-4">
                       <a
                         href="./detalhe-produto.html"
@@ -284,8 +259,6 @@
                         </div>
                       </a>
                     </div>
-
-                    <!-- CARD 2 -->
                     <div class="col-12 col-md-6 col-xl-4">
                       <a
                         href="./detalhe-produto.html"
@@ -311,8 +284,6 @@
                         </div>
                       </a>
                     </div>
-
-                    <!-- CARD 3 -->
                     <div class="col-12 col-md-6 col-xl-4">
                       <a
                         href="./detalhe-produto.html"
@@ -340,8 +311,6 @@
                     </div>
                   </div>
                 </div>
-
-                <!-- SLIDE 2 -->
                 <div class="carousel-item">
                   <div class="row g-3">
                     <div class="col-12 col-md-6 col-xl-4">
@@ -415,8 +384,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- CONTROLES (setas) -->
               <button
                 class="carousel-control-prev selection-control"
                 type="button"
@@ -446,8 +413,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ================ CHURRASCO NO PONTO ================ -->
     <section class="container my-5">
       <h2 class="churrasco-title text-center mb-4">
         CHURRASCO NO PONTO, SABOR DE VERDADE!
@@ -460,15 +425,10 @@
         data-bs-interval="0"
       >
         <div class="carousel-inner">
-          <!-- SLIDE 1 -->
           <div class="carousel-item active">
             <div class="row g-3">
-              <!-- CARD 1 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a
-                  href="./detalhe-produto.html"
-                  class="bbq-card d-block h-100"
-                >
+                <a href="./detalhe-produto.html" class="bbq-card d-block h-100">
                   <div class="bbq-ribbon">
                     <strong>4% OFF</strong>
                     <span>2ª unidade por <b>R$ 27,90</b> cada</span>
@@ -491,13 +451,8 @@
                   </div>
                 </a>
               </div>
-
-              <!-- CARD 2 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a
-                  href="./detalhe-produto.html"
-                  class="bbq-card d-block h-100"
-                >
+                <a href="./detalhe-produto.html" class="bbq-card d-block h-100">
                   <div class="bbq-ribbon">
                     <strong>4% OFF</strong>
                     <span>2ª unidade por <b>R$ 27,90</b> cada</span>
@@ -518,13 +473,8 @@
                   </div>
                 </a>
               </div>
-
-              <!-- CARD 3 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a
-                  href="./detalhe-produto.html"
-                  class="bbq-card d-block h-100"
-                >
+                <a href="./detalhe-produto.html" class="bbq-card d-block h-100">
                   <div class="bbq-ribbon">
                     <strong>4% OFF</strong>
                     <span>2ª unidade por <b>R$ 27,90</b> cada</span>
@@ -545,13 +495,8 @@
                   </div>
                 </a>
               </div>
-
-              <!-- CARD 4 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a
-                  href="./detalhe-produto.html"
-                  class="bbq-card d-block h-100"
-                >
+                <a href="./detalhe-produto.html" class="bbq-card d-block h-100">
                   <div class="bbq-ribbon">
                     <strong>4% OFF</strong>
                     <span>2ª unidade por <b>R$ 27,90</b> cada</span>
@@ -574,10 +519,7 @@
               </div>
             </div>
           </div>
-          <!-- FIM SLIDE 1 -->
         </div>
-
-        <!-- CONTROLES -->
         <button
           class="carousel-control-prev bbq-control"
           type="button"
@@ -598,61 +540,46 @@
         </button>
       </div>
     </section>
-
-    <!-- ================= BANNER PROGRAMA DE PONTOS ================= -->
     <section class="container my-4">
       <div class="hero-banner rounded-4 overflow-hidden position-relative">
-        <!-- Imagem desktop -->
         <img
           src="../img/banners/banner-pontos.png"
           alt="Programa de Pontos Swift"
           class="w-100 d-none d-md-block"
         />
-        <!-- Imagem mobile -->
         <img
           src="../img/hero-mobile.jpg"
           alt="Programa de Pontos Swift"
           class="w-100 d-md-none"
         />
-
-        <!-- Botão clicável em cima do botão da arte -->
         <a href="./pontos.html" class="btn btn-cta btn-programa"
           >CONHECER O PROGRAMA</a
         >
       </div>
     </section>
-
-    <!-- ================= BANNER SWIFT BOX ================= -->
     <section class="container my-4">
       <div class="hero-banner rounded-4 overflow-hidden position-relative">
-        <!-- Imagem desktop -->
         <img
           src="../img/banners/banner-box.png"
           alt="Programa de Swiftbox"
           class="w-100 d-none d-md-block"
         />
-        <!-- Imagem mobile -->
         <img
           src="../img/hero-mobile.jpg"
           alt="Programa de Swiftbox"
           class="w-100 d-md-none"
         />
-
-        <!-- Botão clicável em cima do botão da arte -->
-        <a href="./pontos.html" class="btn btn-cta btn-programa"
+        <a href="./box-swift.htmlß" class="btn btn-cta btn-programa"
           >CONHECER O SWIFTBOX</a
         >
       </div>
     </section>
-
-    <!-- ================= RECEITAS ================= -->
     <section class="container my-5 receitas-section">
       <h2 class="receitas-title text-center mb-4">
         CONFIRA AS MELHORES <span>RECEITAS</span>
       </h2>
 
       <div class="row g-4">
-        <!-- CARD 1 -->
         <div class="col-12 col-md-6 col-lg-3">
           <a href="./detalhe-produto.html" class="receita-card d-block h-100">
             <img
@@ -672,8 +599,6 @@
             </div>
           </a>
         </div>
-
-        <!-- CARD 2 -->
         <div class="col-12 col-md-6 col-lg-3">
           <a
             href="./receita-contra-file.html"
@@ -696,8 +621,6 @@
             </div>
           </a>
         </div>
-
-        <!-- CARD 3 -->
         <div class="col-12 col-md-6 col-lg-3">
           <a href="./receita-costela.html" class="receita-card d-block h-100">
             <img
@@ -719,13 +642,8 @@
             </div>
           </a>
         </div>
-
-        <!-- CARD 4 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <a
-            href="./receita-babybeef.html"
-            class="receita-card d-block h-100"
-          >
+          <a href="./receita-babybeef.html" class="receita-card d-block h-100">
             <img
               src="../img/produtos/receita-file.png"
               class="receita-img"
@@ -746,17 +664,14 @@
           </a>
         </div>
       </div>
-
-      <!-- Botão CTA -->
       <div class="text-center mt-4">
-        <a href="./receitas.html" class="btn btn-receitas">VER TODAS AS RECEITAS</a>
+        <a href="./receitas.html" class="btn btn-receitas"
+          >VER TODAS AS RECEITAS</a
+        >
       </div>
     </section>
-
-    <!-- ================= BANNER GALERIA - VER COMO FAZ DEPOIS ================= -->
     <section class="container my-4">
       <div class="hero-banner rounded-4 overflow-hidden">
-        <!-- coloque suas imagens em /img/hero.jpg e /img/hero-mobile.jpg -->
         <img
           src="../img/banners/sessão 6 (banners).png"
           alt="Promoções Swift"
@@ -769,13 +684,9 @@
         />
       </div>
     </section>
-
-    <!-- ================= FOOTER ================= -->
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -785,7 +696,10 @@
             <div class="f-block">
               <p class="f-title">Formas de pagamento</p>
               <div class="pay-logos">
-                <img src="../img/icones/logos_mastercard.png" alt="Mastercard" />
+                <img
+                  src="../img/icones/logos_mastercard.png"
+                  alt="Mastercard"
+                />
                 <img src="../img/icones/logos_visa.png" alt="Visa" />
                 <img src="../img/icones/ic_baseline-pix.png" alt="Pix" />
                 <img src="../img/icones/simple-icons_picpay.png" alt="Picpay" />
@@ -793,8 +707,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
@@ -834,8 +746,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -844,8 +754,6 @@
               <li><a href="#">Dúvidas Frequentes</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -856,8 +764,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -867,8 +773,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -894,7 +798,11 @@
 
           <a href="tel:11402085588" class="cta-card cta-tele">
             <span class="cta-left">
-              <img src="../img/icones/wpf_headset.png" alt="" aria-hidden="true" />
+              <img
+                src="../img/icones/wpf_headset.png"
+                alt=""
+                aria-hidden="true"
+              />
               <span>
                 <strong>Compre pelo TeleVendas</strong>
                 <small>(11) 4020-85588</small>
@@ -914,8 +822,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"
@@ -934,7 +840,7 @@
           <p class="copy small mb-0">
             &copy; 2025 Swift — Todos os direitos reservados
           </p>
-        </div>
+       ß </div>
       </div>
     </footer>
   </body>

@@ -1,4 +1,3 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -6,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Produtos</title>
 
-    <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
@@ -16,22 +14,16 @@
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
-
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -61,7 +53,6 @@
             </div>
           </form>
 
-          <!-- Conta / Carrinho -->
           <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
@@ -100,7 +91,6 @@
         </div>
       </div>
 
-      <!-- NAV de categorias (mesma do index) -->
       <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
@@ -198,260 +188,624 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
     <main class="container my-5">
-      <!-- BANNER DE INICIAL -->
-      <div class ="container banner-produtos row py-4">
+      <div class="container banner-produtos row py-4">
         <div class="container col-6">
           <h1 class="mt-3 text-brand display-5">Bovinos</h1>
           <div class="container mb-3">
-            <div class="mb-2">          
-              <p class="fs-5 fw-bold">Carnes ultracongeladas e selecionadas para você levar pra casa somente o melhor da Swift em <span class="text-brand">peças, cubos, filés e muito mais.</span> Tudo para as suas refeições diárias se tornarem uma experiência de sabor sem igual.</p>
+            <div class="mb-2">
+              <p class="fs-5 fw-bold">
+                Carnes ultracongeladas e selecionadas para você levar pra casa
+                somente o melhor da Swift em
+                <span class="text-brand"
+                  >peças, cubos, filés e muito mais.</span
+                >
+                Tudo para as suas refeições diárias se tornarem uma experiência
+                de sabor sem igual.
+              </p>
             </div>
             <div class="mt-5">
               <div>
-                <h6 class="display-5 fs-2 ">Categorias de Destaque:</h6>
-                
+                <h6 class="display-5 fs-2">Categorias de Destaque:</h6>
+
                 <div class="d-flex gap-2 text-center col-12">
+                  <ul class="d-flex gap-3 justify-content list-unstyled">
+                    <li class="text-dark">
+                      <div class="d-flex flex-column align-items-center">
+                        <img
+                          src="../img/produtos/peito-bovino-combo.png"
+                          class="brand-format mb-2 categorias-produtos"
+                          alt="Contra"
+                        />
+                        <h6 class="display-5 fs-4">Contra</h6>
+                      </div>
+                    </li>
 
-                 <ul class="d-flex gap-3 justify-content list-unstyled">
+                    <li class="text-dark">
+                      <div class="d-flex flex-column align-items-center">
+                        <img
+                          src="../img/produtos/picanhaouro.png"
+                          class="brand-format mb-2 categorias-produtos"
+                          alt="Picanha"
+                        />
+                        <h6 class="display-5 fs-4">Picanha</h6>
+                      </div>
+                    </li>
 
-                  <li class="text-dark">
-                    <div class="d-flex flex-column align-items-center">
-                      <img src="../img/produtos/peito-bovino-combo.png" class="brand-format mb-2 categorias-produtos" alt="Contra">
-                      <h6 class="display-5 fs-4">Contra</h6>
-                    </div>
-                  </li>
+                    <li class="text-dark">
+                      <div class="d-flex flex-column align-items-center">
+                        <img
+                          src="../img/produtos/alcatraswift.png"
+                          class="brand-format mb-2 categorias-produtos"
+                          alt="Alcatra"
+                        />
+                        <h6 class="display-5 fs-4">Alcatra</h6>
+                      </div>
+                    </li>
 
-                  <li class="text-dark">
-                    <div class="d-flex flex-column align-items-center">
-                      <img src="../img/produtos/picanhaouro.png" class="brand-format mb-2 categorias-produtos" alt="Picanha">
-                      <h6 class="display-5 fs-4">Picanha</h6>
-                    </div>
-                  </li>
-                  
-                  <li class="text-dark">
-                    <div class="d-flex flex-column align-items-center">
-                      <img src="../img/produtos/alcatraswift.png" class="brand-format mb-2 categorias-produtos" alt="Alcatra">
-                      <h6 class="display-5 fs-4">Alcatra</h6>
-                    </div>
-                  </li>
+                    <li class="text-dark">
+                      <div class="d-flex flex-column align-items-center">
+                        <img
+                          src="../img/produtos/costelaquadrada.png"
+                          class="brand-format mb-2 categorias-produtos"
+                          alt="Costela"
+                        />
+                        <h6 class="display-5 fs-4">Costela</h6>
+                      </div>
+                    </li>
 
-                  <li class="text-dark">
-                    <div class="d-flex flex-column align-items-center">
-                      <img src="../img/produtos/costelaquadrada.png" class="brand-format mb-2 categorias-produtos" alt="Costela">
-                      <h6 class="display-5 fs-4">Costela</h6>
-                    </div>
-                  </li>
-
-                  <li class="text-dark">
-                    <div class="d-flex flex-column align-items-center">
-                      <img src="../img/produtos/filedemignon.png" class="brand-format mb-2 categorias-produtos" alt="Mignon">
-                      <h6 class="display-5 fs-4">Mignon</h6>
-                    </div>
-                  </li>
-
-                </ul>
+                    <li class="text-dark">
+                      <div class="d-flex flex-column align-items-center">
+                        <img
+                          src="../img/produtos/filedemignon.png"
+                          class="brand-format mb-2 categorias-produtos"
+                          alt="Mignon"
+                        />
+                        <h6 class="display-5 fs-4">Mignon</h6>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-6">
-          <img src="../img/banners/categoria-bovinos.png" alt="Refeição de purê com carne bovina" class="img-fluid rounded-5">
+          <img
+            src="../img/banners/categoria-bovinos.png"
+            alt="Refeição de purê com carne bovina"
+            class="img-fluid rounded-5"
+          />
         </div>
       </div>
-      
+
       <div class="container my-5 m-0 p-0">
         <div class="row align-items-start">
-          <!-- FILTROS E ORDENAÇÃO -->
-          <div class="text-center  rounded-4 bg-body-secondary col-3 p-0">
-
-            <h3 class="py-4 m-0 bg-brand-900 rounded-top-4 rounded-bottom-5 text-light">Ordenar</h3>
+          <div class="text-center rounded-4 bg-body-secondary col-3 p-0">
+            <h3
+              class="py-4 m-0 bg-brand-900 rounded-top-4 rounded-bottom-5 text-light"
+            >
+              Ordenar
+            </h3>
             <div class="row g-3 p-3">
               <div class="col-6 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center">Menor preço</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center"
+                >
+                  Menor preço
+                </button>
               </div>
               <div class="col-6 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center">Maior preço</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center"
+                >
+                  Maior preço
+                </button>
               </div>
               <div class="col-6 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center">Mais vendidos</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center"
+                >
+                  Mais vendidos
+                </button>
               </div>
               <div class="col-6 d-flex justify-content-center">
-                  <button type="button" class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center">Com desconto</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center"
+                >
+                  Com desconto
+                </button>
               </div>
               <div class="col-6 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center">A-Z</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center"
+                >
+                  A-Z
+                </button>
               </div>
               <div class="col-6 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center">Z-A</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-2 d-flex align-items-center justify-content-center"
+                >
+                  Z-A
+                </button>
               </div>
             </div>
 
-            <h3 class="py-4 m-0 bg-brand-900 rounded-top-1 rounded-start-5 rounded-bottom-5 text-light">Cortes & Sabores</h3>
+            <h3
+              class="py-4 m-0 bg-brand-900 rounded-top-1 rounded-start-5 rounded-bottom-5 text-light"
+            >
+              Cortes & Sabores
+            </h3>
             <div class="d-flex flex-wrap text-brand gap-2 px-3 py-3">
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Acém</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Alcatra</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Ancho</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Assado de Tiras</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Baby Beef</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Bife do Vazio</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Bife de Bananinha</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Carne Seca</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Chorizo</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">chuleta</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Contra</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Costela</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Coxão Duro</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Cupim</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Fraldinha</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Lagarto</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Maminha</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Mignon</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Miúdos</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Mocotó</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Moída</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Músculo</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Ossobuco</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Paleta</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Patinho</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Peito</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Picanha</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Prime Rib</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Raquete (Shoulder)</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Ribeye Cap</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">T-Bone</button>
-              <button type="button" class="btn btn-cortes rounded-5 d-inline-block">Variados</button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Acém
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Alcatra
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Ancho
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Assado de Tiras
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Baby Beef
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Bife do Vazio
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Bife de Bananinha
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Carne Seca
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Chorizo
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                chuleta
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Contra
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Costela
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Coxão Duro
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Cupim
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Fraldinha
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Lagarto
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Maminha
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Mignon
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Miúdos
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Mocotó
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Moída
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Músculo
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Ossobuco
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Paleta
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Patinho
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Peito
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Picanha
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Prime Rib
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Raquete (Shoulder)
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Ribeye Cap
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                T-Bone
+              </button>
+              <button
+                type="button"
+                class="btn btn-cortes rounded-5 d-inline-block"
+              >
+                Variados
+              </button>
             </div>
 
-            <h3 class="py-4 m-0 bg-brand-900 rounded-top-1 rounded-start-5 rounded-bottom-5 text-light">Formatos</h3>
+            <h3
+              class="py-4 m-0 bg-brand-900 rounded-top-1 rounded-start-5 rounded-bottom-5 text-light"
+            >
+              Formatos
+            </h3>
             <div class="row g-3 p-3">
               <div class="col-4 d-flex justify-content-">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Bife</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Bife
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Carpachio</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Carpachio
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Costela</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Costela
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Cubos</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Cubos
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                  <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Hambúrguer</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Hambúrguer
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Iscas</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Iscas
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Linguíças</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Linguíças
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Medalhões</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Medalhões
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Moída</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Moída
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Peças</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Peças
+                </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center">Tiras</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  Tiras
+                </button>
               </div>
             </div>
 
-            <h3 class="py-4 m-0 bg-brand-900 rounded-top-1 rounded-start-5 rounded-bottom-5 text-light">Linhas Swift</h3>
+            <h3
+              class="py-4 m-0 bg-brand-900 rounded-top-1 rounded-start-5 rounded-bottom-5 text-light"
+            >
+              Linhas Swift
+            </h3>
             <div class="row g-3 p-3">
               <div class="col-4 d-flex justify-content-">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/linha-bronze.png" alt="icone linha bronze">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/linha-bronze.png"
+                    alt="icone linha bronze"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/linha-ouro.png" alt="icone linha ouro">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/linha-ouro.png"
+                    alt="icone linha ouro"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/pronto-para-comer.png" alt="icone pronto para comer">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/pronto-para-comer.png"
+                    alt="icone pronto para comer"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/mais-estrelas.png" alt="icone mais estrelas">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/mais-estrelas.png"
+                    alt="icone mais estrelas"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/linha-temperados.png" alt="icone temperados">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/linha-temperados.png"
+                    alt="icone temperados"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/linha-pro-forno.png" alt="icone já para o forno">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/linha-pro-forno.png"
+                    alt="icone já para o forno"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/linha-gran.png" alt="icone gran reserva">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/linha-gran.png"
+                    alt="icone gran reserva"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/linha-black.png" alt="icone linha black">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/linha-black.png"
+                    alt="icone linha black"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/linha-wagyu.png" alt="icone linha wagyu">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/linha-wagyu.png"
+                    alt="icone linha wagyu"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/swift logo 2.png" alt="icone swift">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img src="../img/icones/swift logo 2.png" alt="icone swift" />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/logo-swift-grill.png" alt="icone swift grill">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/logo-swift-grill.png"
+                    alt="icone swift grill"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/seara-logo-2024 1.png" alt="icone seara">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/seara-logo-2024 1.png"
+                    alt="icone seara"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/argentina-flag.png" alt="icone argentina flag">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/argentina-flag.png"
+                    alt="icone argentina flag"
+                  />
                 </button>
               </div>
               <div class="col-4 d-flex justify-content-center">
-                <button type="button" class=" btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center">
-                  <img src="../img/icones/flag-uruguay.png" alt="icone uruguayflag">
+                <button
+                  type="button"
+                  class="btn btn-linhas btn-round-3 d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="../img/icones/flag-uruguay.png"
+                    alt="icone uruguayflag"
+                  />
                 </button>
               </div>
             </div>
           </div>
 
-          <!-- LISTA DE PRODUTOS -->
           <div class="col-lg-9">
             <div class="row gy-4">
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/máscara patinho(2).png" class="card-img rounded-top-5" alt="CARNE MOIDA DE PATINHO SWIFT 1KG">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/máscara patinho(2).png"
+                      class="card-img rounded-top-5"
+                      alt="CARNE MOIDA DE PATINHO SWIFT 1KG"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -459,34 +813,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 28,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 28,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 47,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 47,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/617769-almondegas-bovinas_1.png" class="card-img rounded-top-5" alt="almôndegas bovinas swift 500g">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/617769-almondegas-bovinas_1.png"
+                      class="card-img rounded-top-5"
+                      alt="almôndegas bovinas swift 500g"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -494,34 +874,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 18,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 18,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 16,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 16,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/621998_FRALDA-COMBO-KG_INNATURA_0846_QUADRADO_1000x1000pixels1.png" class="card-img rounded-top-5" alt="Fraldinha - combo 1kg a 2kg">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/621998_FRALDA-COMBO-KG_INNATURA_0846_QUADRADO_1000x1000pixels1.png"
+                      class="card-img rounded-top-5"
+                      alt="Fraldinha - combo 1kg a 2kg"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -529,34 +935,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 37,90 <small class="fw-normal fs-6">kg</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 37,90 <small class="fw-normal fs-6">kg</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 35,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 35,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/622012_bife-de-contrafile-combo_1.png" class="card-img rounded-top-5" alt="Bife de contrafilé combo">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/622012_bife-de-contrafile-combo_1.png"
+                      class="card-img rounded-top-5"
+                      alt="Bife de contrafilé combo"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -564,34 +996,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 52,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 52,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 50,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 50,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/621995-contrafile-combo_1.png" class="card-img rounded-top-5" alt="Contra file combo">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/621995-contrafile-combo_1.png"
+                      class="card-img rounded-top-5"
+                      alt="Contra file combo"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -599,34 +1057,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 18,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 18,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 16,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 16,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/621648-bife-de-patinho_1.png" class="card-img rounded-top-5" alt="bife de patinho swift 1kg">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/621648-bife-de-patinho_1.png"
+                      class="card-img rounded-top-5"
+                      alt="bife de patinho swift 1kg"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -634,34 +1118,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 45,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 45,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 39,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 39,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/621396_CARNE-MOIDA-BOLONHESA-SWIFT-1KG_INNATURA_0276_QUADRADO_1000x1000.png" class="card-img rounded-top-5" alt="Carne moida bolonhesa">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/621396_CARNE-MOIDA-BOLONHESA-SWIFT-1KG_INNATURA_0276_QUADRADO_1000x1000.png"
+                      class="card-img rounded-top-5"
+                      alt="Carne moida bolonhesa"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -669,34 +1179,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 38,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 38,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 36,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 36,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/621372_CUBOS-DE-ACEM-SWIFT-1KG_INNATURA_0136_QUADRADO_1000x1000.png" class="card-img rounded-top-5" alt="Cubos de acém swift 1kg">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/621372_CUBOS-DE-ACEM-SWIFT-1KG_INNATURA_0136_QUADRADO_1000x1000.png"
+                      class="card-img rounded-top-5"
+                      alt="Cubos de acém swift 1kg"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -704,34 +1240,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 37,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 37,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 35,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 35,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/621362_CARNE-MOIDA-TUBETE-SWIFT-500G_INNATURA_0401-_QUADRADO_1000x1000pixels-2.png" class="card-img rounded-top-5" alt="carne moida tubete swift 500g">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/621362_CARNE-MOIDA-TUBETE-SWIFT-500G_INNATURA_0401-_QUADRADO_1000x1000pixels-2.png"
+                      class="card-img rounded-top-5"
+                      alt="carne moida tubete swift 500g"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -739,34 +1301,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 52,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 52,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 50,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 50,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/617757-cubos-de-musculo_1.png" class="card-img rounded-top-5" alt="cubos de músculo swift 500g">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/617757-cubos-de-musculo_1.png"
+                      class="card-img rounded-top-5"
+                      alt="cubos de músculo swift 500g"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -774,34 +1362,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 18,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 18,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 16,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 16,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/617730-tiras-de-patinho_1-2.png" class="card-img rounded-top-5" alt="tiras de patinho swift 500g">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/617730-tiras-de-patinho_1-2.png"
+                      class="card-img rounded-top-5"
+                      alt="tiras de patinho swift 500g"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -809,34 +1423,60 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 24,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 24,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 23,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 23,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 display-5">
-                <div class="card shadow-sm rounded-5" >
-                  <a class="text-decoration-none text-black " href="#">
-                    <img src="../img/produtos/máscara patinho(2).png" class="card-img rounded-top-5" alt="carne moida de patinho swift 500g">
+                <div class="card shadow-sm rounded-5">
+                  <a class="text-decoration-none text-black" href="#">
+                    <img
+                      src="../img/produtos/máscara patinho(2).png"
+                      class="card-img rounded-top-5"
+                      alt="carne moida de patinho swift 500g"
+                    />
                   </a>
-                  
+
                   <div class="card-body d-flex flex-column">
                     <a class="text-decoration-none text-black" href="#">
                       <h5 class="card-title text-center fs-2 fw-bold">
@@ -844,117 +1484,225 @@
                       </h5>
                     </a>
 
-                    <p class="text-end fs-2 fw-bold mt-auto">R$ 26,90 <small class="fw-normal fs-6">un</small></p>
-                    
-                    <div class="d-flex justify-content-between align-items-center mt-2 gap-2">
+                    <p class="text-end fs-2 fw-bold mt-auto">
+                      R$ 26,90 <small class="fw-normal fs-6">un</small>
+                    </p>
 
-                        <div class="input-group quantity-selector gap-2">
-                          <button class="btn bg-body-secondary rounded-5" type="button">-</button>
-                          <input type="text" class="form-control text-center d-inline-block p-2" value="1" readonly>
-                          <button class="btn bg-body-secondary rounded-5" type="button">+</button>
-                        </div>
-                
-                        <button class="btn btn-buy rounded-pill" type="button">
-                          ADICIONAR
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 gap-2"
+                    >
+                      <div class="input-group quantity-selector gap-2">
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          -
                         </button>
-                  
+                        <input
+                          type="text"
+                          class="form-control text-center d-inline-block p-2"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="btn bg-body-secondary rounded-5"
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="btn btn-buy rounded-pill" type="button">
+                        ADICIONAR
+                      </button>
                     </div>
                   </div>
 
                   <div>
-                    <p class=" bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5">2ª unidade por <span class="fw-bold">R$ 24,90 cada</span></p>
+                    <p
+                      class="bg-body-secondary rounded-0 rounded-bottom-5 m-0 py-3 text-dark d-block text-center display-5 fs-5"
+                    >
+                      2ª unidade por
+                      <span class="fw-bold">R$ 24,90 cada</span>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="justify-content-center">
-              <h2 class="text-center fw-bold text-brand-800 mt-4 mb-0">EXIBINDO 12 DE 159 PRODUTOS</h2>
+              <h2 class="text-center fw-bold text-brand-800 mt-4 mb-0">
+                EXIBINDO 12 DE 159 PRODUTOS
+              </h2>
               <div class="progress-container">
-              <div class="progress-bar" id="myBar"></div>
+                <div class="progress-bar" id="myBar"></div>
               </div>
               <div class="d-flex justify-content-center">
-              <button type="button" class="btn btn-laranja rounded-bottom-5 rounded-start-5 py-2 px-5 display-5 fs-4 fw-bold">CARREGAR +</button>
+                <button
+                  type="button"
+                  class="btn btn-laranja rounded-bottom-5 rounded-start-5 py-2 px-5 display-5 fs-4 fw-bold"
+                >
+                  CARREGAR +
+                </button>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
-      <!-- ================= BANNERS  ================= -->
       <div class="banner-info banner-full-bleed text-center text-md-start">
         <div class="container">
           <div class="row">
             <div class="col-md-9 col-lg-8 p-5">
-              <h1 class="fw-bold display-5 ">Carnes bovinas selecionadas e de alta qualidade</h1>
-              <p class="display-5 fs-5">Aqui na Swift você encontra os mais diferentes tipos de cortes de carne para o dia a dia ou para o seu churrasco, tudo com a mais alta qualidade para a sua segurança.
-                <br>
-                <br>
-                Ideal para quem procura a famosa carne de boi, você poderá encontrar diferentes tipos de cortes e linhas exclusivas, direto do nosso freezer para a sua panela.</p>
+              <h1 class="fw-bold display-5">
+                Carnes bovinas selecionadas e de alta qualidade
+              </h1>
+              <p class="display-5 fs-5">
+                Aqui na Swift você encontra os mais diferentes tipos de cortes
+                de carne para o dia a dia ou para o seu churrasco, tudo com a
+                mais alta qualidade para a sua segurança. <br />
+                <br />
+                Ideal para quem procura a famosa carne de boi, você poderá
+                encontrar diferentes tipos de cortes e linhas exclusivas, direto
+                do nosso freezer para a sua panela.
+              </p>
             </div>
             <div class="col-md-3 col-lg-4 fixed-end">
-              <img src="../img/banners/carnes-bovinas-selecionadas.png" alt="Carnes bovinas Swift" class="img-fluid">
+              <img
+                src="../img/banners/carnes-bovinas-selecionadas.png"
+                alt="Carnes bovinas Swift"
+                class="img-fluid"
+              />
             </div>
           </div>
         </div>
       </div>
       <div class="text-center text-md-start">
         <div class="container">
-            <div class="row">
-              <div class="col-md-3 col-lg-4">
-                <img src="../img/banners/encontre-os-melhores-prod....png" alt="Carnes Swift" class="img-fluid">
-              </div>
-              <div class="col-md-9 col-lg-8 p-5">
-                <h1 class="fw-bold display-5 ">Encontre os melhores produtos na Swift</h1>
-                <p class="display-5 fs-5">O melhor do churrasco você encontra aqui na Swift. São diversos cortes de carne bovina, além de linguiças, espetinhos e cortes especiais para mandar bem no churras com muito sabor e produtos selecionados especialmente para você.</p>
-                <h1 class="fw-bold display-5 "> Conheça a linha Swift Mais</h1>
-                <p class="display-5 fs-5">A nova linha Swift Mais oferece qualidade com muito mais suculência e maciez. Com diversos tipos de cortes diferentes, ela traz tudo o que você procura para criar pratos interessantes, repletos de sabor e originalidade.</p>
-                <div class="text-end">
-                  <button class="btn btn-brand display-5 fs-4 rounded-bottom-5 rounded-start-5 px-5">CONFIRA</button>
-                </div>
+          <div class="row">
+            <div class="col-md-3 col-lg-4">
+              <img
+                src="../img/banners/encontre-os-melhores-prod....png"
+                alt="Carnes Swift"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-9 col-lg-8 p-5">
+              <h1 class="fw-bold display-5">
+                Encontre os melhores produtos na Swift
+              </h1>
+              <p class="display-5 fs-5">
+                O melhor do churrasco você encontra aqui na Swift. São diversos
+                cortes de carne bovina, além de linguiças, espetinhos e cortes
+                especiais para mandar bem no churras com muito sabor e produtos
+                selecionados especialmente para você.
+              </p>
+              <h1 class="fw-bold display-5">Conheça a linha Swift Mais</h1>
+              <p class="display-5 fs-5">
+                A nova linha Swift Mais oferece qualidade com muito mais
+                suculência e maciez. Com diversos tipos de cortes diferentes,
+                ela traz tudo o que você procura para criar pratos
+                interessantes, repletos de sabor e originalidade.
+              </p>
+              <div class="text-end">
+                <button
+                  class="btn btn-brand display-5 fs-4 rounded-bottom-5 rounded-start-5 px-5"
+                >
+                  CONFIRA
+                </button>
               </div>
             </div>
+          </div>
         </div>
       </div>
       <div class="banner-info banner-full-bleed text-center text-md-start">
         <div class="container">
           <div class="text-center py-5 justify-content-center">
-            <h1 class="display-4 fw-bold">AS MELHORES CARNES VOCÊ ENCONTRA AQUI!</h1>
-            <p class="display-5 fs-3">A Swift traz até você carnes bovinas de qualidade, com uma seleção de alta qualidade e pronta para montar o seu melhor cardápio.</p>
+            <h1 class="display-4 fw-bold">
+              AS MELHORES CARNES VOCÊ ENCONTRA AQUI!
+            </h1>
+            <p class="display-5 fs-3">
+              A Swift traz até você carnes bovinas de qualidade, com uma seleção
+              de alta qualidade e pronta para montar o seu melhor cardápio.
+            </p>
             <div class="row text-start mt-5">
-              <div class="col-md-12 col-lg-6  p-5 display-5">
+              <div class="col-md-12 col-lg-6 p-5 display-5">
                 <h2 class="fs-2 fw-bold">PICANHA: A ESTRELINHA DO CHURRAS</h2>
-                <p class="fs-3">O mais famoso corte do churrasco, a <span class="text-brand">deliciosa picanha</span> tem pelo menos 80% de uniformidade na capa de gordura, muito sabor, maciez e suculência.</p>
+                <p class="fs-3">
+                  O mais famoso corte do churrasco, a
+                  <span class="text-brand">deliciosa picanha</span> tem pelo
+                  menos 80% de uniformidade na capa de gordura, muito sabor,
+                  maciez e suculência.
+                </p>
                 <div class="text-end">
-                  <button class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5">CONFIRA</button>
+                  <button
+                    class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5"
+                  >
+                    CONFIRA
+                  </button>
                 </div>
               </div>
-              <div class="col-md-12 col-lg-6  p-5 display-5">
+              <div class="col-md-12 col-lg-6 p-5 display-5">
                 <h2 class="fs-2 fw-bold">OS MELHORES CORTES DA ALCATRA</h2>
-                <p class="fs-3">A <span class="text-brand">Alcatra da Swift</span> traz cortes especiais de dar água na boca! Uma carne macia e com pouca gordura, ela fica muito saborosa nas refeições do dia a dia.</p>
+                <p class="fs-3">
+                  A <span class="text-brand">Alcatra da Swift</span> traz cortes
+                  especiais de dar água na boca! Uma carne macia e com pouca
+                  gordura, ela fica muito saborosa nas refeições do dia a dia.
+                </p>
                 <div class="text-end">
-                  <button class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5">CONFIRA</button>
+                  <button
+                    class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5"
+                  >
+                    CONFIRA
+                  </button>
                 </div>
               </div>
               <div class="col-md-12 col-lg-6 text-start p-5 display-5">
                 <h2 class="fs-2 fw-bold">COSTELA SWIFT: O MÁXIMO DE SABOR</h2>
-                <p class=" fs-3"><span class="text-brand">Cortes especiais de costela</span> para o preparo na churrasqueira. Generosas porções de carne suína devidamente selecionadas, muito suculentas e deliciosas!</p>
+                <p class="fs-3">
+                  <span class="text-brand">Cortes especiais de costela</span>
+                  para o preparo na churrasqueira. Generosas porções de carne
+                  suína devidamente selecionadas, muito suculentas e deliciosas!
+                </p>
                 <div class="text-end">
-                  <button class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5">CONFIRA</button>
+                  <button
+                    class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5"
+                  >
+                    CONFIRA
+                  </button>
                 </div>
               </div>
-              <div class="col-md-12 col-lg-6  p-5 display-5">
+              <div class="col-md-12 col-lg-6 p-5 display-5">
                 <h2 class="fs-2 fw-bold">A NOBREZA DO FILÉ MIGNON</h2>
-                <p class="fs-3">Os <span class="text-brand">Cortes do filé mignon Swift</span> oferecem uma carne magra e perfeita para preparações nobres e receitas mais elaboradas que vão encantar os convidados.</p>
+                <p class="fs-3">
+                  Os
+                  <span class="text-brand">Cortes do filé mignon Swift</span>
+                  oferecem uma carne magra e perfeita para preparações nobres e
+                  receitas mais elaboradas que vão encantar os convidados.
+                </p>
                 <div class="text-end">
-                  <button class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5">CONFIRA</button>
+                  <button
+                    class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5"
+                  >
+                    CONFIRA
+                  </button>
                 </div>
               </div>
-              <div class="col-md-12 col-lg-6  p-5 display-5">
-                <h2 class="fs-2 fw-bold">CONTRA FILÉ: UM CLÁSSICO DO CHURRASCO</h2>
-                <p class="fs-3">O <span class="text-brand">Contra Filé Swift</span> traz cortes macios e saborosos para as preparações do dia a dia. Muita praticidade e sem desperdício com a embalagem abre fácil.</p>
+              <div class="col-md-12 col-lg-6 p-5 display-5">
+                <h2 class="fs-2 fw-bold">
+                  CONTRA FILÉ: UM CLÁSSICO DO CHURRASCO
+                </h2>
+                <p class="fs-3">
+                  O <span class="text-brand">Contra Filé Swift</span> traz
+                  cortes macios e saborosos para as preparações do dia a dia.
+                  Muita praticidade e sem desperdício com a embalagem abre
+                  fácil.
+                </p>
                 <div class="text-end">
-                  <button class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5">CONFIRA</button>
+                  <button
+                    class="btn btn-brand fs-4 rounded-bottom-5 rounded-start-5 px-5"
+                  >
+                    CONFIRA
+                  </button>
                 </div>
               </div>
             </div>
@@ -962,44 +1710,63 @@
         </div>
       </div>
 
-      <div class="bg-mais-vendidos banner-full-bleed text-center text-md-start py-5 mb-5">
+      <div
+        class="bg-mais-vendidos banner-full-bleed text-center text-md-start py-5 mb-5"
+      >
         <div class="elemento-escuro"></div>
         <div class="elemento-vermelho"></div>
         <div class="container">
           <div class="row g-0 align-items-center">
             <div class="col-lg-4 p-4 p-lg-5 text-white">
-              <h2 class="display-1 fw-bold mb-4">
-              MAIS <br>VENDIDOS
-              </h2>
+              <h2 class="display-1 fw-bold mb-4">MAIS <br />VENDIDOS</h2>
 
               <div>
-                <p class="fs-4">Os melhores produtos para preparar receitas incríveis na sua casa. Variedade e sabor na medida!</p>
+                <p class="fs-4">
+                  Os melhores produtos para preparar receitas incríveis na sua
+                  casa. Variedade e sabor na medida!
+                </p>
                 <div class="text-end">
-                  <button class="btn btn-laranja rounded-bottom-5 rounded-start-5 px-5" type="button" data-filter="confira">
+                  <button
+                    class="btn btn-laranja rounded-bottom-5 rounded-start-5 px-5"
+                    type="button"
+                    data-filter="confira"
+                  >
                     CONFIRA
                   </button>
                 </div>
                 <div class="text-center sobrepor">
-                  <img src="../img/banners/perfeito-para-o-seu-bolso.svg" alt="perfeito para o seu bolso" class="img-fluid ">
+                  <img
+                    src="../img/banners/perfeito-para-o-seu-bolso.svg"
+                    alt="perfeito para o seu bolso"
+                    class="img-fluid"
+                  />
                 </div>
               </div>
             </div>
-
-            <!-- Coluna direita: carrossel -->
             <div class="col-lg-8 p-3 position-relative">
-              <div id="selectionCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="0">
+              <div
+                id="selectionCarousel"
+                class="carousel slide"
+                data-bs-ride="false"
+                data-bs-interval="0"
+              >
                 <div class="carousel-inner">
-                  <!-- SLIDE 1 -->
                   <div class="carousel-item active">
                     <div class="row g-3">
-                      <!-- CARD 1 -->
                       <div class="col-12 col-md-6 col-xl-4">
-                        <a href="../pages/detalhe-produto.html" class="product-card d-block h-100">
+                        <a
+                          href="../pages/detalhe-produto.html"
+                          class="product-card d-block h-100"
+                        >
                           <div class="deal-ribbon">
                             <strong>9% OFF</strong>
                             <span>2ª unidade por <b>R$ 19,90</b> cada</span>
                           </div>
-                          <img src="../img/produtos/máscara patinho.png" class="product-img" alt="Espetinho de Panceta Swift 500g">
+                          <img
+                            src="../img/produtos/máscara patinho.png"
+                            class="product-img"
+                            alt="Espetinho de Panceta Swift 500g"
+                          />
                           <div class="product-body">
                             <h3 class="product-name">
                               Espetinho de Panceta Swift 500g
@@ -1007,19 +1774,27 @@
                             <div class="product-price">
                               R$ 21,90 <small>un</small>
                             </div>
-                            <button class="btn btn-brand w-100">Adicionar</button>
+                            <button class="btn btn-brand w-100">
+                              Adicionar
+                            </button>
                           </div>
                         </a>
                       </div>
 
-                      <!-- CARD 2 -->
                       <div class="col-12 col-md-6 col-xl-4">
-                        <a href="../detalhe-produto.html" class="product-card d-block h-100">
+                        <a
+                          href="../detalhe-produto.html"
+                          class="product-card d-block h-100"
+                        >
                           <div class="deal-ribbon">
                             <strong>5% OFF</strong>
                             <span>2ª unidade por <b>R$ 34,90</b> cada</span>
                           </div>
-                          <img src="../img/produtos/máscara patinho(1).png" class="product-img" alt="Filé de Tilápia Swift 800g">
+                          <img
+                            src="../img/produtos/máscara patinho(1).png"
+                            class="product-img"
+                            alt="Filé de Tilápia Swift 800g"
+                          />
                           <div class="product-body">
                             <h3 class="product-name">
                               Filé de Tilápia Swift 800g
@@ -1027,19 +1802,27 @@
                             <div class="product-price">
                               R$ 36,90 <small>un</small>
                             </div>
-                            <button class="btn btn-brand w-100">Adicionar</button>
+                            <button class="btn btn-brand w-100">
+                              Adicionar
+                            </button>
                           </div>
                         </a>
                       </div>
 
-                      <!-- CARD 3 -->
                       <div class="col-12 col-md-6 col-xl-4">
-                        <a href="../detalhe-produto.html" class="product-card d-block h-100">
+                        <a
+                          href="../detalhe-produto.html"
+                          class="product-card d-block h-100"
+                        >
                           <div class="deal-ribbon">
                             <strong>7% OFF</strong>
                             <span>2ª unidade por <b>R$ 24,90</b> cada</span>
                           </div>
-                          <img src="../img/produtos/máscara patinho(2).png" class="product-img" alt="Carne Moída de Patinho Swift 500g">
+                          <img
+                            src="../img/produtos/máscara patinho(2).png"
+                            class="product-img"
+                            alt="Carne Moída de Patinho Swift 500g"
+                          />
                           <div class="product-body">
                             <h3 class="product-name">
                               Carne Moída de Patinho Swift 500g
@@ -1047,90 +1830,131 @@
                             <div class="product-price">
                               R$ 26,90 <small>un</small>
                             </div>
-                            <button class="btn btn-brand w-100">Adicionar</button>
+                            <button class="btn btn-brand w-100">
+                              Adicionar
+                            </button>
                           </div>
                         </a>
                       </div>
                     </div>
-                  </div>
-
-                  <!-- SLIDE 2 -->
-                  <div class="carousel-item">
-                    <div class="row g-3">
-                      <div class="col-12 col-md-6 col-xl-4">
-                        <a href="../detalhe-produto.html" class="product-card d-block h-100">
-                          <div class="deal-ribbon">
-                            <strong>10% OFF</strong><span>Na compra de 2</span>
-                          </div>
-                          <img src="../img/produtos/máscara patinho(1).png" class="product-img" alt="Produto 4">
-                          <div class="product-body">
-                            <h3 class="product-name">Produto 4</h3>
-                            <div class="product-price">
-                              R$ 37,90 <small>un</small>
+                    <div class="carousel-item">
+                      <div class="row g-3">
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <a
+                            href="../detalhe-produto.html"
+                            class="product-card d-block h-100"
+                          >
+                            <div class="deal-ribbon">
+                              <strong>10% OFF</strong
+                              ><span>Na compra de 2</span>
                             </div>
-                            <button class="btn btn-brand w-100">Adicionar</button>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div class="col-12 col-md-6 col-xl-4">
-                        <a href="../detalhe-produto.html" class="product-card d-block h-100">
-                          <div class="deal-ribbon">
-                            <strong>8% OFF</strong><span>Na compra de 3</span>
-                          </div>
-                          <img src="../img/produtos/máscara patinho.png" class="product-img" alt="Produto 5">
-                          <div class="product-body">
-                            <h3 class="product-name">Produto 5</h3>
-                            <div class="product-price">
-                              R$ 45,90 <small>un</small>
+                            <img
+                              src="../img/produtos/máscara patinho(1).png"
+                              class="product-img"
+                              alt="Produto 4"
+                            />
+                            <div class="product-body">
+                              <h3 class="product-name">Produto 4</h3>
+                              <div class="product-price">
+                                R$ 37,90 <small>un</small>
+                              </div>
+                              <button class="btn btn-brand w-100">
+                                Adicionar
+                              </button>
                             </div>
-                            <button class="btn btn-brand w-100">Adicionar</button>
-                          </div>
-                        </a>
-                      </div>
+                          </a>
+                        </div>
 
-                      <div class="col-12 col-md-6 col-xl-4">
-                        <a href="../detalhe-produto.html" class="product-card d-block h-100">
-                          <div class="deal-ribbon">
-                            <strong>12% OFF</strong><span>Combo família</span>
-                          </div>
-                          <img src="../img/produtos/máscara patinho(2).png" class="product-img" alt="Produto 6">
-                          <div class="product-body">
-                            <h3 class="product-name">Produto 6</h3>
-                            <div class="product-price">
-                              R$ 39,90 <small>un</small>
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <a
+                            href="../detalhe-produto.html"
+                            class="product-card d-block h-100"
+                          >
+                            <div class="deal-ribbon">
+                              <strong>8% OFF</strong><span>Na compra de 3</span>
                             </div>
-                            <button class="btn btn-brand w-100">Adicionar</button>
-                          </div>
-                        </a>
+                            <img
+                              src="../img/produtos/máscara patinho.png"
+                              class="product-img"
+                              alt="Produto 5"
+                            />
+                            <div class="product-body">
+                              <h3 class="product-name">Produto 5</h3>
+                              <div class="product-price">
+                                R$ 45,90 <small>un</small>
+                              </div>
+                              <button class="btn btn-brand w-100">
+                                Adicionar
+                              </button>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <a
+                            href="../detalhe-produto.html"
+                            class="product-card d-block h-100"
+                          >
+                            <div class="deal-ribbon">
+                              <strong>12% OFF</strong><span>Combo família</span>
+                            </div>
+                            <img
+                              src="../img/produtos/máscara patinho(2).png"
+                              class="product-img"
+                              alt="Produto 6"
+                            />
+                            <div class="product-body">
+                              <h3 class="product-name">Produto 6</h3>
+                              <div class="product-price">
+                                R$ 39,90 <small>un</small>
+                              </div>
+                              <button class="btn btn-brand w-100">
+                                Adicionar
+                              </button>
+                            </div>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="carousel-control-prev selection-control"
+                    type="button"
+                    data-bs-target="#selectionCarousel"
+                    data-bs-slide="prev"
+                    aria-label="Anterior"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                  <button
+                    class="carousel-control-next selection-control"
+                    type="button"
+                    data-bs-target="#selectionCarousel"
+                    data-bs-slide="next"
+                    aria-label="Próximo"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
                 </div>
-
-                <!-- CONTROLES (setas) -->
-                <button class="carousel-control-prev selection-control" type="button" data-bs-target="#selectionCarousel" data-bs-slide="prev" aria-label="Anterior">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next selection-control" type="button" data-bs-target="#selectionCarousel" data-bs-slide="next" aria-label="Próximo">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-    </main> 
+    </main>
 
-    <!-- ================= RECEITAS  ================= -->
     <section class="container my-5 receitas-section">
       <h2 class="receitas-title text-center mb-4">
         CONFIRA AS MELHORES <span>RECEITAS</span>
       </h2>
 
       <div class="row g-4">
-        <!-- CARD 1 -->
         <div class="col-12 col-md-6 col-lg-3">
           <a href="./receitas.html" class="receita-card d-block h-100">
             <img
@@ -1150,8 +1974,6 @@
             </div>
           </a>
         </div>
-
-        <!-- CARD 2 -->
         <div class="col-12 col-md-6 col-lg-3">
           <a href="./receitas.html" class="receita-card d-block h-100">
             <img
@@ -1171,8 +1993,6 @@
             </div>
           </a>
         </div>
-
-        <!-- CARD 3 -->
         <div class="col-12 col-md-6 col-lg-3">
           <a href="./receitas.html" class="receita-card d-block h-100">
             <img
@@ -1194,10 +2014,8 @@
             </div>
           </a>
         </div>
-
-        <!-- CARD 4 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html"  class="receita-card d-block h-100">
+          <a href="./receitas.html" class="receita-card d-block h-100">
             <img
               src="../img/produtos/receita-carne.png"
               class="receita-img"
@@ -1218,25 +2036,23 @@
           </a>
         </div>
       </div>
-
-      <!-- Botão CTA -->
       <div class="text-center mt-4">
         <a href="./receitas.html" class="btn btn-receitas"
           >VER TODAS AS RECEITAS</a
         >
       </div>
     </section>
-    
-    <section class="container text-center my-5">
-      <img src="../img/banners/sessão 6 (banners).png" alt="banner promoções e vantagens" class="img-fluid">
-    </section>
 
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
+    <section class="container text-center my-5">
+      <img
+        src="../img/banners/sessão 6 (banners).png"
+        alt="banner promoções e vantagens"
+        class="img-fluid"
+      />
+    </section>
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -1258,7 +2074,6 @@
             </div>
           </div>
 
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
@@ -1298,8 +2113,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -1308,8 +2121,6 @@
               <li><a href="#">Dúvidas Frequentes</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -1320,8 +2131,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -1331,8 +2140,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -1382,8 +2189,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"

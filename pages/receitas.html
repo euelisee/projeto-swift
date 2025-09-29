@@ -1,12 +1,9 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Produtos</title>
-
-    <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
@@ -16,22 +13,16 @@
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
-
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -60,8 +51,6 @@
               </button>
             </div>
           </form>
-
-          <!-- Conta / Carrinho -->
           <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
@@ -76,7 +65,6 @@
               />
               <span class="d-none d-lg-inline">Bem-vindo(a)</span>
             </a>
-
             <a
               href="./carrinho.html"
               class="btn btn-outline-soft position-relative d-flex align-items-center gap-2"
@@ -99,8 +87,6 @@
           </div>
         </div>
       </div>
-
-      <!-- NAV de categorias (mesma do index) -->
       <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
@@ -198,364 +184,295 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
     <main class="container my-5">
-
-      <!--  insira aqui o conteúdo da página -->
-    
-
-    <!-- ================= RECEITAS  ================= -->
-    <section class="container my-5 receitas-section">
-
-       <!-- ================= BANNER TOP RECEITAS ================= -->
-    <section class="container my-4">
-      <div class="hero-banner rounded-4 overflow-hidden position-relative">
-        <!-- Imagem desktop -->
-        <img
-          src="../img/banners/banner-top-receitas.png"
-          alt="Receitas Swift"
-          class="w-100 d-none d-md-block"
-        />
-        <!-- Imagem mobile -->
-        <img
-          src="../img/banners/banner-top-receitas.png"
-          alt="Receitas Swift"
-          class="w-100 d-md-none"
-        />
-
-      </div>
-    </section>
-
-    <section class="container my-5 receitas-section">
-         <h2 class="receitas-title text-center mb-4 pb-lg-4">
-        CONFIRA AS MELHORES <span>RECEITAS</span>
-      </h2>
-
-      <div class="row g-4">
-
-        <!-- CARD 1 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
+      <section class="my-5 receitas-section">
+        <section class="container my-4">
+          <div class="hero-banner rounded-4 overflow-hidden position-relative">
             <img
-              src="../img/produtos/receita-contra-file.png"
-              class="receita-img"
-              alt="Centro de Mignon grelhado com manteiga de ervas"
+              src="../img/banners/banner-top-receitas.png"
+              alt="Receitas Swift"
+              class="w-100 d-none d-md-block"
             />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                CENTRO DE MIGNON GRELHADO COM MANTEIGA DE ERVAS
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
-                <span class="tempo"><i class="icon-time"></i> 80 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
             <img
-              src="../img/produtos/receita-carne.png"
-              class="receita-img"
-              alt="Bife de contra filé grelhado com arroz e feijão"
+              src="../img/banners/banner-top-receitas.png"
+              alt="Receitas Swift"
+              class="w-100 d-md-none"
             />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                BIFE DE CONTRA FILÉ GRELHADO COM ARROZ E FEIJÃO
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
-                <span class="tempo"><i class="icon-time"></i> 20 MIN</span>
-              </div>
+          </div>
+        </section>
+        <section class="container my-5 receitas-section">
+          <h2 class="receitas-title text-center mb-4 pb-lg-4">
+            CONFIRA AS MELHORES <span>RECEITAS</span>
+          </h2>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-contra-file.png"
+                  class="receita-img"
+                  alt="Centro de Mignon grelhado com manteiga de ervas"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    CENTRO DE MIGNON GRELHADO COM MANTEIGA DE ERVAS
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+                    <span class="tempo"><i class="icon-time"></i> 80 MIN</span>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-carne.png"
+                  class="receita-img"
+                  alt="Bife de contra filé grelhado com arroz e feijão"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    BIFE DE CONTRA FILÉ GRELHADO COM ARROZ E FEIJÃO
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+                    <span class="tempo"><i class="icon-time"></i> 20 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-file.png"
+                  class="receita-img"
+                  alt="Costela suína brown sugar + acompanhamentos"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    COSTELA SUÍNA BROWN SUGAR + ACOMPANHAMENTOS
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif dif-inter"
+                      ><i class="icon-diff"></i> INTERMEDIÁRIO</span
+                    >
+                    <span class="tempo"><i class="icon-time"></i> 70 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-carne.png"
+                  class="receita-img"
+                  alt="Baby beef com salada de beterraba e queijo de cabra"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    BABY BEEF COM SALADA DE BETERRABA E QUEIJO DE CABRA
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif dif-inter"
+                      ><i class="icon-diff"></i> INTERMEDIÁRIO</span
+                    >
+                    <span class="tempo"><i class="icon-time"></i> 45 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row g-4 pt-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-contra-file.png"
+                  class="receita-img"
+                  alt="Centro de Mignon grelhado com manteiga de ervas"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    CENTRO DE MIGNON GRELHADO COM MANTEIGA DE ERVAS
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+                    <span class="tempo"><i class="icon-time"></i> 80 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-carne.png"
+                  class="receita-img"
+                  alt="Bife de contra filé grelhado com arroz e feijão"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    BIFE DE CONTRA FILÉ GRELHADO COM ARROZ E FEIJÃO
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+                    <span class="tempo"><i class="icon-time"></i> 20 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-file.png"
+                  class="receita-img"
+                  alt="Costela suína brown sugar + acompanhamentos"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    COSTELA SUÍNA BROWN SUGAR + ACOMPANHAMENTOS
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif dif-inter"
+                      ><i class="icon-diff"></i> INTERMEDIÁRIO</span
+                    >
+                    <span class="tempo"><i class="icon-time"></i> 70 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-carne.png"
+                  class="receita-img"
+                  alt="Baby beef com salada de beterraba e queijo de cabra"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    BABY BEEF COM SALADA DE BETERRABA E QUEIJO DE CABRA
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif dif-inter"
+                      ><i class="icon-diff"></i> INTERMEDIÁRIO</span
+                    >
+                    <span class="tempo"><i class="icon-time"></i> 45 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row g-4 pt-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-contra-file.png"
+                  class="receita-img"
+                  alt="Centro de Mignon grelhado com manteiga de ervas"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    CENTRO DE MIGNON GRELHADO COM MANTEIGA DE ERVAS
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+                    <span class="tempo"><i class="icon-time"></i> 80 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-carne.png"
+                  class="receita-img"
+                  alt="Bife de contra filé grelhado com arroz e feijão"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    BIFE DE CONTRA FILÉ GRELHADO COM ARROZ E FEIJÃO
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
+                    <span class="tempo"><i class="icon-time"></i> 20 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-file.png"
+                  class="receita-img"
+                  alt="Costela suína brown sugar + acompanhamentos"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    COSTELA SUÍNA BROWN SUGAR + ACOMPANHAMENTOS
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif dif-inter"
+                      ><i class="icon-diff"></i> INTERMEDIÁRIO</span
+                    >
+                    <span class="tempo"><i class="icon-time"></i> 70 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="./receitas.html" class="receita-card d-block h-100">
+                <img
+                  src="../img/produtos/receita-carne.png"
+                  class="receita-img"
+                  alt="Baby beef com salada de beterraba e queijo de cabra"
+                />
+                <div class="receita-body">
+                  <h3 class="receita-name">
+                    BABY BEEF COM SALADA DE BETERRABA E QUEIJO DE CABRA
+                  </h3>
+                  <p class="receita-porcoes">4 PORÇÕES</p>
+                  <div class="receita-info">
+                    <span class="dif dif-inter"
+                      ><i class="icon-diff"></i> INTERMEDIÁRIO</span
+                    >
+                    <span class="tempo"><i class="icon-time"></i> 45 MIN</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="container my-4">
+          <div class="hero-banner rounded-4 overflow-hidden position-relative">
             <img
-              src="../img/produtos/receita-file.png"
-              class="receita-img"
-              alt="Costela suína brown sugar + acompanhamentos"
+              src="../img/banners/banner-pontos.png"
+              alt="Programa de pontos Swift"
+              class="w-100 d-none d-md-block"
             />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                COSTELA SUÍNA BROWN SUGAR + ACOMPANHAMENTOS
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif dif-inter"
-                  ><i class="icon-diff"></i> INTERMEDIÁRIO</span
-                >
-                <span class="tempo"><i class="icon-time"></i> 70 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
             <img
-              src="../img/produtos/receita-carne.png"
-              class="receita-img"
-              alt="Baby beef com salada de beterraba e queijo de cabra"
+              src="../img/banners/banner-pontos.png"
+              alt="Programa de pontos Swift"
+              class="w-100 d-md-none"
             />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                BABY BEEF COM SALADA DE BETERRABA E QUEIJO DE CABRA
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif dif-inter"
-                  ><i class="icon-diff"></i> INTERMEDIÁRIO</span
-                >
-                <span class="tempo"><i class="icon-time"></i> 45 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-
-      <div class="row g-4 pt-lg-4">
-        <!-- CARD 1 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-contra-file.png"
-              class="receita-img"
-              alt="Centro de Mignon grelhado com manteiga de ervas"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                CENTRO DE MIGNON GRELHADO COM MANTEIGA DE ERVAS
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
-                <span class="tempo"><i class="icon-time"></i> 80 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-carne.png"
-              class="receita-img"
-              alt="Bife de contra filé grelhado com arroz e feijão"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                BIFE DE CONTRA FILÉ GRELHADO COM ARROZ E FEIJÃO
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
-                <span class="tempo"><i class="icon-time"></i> 20 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-file.png"
-              class="receita-img"
-              alt="Costela suína brown sugar + acompanhamentos"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                COSTELA SUÍNA BROWN SUGAR + ACOMPANHAMENTOS
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif dif-inter"
-                  ><i class="icon-diff"></i> INTERMEDIÁRIO</span
-                >
-                <span class="tempo"><i class="icon-time"></i> 70 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-carne.png"
-              class="receita-img"
-              alt="Baby beef com salada de beterraba e queijo de cabra"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                BABY BEEF COM SALADA DE BETERRABA E QUEIJO DE CABRA
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif dif-inter"
-                  ><i class="icon-diff"></i> INTERMEDIÁRIO</span
-                >
-                <span class="tempo"><i class="icon-time"></i> 45 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-
-      <div class="row g-4 pt-lg-4">
-        <!-- CARD 1 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-contra-file.png"
-              class="receita-img"
-              alt="Centro de Mignon grelhado com manteiga de ervas"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                CENTRO DE MIGNON GRELHADO COM MANTEIGA DE ERVAS
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
-                <span class="tempo"><i class="icon-time"></i> 80 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-carne.png"
-              class="receita-img"
-              alt="Bife de contra filé grelhado com arroz e feijão"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                BIFE DE CONTRA FILÉ GRELHADO COM ARROZ E FEIJÃO
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif"><i class="icon-diff"></i> INICIANTE</span>
-                <span class="tempo"><i class="icon-time"></i> 20 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-file.png"
-              class="receita-img"
-              alt="Costela suína brown sugar + acompanhamentos"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                COSTELA SUÍNA BROWN SUGAR + ACOMPANHAMENTOS
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif dif-inter"
-                  ><i class="icon-diff"></i> INTERMEDIÁRIO</span
-                >
-                <span class="tempo"><i class="icon-time"></i> 70 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <a href="./receitas.html" class="receita-card d-block h-100">
-            <img
-              src="../img/produtos/receita-carne.png"
-              class="receita-img"
-              alt="Baby beef com salada de beterraba e queijo de cabra"
-            />
-            <div class="receita-body">
-              <h3 class="receita-name">
-                BABY BEEF COM SALADA DE BETERRABA E QUEIJO DE CABRA
-              </h3>
-              <p class="receita-porcoes">4 PORÇÕES</p>
-              <div class="receita-info">
-                <span class="dif dif-inter"
-                  ><i class="icon-diff"></i> INTERMEDIÁRIO</span
-                >
-                <span class="tempo"><i class="icon-time"></i> 45 MIN</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+            <a href="../pages/pontos.html" class="btn btn-cta btn-programa"
+              >CONHECER O PROGRAMA</a
+            >
+          </div>
+        </section>
       </section>
-
-             <!-- ================= BANNER PROGRAMA DE PONTOS ================= -->
-    <section class="container my-4">
-      <div class="hero-banner rounded-4 overflow-hidden position-relative">
-        <!-- Imagem desktop -->
-        <img
-          src="../img/banners/banner-pontos.png"
-          alt="Programa de pontos Swift"
-          class="w-100 d-none d-md-block"
-        />
-        <!-- Imagem mobile -->
-        <img
-          src="../img/banners/banner-pontos.png"
-          alt="Programa de pontos Swift"
-          class="w-100 d-md-none"
-        />
-         <!-- Botão clicável em cima do botão da arte -->
-        <a href="../pages/pontos.html" class="btn btn-cta btn-programa"
-          >CONHECER O PROGRAMA</a
-        >
-
-      </div>
-    </section>
-      
-
-      
-    </section>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -576,11 +493,8 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
-
             <div class="f-item">
               <img
                 src="../img/icones/ic_round-phone.png"
@@ -592,7 +506,6 @@
                 <strong>0800 400 2892</strong>
               </div>
             </div>
-
             <div class="f-item">
               <div>
                 <small>Horários de funcionamento:</small>
@@ -602,7 +515,6 @@
                 </p>
               </div>
             </div>
-
             <div class="f-item">
               <img
                 src="../img/icones/clarity_email-solid.png"
@@ -617,8 +529,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -627,8 +537,6 @@
               <li><a href="#">Dúvidas Frequentes</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -639,8 +547,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -650,8 +556,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -674,7 +578,6 @@
               ><span class="cta-arrow" aria-hidden="true">➜</span></span
             >
           </a>
-
           <a href="tel:11402085588" class="cta-card cta-tele">
             <span class="cta-left">
               <img
@@ -691,7 +594,6 @@
               ><span class="cta-arrow" aria-hidden="true">➜</span></span
             >
           </a>
-
           <div class="footer-hours">
             <p class="f-heading">HORÁRIOS DE FUNCIONAMENTO:</p>
             <p class="hours">
@@ -701,8 +603,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"

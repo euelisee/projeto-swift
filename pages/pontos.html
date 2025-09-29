@@ -1,4 +1,3 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -6,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Pontos</title>
 
-    <!-- CSS (mesmos do index) -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+   <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -16,23 +14,17 @@
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
-
-          <!-- Seletor de loja/CEP -->
-          <button class="store-chip" id="btnStore" type="button">
+  <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
-          <form
+  <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
             onsubmit="return false;"
@@ -60,9 +52,7 @@
               </button>
             </div>
           </form>
-
-          <!-- Conta / Carrinho -->
-          <div class="d-flex align-items-center gap-2 ms-auto">
+    <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
               class="btn btn-outline-soft d-flex align-items-center gap-2"
@@ -99,9 +89,7 @@
           </div>
         </div>
       </div>
-
-      <!-- NAV de categorias (mesma do index) -->
-      <nav class="border-top border-bottom bg-white">
+   <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
             <a href="./produtos.html" class="cat-item">
@@ -198,24 +186,35 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
-    <main class="container my-5">
-      <h1 class="h3 mb-4">Título da Página</h1>
-      <!--  insira aqui o conteúdo da página -->
-    </main>
-
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
+<main class="container my-5">
+  <section class="mb-5">
+    <div class="hero-banner rounded-4 overflow-hidden position-relative">
+      <img src="../img/banners/banner-pontos.png" alt="Banner do Programa de Pontos Swift com uma mulher" class="w-100">
+    </div>
+  </section>
+  <section class="mb-5 text-center">
+    <img src="../img/banners/passoapasso.png" alt="Passo a passo do programa de pontos" class="img-fluid shadow-sm rounded-3">
+  </section>
+  <section class="mb-5">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-md-6">
+        <img src="../img/banners/carrinho-de-compras.png" class="img-fluid rounded-3 shadow-sm h-100" alt="Carrinho de compras cheio de presentes e pontos Swift">
+      </div>
+<div class="col-md-6">
+  <div class="card h-100 border-0 text-white text-center d-flex justify-content-center rounded-3 shadow-sm" style="background-color: var(--brand);">
+    <div class="card-body p-5">
+      <h2 class="h1 ‰fw-bold mb-4 font-heading-condensed">APÓS O CRÉDITO DOS PONTOS VOCÊ TERÁ 14 DIAS PARA TROCÁ-LOS</h2>
+      <a href="#" class="btn btn-points-signup mt-5">FAÇA PARTE DO PROGRAMA DE PONTOS SWIFT!</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
+</main>
+ 
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
-        <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
+       <div class="footer-top">
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -237,8 +236,7 @@
             </div>
           </div>
 
-          <!-- Coluna 2: Fale Conosco -->
-          <div class="f-col">
+    <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
             <div class="f-item">
@@ -278,7 +276,6 @@
             </div>
           </div>
 
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -288,8 +285,7 @@
             </ul>
           </div>
 
-          <!-- Coluna 4: Sua compra -->
-          <div class="f-col">
+         <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
               <li><a href="#">Seus Pedidos</a></li>
@@ -299,9 +295,7 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
-          <div class="f-col">
+   <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
               <li><a href="#">Nossa história</a></li>
@@ -309,10 +303,7 @@
               <li><a href="#">Sustentabilidade</a></li>
             </ul>
           </div>
-        </div>
-
-        <!-- middle: CTAs + horários -->
-        <div class="footer-cta">
+       <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
             target="_blank"
@@ -361,9 +352,7 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
-        <div class="footer-bottom">
+ <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"
               ><img src="../img/icones/Icone Instagram.png" alt=""

@@ -1,8 +1,4 @@
-// =====================================
 // JS — PROJETO SWIFT (global)
-// Carregado em TODAS as páginas.
-// Mantemos a lógica isolada por página com guards.
-// =====================================
 
 console.log("Swift: scripts carregados.");
 const page = window.location.pathname;
@@ -17,10 +13,7 @@ const page = window.location.pathname;
     });
   }
 })();
-
-// =====================================
-// HOME (index.html)
-// =====================================
+// HOME 
 (() => {
   if (!(page.endsWith("/index.html") || page.endsWith("/"))) return;
 
@@ -38,14 +31,10 @@ const page = window.location.pathname;
     });
   });
 })();
-
-// =====================================
-// CADASTRO (pages/cadastro.html)
-// =====================================
+// CADASTRO
 (() => {
   if (!page.endsWith("/cadastro.html")) return;
 
-  // Toggle password com ícone (se você estiver usando material icons)
   window.togglePassword = function (inputId, iconElement) {
     const input = document.getElementById(inputId);
     if (!input || !iconElement) return;
@@ -54,7 +43,6 @@ const page = window.location.pathname;
     iconElement.textContent = show ? "visibility_off" : "visibility";
   };
 
-  // Form
   const form = document.getElementById("cadastroForm");
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -81,8 +69,6 @@ const page = window.location.pathname;
       window.location.href = "index.html";
     });
   }
-
-  // CPF
   const cpf = document.getElementById("cpf");
   if (cpf) {
     cpf.addEventListener("input", (e) => {
@@ -105,16 +91,10 @@ const page = window.location.pathname;
     });
   }
 })();
-
-// =====================================
-// LOGIN (pages/login.html)
-// - Toggle do "olhinho"
-// - (Opcional) botão "Continuar" -> Google (mock ou real)
-// =====================================
+// LOGIN 
 (() => {
   if (!page.endsWith("/login.html")) return;
 
-  // Toggle de visibilidade da senha
   const btn = document.getElementById("togglePassword");
   const input = document.getElementById("password");
   if (btn && input) {
@@ -128,26 +108,21 @@ const page = window.location.pathname;
         icon.classList.toggle("bi-eye-slash", show);
       }
     });
-
-    // Pressionar e segurar para ver (opcional)
     btn.addEventListener("mousedown", () => (input.type = "text"));
     btn.addEventListener("mouseup", () => (input.type = "password"));
     btn.addEventListener("mouseleave", () => {
       if (btn.getAttribute("aria-pressed") !== "true") input.type = "password";
     });
   }
-
   // Botão Continuar -> Google (mock)
   const btnGoogleLogin = document.getElementById("btnGoogleLogin");
   if (btnGoogleLogin) {
     btnGoogleLogin.addEventListener("click", () => {
-      // MOCK: troque depois pela URL OAuth real
       window.location.href = "/mock/google-login.html";
     });
   }
 })();
-
-// --------- MOCK GOOGLE LOGIN ---------
+// MOCK GOOGLE LOGIN
 function startCountdown() {
   console.log("Página de mock de login via Google (simulação).");
 
@@ -169,12 +144,9 @@ function startCountdown() {
 
   tick();
 }
-
-// =====================================
-// ENTREGA E RETIRADA (pages/entrega.html)
-// =====================================
+// ENTREGA E RETIRADA 
 (() => {
-  if (!page.endsWith("/entrega.html")) return;
+  if (!page.endsWith("/carrinho-entrega.html")) return;
   document.addEventListener("DOMContentLoaded", () => {
     const homeDeliveryRadio = document.getElementById("homeDelivery")
     const storePickupRadio = document.getElementById("storePickup")
@@ -184,7 +156,7 @@ function startCountdown() {
     const selectStoreBtn = document.getElementById("selectStoreBtn")
     const continueBtn = document.querySelector(".btn-continue")
 
-    // Função para atualizar a aparência das opções
+
     function updateDeliveryOptions() {
       deliveryOptions.forEach((option) => {
         option.classList.remove("active")
@@ -198,12 +170,12 @@ function startCountdown() {
         storeSearchSection.classList.add("show");
 
         if (map) {
-          map.invalidateSize(); // Corrige problemas de renderização do mapa ao mostrar a seção
+          map.invalidateSize();
         }
       }
     }
 
-    // Event listeners para os radio buttons
+
     homeDeliveryRadio.addEventListener("change", updateDeliveryOptions)
     storePickupRadio.addEventListener("change", updateDeliveryOptions)
 
@@ -272,28 +244,24 @@ function startCountdown() {
 
     let map
     let markers = []
-    let selectedStore = swiftStores[0] // Loja padrão selecionada
+    let selectedStore = swiftStores[0]
 
     function initMap() {
-      // Centralizar o mapa em São Paulo
       const saoPaulo = [-23.5505, -46.6333]
 
       map = L.map("map").setView(saoPaulo, 12)
 
-      // Adicionar camada base (tiles do OpenStreetMap)
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map)
 
-      // Criar ícone personalizado
       const storeIcon = L.icon({
-        iconUrl: '../img/pinmapa.png', // caminho do seu PNG
-        iconSize: [60, 60],          // tamanho do ícone (ajuste conforme seu PNG)
-        iconAnchor: [20, 40],        // ponto do ícone que "encosta" no mapa
-        popupAnchor: [0, -40]        // onde aparece o popup em relação ao ícone
+        iconUrl: '../img/pinmapa.png',
+        iconSize: [60, 60],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -40]
       })
 
-      // Criar marcadores para todas as lojas
       swiftStores.forEach((store) => {
         const marker = L.marker([store.lat, store.lng], { icon: storeIcon })
           .addTo(map)
@@ -306,14 +274,11 @@ function startCountdown() {
         markers.push(marker)
       })
 
-      // Selecionar a primeira loja por padrão
       selectStore(selectedStore)
     }
 
     function selectStore(store) {
       selectedStore = store
-
-      // Atualizar informações da loja selecionada
       document.getElementById("selectedStoreName").textContent = store.name
       document.getElementById("selectedStoreAddress").textContent = store.address
 
@@ -325,12 +290,10 @@ function startCountdown() {
         hoursContainer.appendChild(li)
       })
 
-      // Centralizar o mapa na loja selecionada
       if (map) {
         map.setView([store.lat, store.lng], 15)
       }
 
-      // Resetar botão de seleção
       const selectBtn = document.getElementById("selectStoreBtn")
       selectBtn.textContent = "Selecionar"
       selectBtn.style.backgroundColor = ""
@@ -365,43 +328,28 @@ function startCountdown() {
       }
     })
 
-
-
-    // Selecionar loja
     selectStoreBtn.addEventListener("click", function () {
       console.log(`[Leaflet] Loja selecionada: ${selectedStore.name}`)
       this.textContent = "Selecionado"
       this.style.backgroundColor = "var(--swift-green)"
       this.disabled = true
 
-      // Habilitar botão continuar
+
       continueBtn.disabled = false
     })
 
-    // Continuar compra
     continueBtn.addEventListener("click", () => {
       const selectedMethod = document.querySelector('input[name="deliveryMethod"]:checked').value
-      if (selectedMethod === "home") {
-        alert("Entrega no endereço selecionada!")
-      } else {
-        alert("Retirada na loja selecionada!")
-      }
     })
 
-    // Inicializar estado
     updateDeliveryOptions()
     initMap()
   });
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
-  const paymentRadios = document.querySelectorAll('input[name="forma-pagamento"]');
-  const paymentOptions = document.querySelectorAll('.payment-option');
-  const allForms = document.querySelectorAll('.payment-details-form');
-  const backButton = document.getElementById('back-to-options');
-
   if (document.querySelector('#paginaAcompanharPedido')) {
-    const intervaloDeTempo = 3000;
+    const intervaloDeTempo = 1000;
     const itensParaRevelar = document.querySelectorAll('.blur-ativo');
 
     function revelarItem(index) {
@@ -413,39 +361,68 @@ document.addEventListener('DOMContentLoaded', function () {
     revelarItem(0);
   }
 
-  // Função para resetar a visão para o estado inicial
-  function showAllOptions() {
-    paymentOptions.forEach(option => option.classList.remove('hidden'));
-    allForms.forEach(form => form.classList.remove('expanded'));
-    backButton.style.display = 'none';
+  const paymentRadios = document.querySelectorAll('input[name="forma-pagamento"]');
+  const paymentOptions = document.querySelectorAll('.payment-option');
+  const allForms = document.querySelectorAll('.payment-details-form');
+  const backButton = document.getElementById('back-to-options');
 
-    // Desmarca qualquer radio que estava ativo
-    const activeRadio = document.querySelector('input[name="forma-pagamento"]:checked');
-    if (activeRadio) activeRadio.checked = false;
+  if (paymentRadios && paymentOptions && allForms && backButton) {
 
-    document.getElementById('pix').checked = true;
-  }
-  backButton.addEventListener('click', showAllOptions);
+    backButton.addEventListener('click', () => {
+      paymentOptions.forEach(option => option.classList.remove('hidden'));
+      allForms.forEach(form => form.classList.remove('expanded'));
+      backButton.style.display = 'none';
 
-  paymentRadios.forEach(radio => {
-    radio.addEventListener('change', function () {
-      const targetSelector = this.dataset.target;
+      const activeRadio = document.querySelector('input[name="forma-pagamento"]:checked');
+      if (activeRadio) activeRadio.checked = false;
 
-      // Se o radio clicado tiver um 'data-target' (é expansível)
-      if (targetSelector) {
-        const targetForm = document.querySelector(targetSelector);
-
-        // Esconde as outras opções
-        paymentOptions.forEach(option => {
-          if (!option.contains(this)) {
-            option.classList.add('hidden');
-          }
-        });
-
-        // Mostra o formulário e o botão de voltar
-        if (targetForm) targetForm.classList.add('expanded');
-        backButton.style.display = 'block';
-      }
+      document.getElementById('pix').checked = true;
     });
-  });
+
+    paymentRadios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        const targetSelector = this.dataset.target;
+        if (targetSelector) {
+          const targetForm = document.querySelector(targetSelector);
+
+          paymentOptions.forEach(option => {
+            if (!option.contains(this)) {
+              option.classList.add('hidden');
+            }
+          });
+          if (targetForm) targetForm.classList.add('expanded');
+          backButton.style.display = 'block';
+        }
+      });
+    });
+  }
 });
+// MOCK DE PAGAMENTO
+function startPaymentProcess() {
+  console.log("Página de mock de pagamento iniciada.");
+
+  const processingState = document.getElementById("processing-state");
+  const successState = document.getElementById("success-state");
+  const countdownSpan = document.getElementById("redirect-countdown");
+
+  const targetPage = 'acompanhar-pedido.html';
+  setTimeout(() => {
+    if (processingState) processingState.classList.add("d-none");
+    if (successState) successState.classList.remove("d-none");
+
+    let countdown = 3;
+    const tick = () => {
+      if (countdownSpan) {
+        countdownSpan.textContent = countdown;
+      }
+      if (countdown <= 0) {
+        console.log("[mock] Pagamento concluído, redirecionando para:", targetPage);
+        window.location.href = targetPage;
+      } else {
+        countdown -= 1;
+        setTimeout(tick, 1000);
+      }
+    };
+    tick();
+  }, 3000);
+}
