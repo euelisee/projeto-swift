@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Swift — Acompanhar Pedido</title>
+    <title>Swift — Pontos</title>
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+   <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -17,15 +17,14 @@
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
-          <button class="store-chip" id="btnStore" type="button">
+  <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-          <form
+  <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
             onsubmit="return false;"
@@ -53,7 +52,7 @@
               </button>
             </div>
           </form>
-          <div class="d-flex align-items-center gap-2 ms-auto">
+    <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
               class="btn btn-outline-soft d-flex align-items-center gap-2"
@@ -90,131 +89,138 @@
           </div>
         </div>
       </div>
+   <nav class="border-top border-bottom bg-white">
+        <div class="container">
+          <div class="categories scroller-x py-2">
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-bovino.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Bovinos</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-aves.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Aves</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-pescados.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Pescados</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-suinos.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Suínos</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-linguicas.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Linguíças</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-churrasco.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Churrasco</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-especiais.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Cortes Especiais</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-vegetais.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>100% vegetais</small>
+            </a>
+            <a href="./produtos.html" class="cat-item">
+              <img
+                src="../img/icones/icon-variados.png"
+                width="22"
+                height="22"
+                alt=""
+                aria-hidden="true"
+              />
+              <small>Variados</small>
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main class="container" id="paginaAcompanharPedido">
-      <section class="my-5 row tracking-section">
-        <div class="col-12 col-md-6 col-lg-8">
-          <h2 class="display-1 fs-1">Acompanhe seu pedido</h2>
-            <div class="border bg-body rounded-4 ps-4 py-3 text-start mb-4">
-                <div>
-                    <div class="d-flex align-items-center blur-ativo">
-                        <img src="../img/icones/icon-ready.png" width="32" alt="" class="me-3">
-                        <p class="fw-semibold mb-0">O seu pedido foi confirmado</p>
-                    </div>
-                    
-                    <div>
-                        <img src="../img/icones/icon-lineDots.png" width="32" alt="" class="my-2">
-                    </div>
-                    
-                    <div class="d-flex align-items-center blur-ativo">
-                        <img src="../img/icones/icon-package.png" width="32" alt="" class="me-3">
-                        <p class="fw-semibold mb-0">O seu pedido está sendo preparado</p>
-                    </div>
-                    <div>
-                        <img src="../img/icones/icon-lineDots.png" width="32" alt="" class="my-2">
-                    </div>
-                    
-                    <div class="d-flex align-items-center blur-ativo">
-                        <img src="../img/icones/rnk-icone-entrega-rapida-swift-home 1.png" width="32" alt="" class="me-3">
-                        <p class="fw-semibold mb-0">Ótima notícia! O seu pedido já pode ser retirado!</p>
-                    </div>
-                </div>
-                <div class="align-items-center text-center d-flex flex-column mt-4 blur-ativo">
-                    <p>Informe o codigo de seguranca no momento da retirada:</p>
-                    <div class="border rounded-3 p-2 ms-3">
-                        <span class="fw-bold fs-4">123456</span></div>
-                </div>
-            </div>
-        </div>
-           <div class="col-lg-4 col-md-5">
-                <div class="order-summary">
-                    <h2>Resumo da compra</h2>
-                    
-                    <div class="summary-item">
-                        <span>Produtos(5)</span>
-                        <span class="price">R$249<sup>50</sup></span>
-                    </div>
-                    
-                    <div class="summary-item">
-                        <span>Frete</span>
-                        <span class="price free">Grátis</span>
-                    </div>
-                    
-                    <div class="summary-item discount">
-                        <span>Descontos</span>
-                        <span class="price">R$10,00</span>
-                    </div>
-                    
-                    <hr class="summary-divider">
-                    
-                    <div class="summary-total">
-                        <span>Total</span>
-                        <span class="total-price">R$239<sup>50</sup></span>
-                    </div>
-                    
-                </div>
-            </div>
-      </section>
+<main>
+  <section class="mb-5">
+    <div class="hero-banner rounded-4 overflow-hidden position-relative">
+      <img src="../img/banners/banner-box.png" alt="Banner do SwiftBox com uma caixa de produtos" class="w-100">
+    </div>
+  </section>
 
-      <hr class="my-5" />
-
-      <section aria-labelledby="titulo-recomenda" class="container">
-        <h2 id="titulo-recomenda" class="h5 mb-3">Recomendações para você</h2>
-        <div class="row g-3 tracking-section">
-          <div class="col-6 col-md-3">
-            <a href="./detalhe-produto.html" class="product-card d-block h-100">
-              <img
-                src="../img/produtos/máscara patinho.png"
-                class="product-img"
-                alt="Espetinho de Panceta 500g"
-              />
-              <div class="product-body">
-                <h3 class="product-name">Espetinho de Panceta 500g</h3>
-                <div class="product-price">R$ 21,90 <small>un</small></div>
-                <button class="btn btn-brand w-100" type="button">
-                  Adicionar
-                </button>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-3">
-            <a href="./detalhe-produto.html" class="product-card d-block h-100">
-              <img
-                src="../img/produtos/máscara patinho(1).png"
-                class="product-img"
-                alt="Filé de Tilápia 800g"
-              />
-              <div class="product-body">
-                <h3 class="product-name">Filé de Tilápia 800g</h3>
-                <div class="product-price">R$ 36,90 <small>un</small></div>
-                <button class="btn btn-brand w-100" type="button">
-                  Adicionar
-                </button>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-3">
-            <a href="./detalhe-produto.html" class="product-card d-block h-100">
-              <img
-                src="../img/produtos/máscara patinho(2).png"
-                class="product-img"
-                alt="Carne Moída de Patinho 500g"
-              />
-              <div class="product-body">
-                <h3 class="product-name">Carne Moída de Patinho 500g</h3>
-                <div class="product-price">R$ 26,90 <small>un</small></div>
-                <button class="btn btn-brand w-100" type="button">
-                  Adicionar
-                </button>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
+  <section class="container mb-5 text-center">
+    <img src="../img/banners/passoapasso-box-swift.png" alt="Passo a passo do SwiftBox" class="img-fluid shadow-sm rounded-3">
+  </section>
+  <section class="container mb-5">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-md-6">
+        <img src="../img/banners/balao-box.png" class="img-fluid rounded-3 shadow-sm h-100" alt="Caixa do SwiftBox com paraquedas">
+      </div>
+      <div class="col-md-6">
+        <img src="../img/banners/familia-feliz-box.png" class="img-fluid rounded-3 shadow-sm h-100" alt="Família feliz abrindo a caixa do SwiftBox">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bloco 4: Card Laranja de Call-to-Action -->
+  <section class="container mb-5">
+    <div class="card border-0 text-white text-center d-flex justify-content-center rounded-3 shadow-sm" style="background-color: var(--brand);">
+      <div class="card-body p-4 p-md-5">
+        <h2 class="h3 fw-bold mb-4 font-heading-condensed">Mais sabor e carinho na sua mesa, todo mês.<br>Sua família merece esse cuidado. Assine agora!</h2>
+        <a href="./login.html" class="btn btn-swiftbox-signup">Assinar o SwiftBox</a>
+      </div>
+    </div>
+  </section>
+</main>
+ 
     <footer class="footer-swift text-light">
       <div class="container">
-        <div class="footer-top">
+       <div class="footer-top">
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -235,7 +241,8 @@
               </div>
             </div>
           </div>
-          <div class="f-col">
+
+    <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
             <div class="f-item">
@@ -274,6 +281,7 @@
               </div>
             </div>
           </div>
+
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -283,7 +291,7 @@
             </ul>
           </div>
 
-          <div class="f-col">
+         <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
               <li><a href="#">Seus Pedidos</a></li>
@@ -293,7 +301,7 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-        <div class="f-col">
+   <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
               <li><a href="#">Nossa história</a></li>
@@ -301,8 +309,7 @@
               <li><a href="#">Sustentabilidade</a></li>
             </ul>
           </div>
-        </div>
-        <div class="footer-cta">
+       <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
             target="_blank"
@@ -351,7 +358,7 @@
             </p>
           </div>
         </div>
-        <div class="footer-bottom">
+ <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"
               ><img src="../img/icones/Icone Instagram.png" alt=""
@@ -372,7 +379,5 @@
         </div>
       </div>
     </footer>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
   </body>
 </html>

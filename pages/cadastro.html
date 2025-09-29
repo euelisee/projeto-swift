@@ -1,37 +1,32 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Cadastro</title>
-
-    <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link href="../css/tokens.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
-
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -198,14 +193,11 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-    <!-- Tela de Cadastro -->
+
     <main class="cadastro-container">
       <div class="form-card">
         <h1 class="form-title">Criar Conta</h1>
-
         <form id="cadastroForm" novalidate>
-          <!-- Nome Completo -->
           <div class="mb-3">
             <label for="nomeCompleto" class="form-label"
               >Nome Completo<span class="required">*</span></label
@@ -218,8 +210,6 @@
               required
             />
           </div>
-
-          <!-- Data de Nascimento -->
           <div class="mb-3">
             <label for="dataNascimento" class="form-label"
               >Data de Nascimento<span class="required">*</span></label
@@ -233,8 +223,6 @@
               required
             />
           </div>
-
-          <!-- Telefone -->
           <div class="mb-3">
             <label for="telefone" class="form-label"
               >Telefone<span class="required">*</span></label
@@ -248,8 +236,6 @@
               required
             />
           </div>
-
-          <!-- CPF -->
           <div class="mb-3">
             <label for="cpf" class="form-label"
               >CPF<span class="required">*</span></label
@@ -263,8 +249,6 @@
               required
             />
           </div>
-
-          <!-- E-mail -->
           <div class="mb-3">
             <label for="email" class="form-label"
               >E-mail<span class="required">*</span></label
@@ -279,31 +263,22 @@
             />
           </div>
 
-          <!--Senha-->
-          <div class="mb-3">
-            <label for="Senha" class="form-label"
+          <div class="col-12">
+            <label for="senha" class="form-label"
               >Senha<span class="required">*</span></label
             >
             <div class="password-field">
-              <input
-                type="password"
-                class="form-control"
-                id="senha"
-                name="senha"
-                required
-              />
+              <input type="password" class="form-control" id="senha" required />
               <span
-                class="password-toggle material-symbols-outlined"
+                class="material-icons password-toggle"
                 onclick="togglePassword('senha', this)"
+                >visibility</span
               >
-                visibility
-              </span>
             </div>
             <div class="password-hint">Mínimo 8 caracteres.</div>
           </div>
 
-          <!-- Confirmar Senha -->
-          <div class="mb-3">
+          <div class="col-12">
             <label for="confirmarSenha" class="form-label"
               >Confirmar Senha<span class="required">*</span></label
             >
@@ -312,19 +287,16 @@
                 type="password"
                 class="form-control"
                 id="confirmarSenha"
-                name="confirmarSenha"
                 required
               />
               <span
-                class="password-toggle material-symbols-outlined"
+                class="material-icons password-toggle"
                 onclick="togglePassword('confirmarSenha', this)"
+                >visibility</span
               >
-                visibility
-              </span>
             </div>
           </div>
 
-          <!-- Checkboxes -->
           <div class="form-check">
             <input
               class="form-check-input"
@@ -356,7 +328,10 @@
           <p class="campos-obrigatorios">
             <span class="required">*</span>Campos obrigatórios.
           </p>
-          <a href="./cadastro-confirmar.html" class="btn btn-brand btn-lg w-100">
+          <a
+            href="./cadastro-confirmar.html"
+            class="btn btn-brand btn-lg w-100"
+          >
             <span>Continuar</span>
           </a>
         </form>
@@ -365,12 +340,9 @@
 
     <script src="../js/main.js"></script>
 
-
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -391,8 +363,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
@@ -432,8 +402,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -454,8 +422,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -465,8 +431,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -516,8 +480,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"

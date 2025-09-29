@@ -1,4 +1,3 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -6,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Revisar</title>
 
-    <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
@@ -16,22 +14,18 @@
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
 
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
 
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -61,7 +55,6 @@
             </div>
           </form>
 
-          <!-- Conta / Carrinho -->
           <div class="d-flex align-items-center gap-2 ms-auto">
             <a
               href="./login.html"
@@ -100,128 +93,104 @@
         </div>
       </div>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
+    <main class="container my-5">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <h1 class="h2 mb-4">Revise e confirme</h1>
 
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
-    <main class="container">
-      <section class="container my-5 row">
-        <div class="col-12 col-md-6 col-lg-8">
-          <h2 class="display-1 fs-1">Revise e Confirme</h2>
-
-          <div
-            class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4"
-          >
-            <div class="row w-100 align-items-center">
-              <label for="dadosPessoais" class="w-100">
-                <p class="m-0 p-0 fw-bold fs-5">Dados Pessoais</p>
-                <p class="m-0 p-0 text-secondary">Darth Vader da Silva</p>
-                <p class="m-0 p-0 text-secondary">000.000.000-00</p>
-              </label>
-              <a href="./cadastro.html" class="link-brand my-2">Alterar</a>
-            </div>
-          </div>
-
-          <div
-            class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4"
-          >
-            <div class="row w-100 align-items-center">
-              <label for="detalheEntrega" class="w-100">
-                <p class="m-0 p-0 fw-bold fs-5">Detalhes da Entrega</p>
-                <p class="m-0 p-0 text-secondary">
-                  Retirar na loja Swift Ipiranga
-                </p>
-                <p class="m-0 p-0 text-secondary">A partir das 15h</p>
-              </label>
-              <a href="./carrinho-entrega.html" class="link-brand my-2"
-                >Alterar</a
-              >
-            </div>
-          </div>
-
-          <div
-            class="border bg-body rounded-4 ps-4 py-3 gap-4 d-flex text-start align-items-center mb-4"
-          >
-            <div class="row w-100 align-items-center">
-              <label for="formaPagamento" class="w-100">
-                <p class="m-0 p-0 fw-bold fs-5">Forma de Pagamento</p>
-                <p class="m-0 p-0 text-secondary">Cartão de débito</p>
-                <p class="m-0 p-0 text-secondary">À vista</p>
-              </label>
-              <a href="./forma-pagamento.html" class="link-brand my-2"
-                >Alterar</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-12 col-md-6 col-lg-4 d-flex align-itens-between flex-column"
-        >
-           <div class="col-lg-4 col-md-5 summary-section">
-                <div class="order-summary">
-                    <h2>Resumo da compra</h2>
-                    
-                    <div class="summary-item">
-                        <span>Produtos(5)</span>
-                        <span class="price">R$249<sup>50</sup></span>
-                    </div>
-                    
-                    <div class="summary-item">
-                        <span>Frete</span>
-                        <span class="price free">Grátis</span>
-                    </div>
-                    
-                    <div class="summary-item discount">
-                        <span>Descontos</span>
-                        <span class="price">R$10,00</span>
-                    </div>
-                    
-                    <hr class="summary-divider">
-                    
-                    <div class="summary-total">
-                        <span>Total</span>
-                        <span class="total-price">R$239<sup>50</sup></span>
-                    </div>
-                    
-                    <button class="btn btn-continue">Continuar a compra</button>
+          <div class="d-grid gap-3">
+            <div class="bg-white border rounded-3 p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <p class="fw-bold fs-5 mb-1">Dados Pessoais</p>
+                  <p class="m-0 text-secondary">João Antonio da Silva</p>
+                  <p class="m-0 text-secondary">123.456.789.00</p>
                 </div>
+                <a href="./cadastro.html" class="link-brand flex-shrink-0 ms-3"
+                  >Alterar</a
+                >
+              </div>
             </div>
-        </div>
-    </div>
-        
-          </div>
-          <div class="container my-4 bg-brand p-3 rounded-3">
-            <div class="d-flex justify-content-center mb-2">
-              <img
-                src="../img/icones/icone-premium.png"
-                width="16"
-                alt="Premium"
-              />
-            </div>
-            <p class="fw-bold fs-6 text-light mb-1 text-center">
-              ASSINANTE PROGRAMA DE PONTOS SWIFT
-            </p>
-            <hr class="text-light" />
 
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="mb-0 fw-bold text-light">Pontos Acumulados:</p>
-              <p class="fs-5 fw-bold mb-0 text-light">2.395 pts</p>
+            <div class="bg-white border rounded-3 p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <p class="fw-bold fs-5 mb-1">Detalhes da entrega</p>
+                  <p class="m-0 text-secondary">
+                    Retirar na loja Swift Ametista
+                  </p>
+                  <p class="m-0 text-secondary">a partir das 15h</p>
+                </div>
+                <a
+                  href="./carrinho-entrega.html"
+                  class="link-brand flex-shrink-0 ms-3"
+                  >Alterar</a
+                >
+              </div>
+            </div>
+
+            <div class="bg-white border rounded-3 p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <p class="fw-bold fs-5 mb-1">Detalhes do pagamento</p>
+                  <p class="m-0 text-secondary">Cartão de Crédito</p>
+                  <p class="m-0 text-secondary">À vista</p>
+                </div>
+                <a
+                  href="./forma-pagamento.html"
+                  class="link-brand flex-shrink-0 ms-3"
+                  >Alterar</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </section>
+
+        <div class="col-lg-4">
+          <div class="d-grid gap-4">
+            <div class="order-summary">
+              <h2 class="h5">Resumo da compra</h2>
+              <div class="summary-item">
+                <span>Produtos(5)</span>
+                <span class="price">R$249,50</span>
+              </div>
+              <div class="summary-item">
+                <span>Frete</span>
+                <span class="price free">Grátis</span>
+              </div>
+              <div class="summary-item discount">
+                <span>Descontos</span>
+                <span class="price">R$10,00</span>
+              </div>
+              <hr class="summary-divider" />
+              <div class="summary-total">
+                <span>Total</span>
+                <span class="total-price">R$239,50</span>
+              </div>
+              <a
+                href="forma-pagamento.html"
+                class="btn btn-continue text-white text-decoration-none"
+                >Confirmar a compra</a
+              >
+            </div>
+
+            <div class="d-grid gap-2">
+              <div
+                class="bg-brand p-3 rounded-3 text-center text-white fw-bold"
+              >
+                ASSINANTE PROGRAMA DE PONTOS SWIFT
+                <span class="fw-bold">Pontos Acumulados</span>
+                <span class="fw-bold fs-5">2.395 pts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -242,8 +211,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
@@ -283,8 +250,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -293,8 +258,6 @@
               <li><a href="#">Dúvidas Frequentes</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -305,8 +268,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -316,8 +277,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -367,8 +326,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"

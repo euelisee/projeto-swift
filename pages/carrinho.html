@@ -1,12 +1,9 @@
-<!-- /pages/_base-page.html  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swift — Carrinho</title>
-
-    <!-- CSS (mesmos do index) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
@@ -16,22 +13,17 @@
     <link href="../css/style.css" rel="stylesheet" />
   </head>
   <body class="bg-body">
-    <!-- ================= HEADER NÃO ALTERAR ================= -->
     <header class="shadow-sm bg-white">
       <div class="container py-3">
         <div class="d-flex align-items-center gap-3 flex-wrap">
-          <!-- LOGO -->
           <a href="../index.html" class="navbar-brand p-0 me-auto me-lg-0">
             <img src="../img/banners/swift logo 1.png" alt="Swift" width="96" />
           </a>
 
-          <!-- Seletor de loja/CEP -->
           <button class="store-chip" id="btnStore" type="button">
             Swift - Oscar Freire<br />
             <span class="cep">CEP: 01426-000</span>
           </button>
-
-          <!-- Busca -->
           <form
             class="flex-grow-1 d-none d-md-flex"
             role="search"
@@ -93,14 +85,12 @@
                 class="cart-badge"
                 id="cartBadge"
                 aria-label="Itens no carrinho"
-                >0</span
+                >5</span
               >
             </a>
           </div>
         </div>
       </div>
-
-      <!-- NAV de categorias (mesma do index) -->
       <nav class="border-top border-bottom bg-white">
         <div class="container">
           <div class="categories scroller-x py-2">
@@ -198,24 +188,476 @@
         </div>
       </nav>
     </header>
-    <!-- ================= /HEADER INCLUIR AS COISAS DA PAGINA AQUI ================= -->
-
-    <!-- =========================================================
-       CONTEÚDO ESPECÍFICO DA PÁGINA
-       >> Troque o título e coloque aqui os componentes da tela.
-       >> Use .container para manter o grid alinhado ao restante do site.
-  ========================================================== -->
     <main class="container my-5">
-      <h1 class="h3 mb-4">Título da Página - CARRINHO</h1>
-      <!--  insira aqui o conteúdo da página -->
-    </main>
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-header bg-white p-3 d-flex align-items-center">
+              <div class="form-check fs-5">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="selectAllProducts"
+                  checked
+                />
+                <label
+                  class="form-check-label fw-bold ms-2"
+                  for="selectAllProducts"
+                >
+                  Produtos
+                </label>
+              </div>
+            </div>
+            <div class="card-body p-0">
+<ul class="list-group list-group-flush" id="cartProductList">
+  <li class="list-group-item p-3">
+    <div class="d-flex align-items-center gap-3">
+      <input class="form-check-input" type="checkbox" value="">
+      <img src="../img/produtos/621396_CARNE-MOIDA-BOLONHESA-SWIFT-1KG_INNATURA_0276_QUADRADO_1000x1000.png" alt="Carne Moída Bolonhesa" class="cart-product-image">
+      <div class="flex-grow-1">
+        <h6 class="mb-0 fw-bold">Carne moída</h6>
+        <small class="text-muted">1 kg, quantidade</small>
+        <div class="d-flex gap-3 mt-1">
+          <a href="#" class="link-danger text-decoration-none small">Excluir</a>
+          <a href="#" class="link-brand text-decoration-none small">Salvar</a>
+          <a href="#" class="link-secondary text-decoration-none small">Alterar</a>
+        </div>
+      </div>
+      <div class="quantity-stepper">
+        <button class="btn btn-sm" data-action="decrease">-</button>
+        <input type="text" class="form-control form-control-sm text-center" value="1" readonly>
+        <button class="btn btn-sm" data-action="increase">+</button>
+      </div>
+      <div class="fw-bold fs-5 text-end" style="min-width: 100px;">
+        R$ 49<sup>90</sup>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item p-3">
+    <div class="d-flex align-items-center gap-3">
+      <input class="form-check-input" type="checkbox" value="">
+      <img src="../img/produtos/617769-almondegas-bovinas_1.png" alt="Carne Moída Bolonhesa" class="cart-product-image">
+      <div class="flex-grow-1">
+        <h6 class="mb-0 fw-bold">Almodengas</h6>
+        <small class="text-muted">1kg, quantidade</small>
+        <div class="d-flex gap-3 mt-1">
+          <a href="#" class="link-danger text-decoration-none small">Excluir</a>
+          <a href="#" class="link-brand text-decoration-none small">Salvar</a>
+          <a href="#" class="link-secondary text-decoration-none small">Alterar</a>
+        </div>
+      </div>
+      
+      <div class="quantity-stepper">
+        <button class="btn btn-sm" data-action="decrease">-</button>
+        <input type="text" class="form-control form-control-sm text-center" value="2" readonly>
+        <button class="btn btn-sm" data-action="increase">+</button>
+      </div>
 
-    <!-- ================= RODAPÉ NAO ALTERAR ================= -->
+      <div class="fw-bold fs-5 text-end" style="min-width: 100px;">
+        R$ 49<sup>90</sup>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item p-3">
+    <div class="d-flex align-items-center gap-3">
+      <input class="form-check-input" type="checkbox" value="">
+      <img src="../img/produtos/alcatraswift.png" alt="Carne Moída Bolonhesa" class="cart-product-image">
+      <div class="flex-grow-1">
+        <h6 class="mb-0 fw-bold">Bife Alcatra</h6>
+        <small class="text-muted">1 kg, quantidade</small>
+        <div class="d-flex gap-3 mt-1">
+          <a href="#" class="link-danger text-decoration-none small">Excluir</a>
+          <a href="#" class="link-brand text-decoration-none small">Salvar</a>
+          <a href="#" class="link-secondary text-decoration-none small">Alterar</a>
+        </div>
+      </div>
+      
+      <div class="quantity-stepper">
+        <button class="btn btn-sm" data-action="decrease">-</button>
+        <input type="text" class="form-control form-control-sm text-center" value="1" readonly>
+        <button class="btn btn-sm" data-action="increase">+</button>
+      </div>
+
+      <div class="fw-bold fs-5 text-end" style="min-width: 100px;">
+        R$ 49<sup>90</sup>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item p-3">
+    <div class="d-flex align-items-center gap-3">
+      <input class="form-check-input" type="checkbox" value="">
+      <img src="../img/produtos/621372_CUBOS-DE-ACEM-SWIFT-1KG_INNATURA_0136_QUADRADO_1000x1000.png" alt="Carne Moída Bolonhesa" class="cart-product-image">
+      <div class="flex-grow-1">
+        <h6 class="mb-0 fw-bold">Cubos de carne acem</h6>
+        <small class="text-muted">1 kg, quantidade</small>
+        <div class="d-flex gap-3 mt-1">
+          <a href="#" class="link-danger text-decoration-none small">Excluir</a>
+          <a href="#" class="link-brand text-decoration-none small">Salvar</a>
+          <a href="#" class="link-secondary text-decoration-none small">Alterar</a>
+        </div>
+      </div>
+      
+      <div class="quantity-stepper">
+        <button class="btn btn-sm" data-action="decrease">-</button>
+        <input type="text" class="form-control form-control-sm text-center" value="1" readonly>
+        <button class="btn btn-sm" data-action="increase">+</button>
+      </div>
+
+      <div class="fw-bold fs-5 text-end" style="min-width: 100px;">
+        R$ 49<sup>90</sup>
+      </div>
+    </div>
+  </li>
+  </li>
+  <li class="list-group-item p-3">
+    <div class="d-flex align-items-center gap-3">
+      <input class="form-check-input" type="checkbox" value="">
+      <img src="../img/produtos/621396_CARNE-MOIDA-BOLONHESA-SWIFT-1KG_INNATURA_0276_QUADRADO_1000x1000.png" alt="Carne Moída Bolonhesa" class="cart-product-image">
+      <div class="flex-grow-1">
+        <h6 class="mb-0 fw-bold">Carne moída - Coxão mole </h6>
+        <small class="text-muted">1 kg, quantidade</small>
+        <div class="d-flex gap-3 mt-1">
+          <a href="#" class="link-danger text-decoration-none small">Excluir</a>
+          <a href="#" class="link-brand text-decoration-none small">Salvar</a>
+          <a href="#" class="link-secondary text-decoration-none small">Alterar</a>
+        </div>
+      </div>
+      
+      <div class="quantity-stepper">
+        <button class="btn btn-sm" data-action="decrease">-</button>
+        <input type="text" class="form-control form-control-sm text-center" value="1" readonly>
+        <button class="btn btn-sm" data-action="increase">+</button>
+      </div>
+
+      <div class="fw-bold fs-5 text-end" style="min-width: 100px;">
+        R$ 49<sup>90</sup>
+      </div>
+    </div>
+  </li>
+  </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="position-sticky" style="top: 2rem">
+            <div class="order-summary">
+              <h2 class="h5">Resumo da compra</h2>
+              <div class="summary-item">
+                <span>Produtos(5)</span
+                ><span class="price">R$249<sup>50</sup></span>
+              </div>
+              <div class="summary-item">
+                <span>Frete</span><span class="price free">Grátis</span>
+              </div>
+              <div class="summary-item discount">
+                <span>Descontos</span><span class="price">R$10,00</span>
+              </div>
+              <hr class="summary-divider" />
+              <div class="summary-total">
+                <span>Total</span
+                ><span class="total-price">R$239<sup>50</sup></span>
+              </div>
+              <a
+                href="./carrinho-entrega.html"
+                class="btn btn-continue text-white text-decoration-none"
+                >Continuar a compra</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3 p-4 mt-5 shadow-sm">
+        <h2 class="h4 mb-3">Recomendações para você</h2>
+        <div id="carouselRecomendacoes" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 19,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/máscara patinho.png"
+                      class="product-img"
+                      alt="Espetinho de panceta"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">
+                        ESPETINHO DE PANCETA SWIFT 500G
+                      </h3>
+                      <p class="product-price">R$ 21,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 34,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/peito-bovino-combo.png"
+                      class="product-img"
+                      alt="Filé de Tilápia"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">ALCATRA SWIFT 800G</h3>
+                      <p class="product-price">R$ 36,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 21,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/621396_CARNE-MOIDA-BOLONHESA-SWIFT-1KG_INNATURA_0276_QUADRADO_1000x1000.png"
+                      class="product-img"
+                      alt="Carne Moída"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">
+                        CARNE MOÍDA DE PATINHO SWIFT 500G
+                      </h3>
+                      <p class="product-price">R$ 26,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 35,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/621372_CUBOS-DE-ACEM-SWIFT-1KG_INNATURA_0136_QUADRADO_1000x1000.png"
+                      class="product-img"
+                      alt="Raldinha"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">CUBOS FRALDINHA - COMBO 1KG A 2KG</h3>
+                      <p class="product-price">R$ 37,90</p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>10% OFF</strong
+                      ><span>2ª unidade por R$ 41,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/617769-almondegas-bovinas_1.png"
+                      class="product-img"
+                      alt="Almodengas"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">ALMODENGAS SWIFT 1KG</h3>
+                      <p class="product-price">R$ 45,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 36,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/queijo_coalho.png"
+                      class="product-img"
+                      alt="Carne Moída Bolonhesa"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">
+                        QUEIJO COALHO SWIFT 0,5KG
+                      </h3>
+                      <p class="product-price">R$ 38,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev selection-control"
+            type="button"
+            data-bs-target="#carouselRecomendacoes"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span
+            ><span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next selection-control"
+            type="button"
+            data-bs-target="#carouselRecomendacoes"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span
+            ><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-3 p-4 mt-5 shadow-sm">
+        <h2 class="h4 mb-3">Produtos que podem te interessar</h2>
+        <div id="carouselRecomendacoes" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 19,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/máscara patinho.png"
+                      class="product-img"
+                      alt="Espetinho de panceta"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">
+                        ESPETINHO DE PANCETA SWIFT 500G
+                      </h3>
+                      <p class="product-price">R$ 21,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 34,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/peito-bovino-combo.png"
+                      class="product-img"
+                      alt="Filé de Tilápia"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">ALCATRA SWIFT 800G</h3>
+                      <p class="product-price">R$ 36,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 21,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/621396_CARNE-MOIDA-BOLONHESA-SWIFT-1KG_INNATURA_0276_QUADRADO_1000x1000.png"
+                      class="product-img"
+                      alt="Carne Moída"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">
+                        CARNE MOÍDA DE PATINHO SWIFT 500G
+                      </h3>
+                      <p class="product-price">R$ 26,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 35,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/621372_CUBOS-DE-ACEM-SWIFT-1KG_INNATURA_0136_QUADRADO_1000x1000.png"
+                      class="product-img"
+                      alt="Raldinha"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">CUBOS FRALDINHA - COMBO 1KG A 2KG</h3>
+                      <p class="product-price">R$ 37,90</p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>10% OFF</strong
+                      ><span>2ª unidade por R$ 41,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/617769-almondegas-bovinas_1.png"
+                      class="product-img"
+                      alt="Almodengas"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">ALMODENGAS SWIFT 1KG</h3>
+                      <p class="product-price">R$ 45,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <a href="#" class="product-card h-100"
+                    ><div class="deal-ribbon">
+                      <strong>5% OFF</strong
+                      ><span>2ª unidade por R$ 36,00 cada</span>
+                    </div>
+                    <img
+                      src="../img/produtos/queijo_coalho.png"
+                      class="product-img"
+                      alt="Carne Moída Bolonhesa"
+                    />
+                    <div class="product-body">
+                      <h3 class="product-name">
+                        QUEIJO COALHO SWIFT 0,5KG
+                      </h3>
+                      <p class="product-price">R$ 38,90 <small>un</small></p>
+                      <button class="btn btn-brand w-100">ADICIONAR</button>
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev selection-control"
+            type="button"
+            data-bs-target="#carouselRecomendacoes"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span
+            ><span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next selection-control"
+            type="button"
+            data-bs-target="#carouselRecomendacoes"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span
+            ><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </main>
     <footer class="footer-swift text-light">
       <div class="container">
-        <!-- topo: colunas -->
         <div class="footer-top">
-          <!-- Coluna 1: marca + formas de pagamento -->
           <div class="f-col">
             <img
               src="../img/banners/swift logo 1.png"
@@ -236,8 +678,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 2: Fale Conosco -->
           <div class="f-col">
             <p class="f-heading">Fale conosco</p>
 
@@ -277,8 +717,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Coluna 3: Ajuda e Informações -->
           <div class="f-col">
             <p class="f-heading">Ajuda e Informações</p>
             <ul class="f-links">
@@ -287,8 +725,6 @@
               <li><a href="#">Dúvidas Frequentes</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 4: Sua compra -->
           <div class="f-col">
             <p class="f-heading">Sua Compra</p>
             <ul class="f-links">
@@ -299,8 +735,6 @@
               <li><a href="#">Encarte Digital</a></li>
             </ul>
           </div>
-
-          <!-- Coluna 5: Institucional -->
           <div class="f-col">
             <p class="f-heading">Institucional</p>
             <ul class="f-links">
@@ -310,8 +744,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- middle: CTAs + horários -->
         <div class="footer-cta">
           <a
             href="https://wa.me/551140208558"
@@ -334,7 +766,6 @@
               ><span class="cta-arrow" aria-hidden="true">➜</span></span
             >
           </a>
-
           <a href="tel:11402085588" class="cta-card cta-tele">
             <span class="cta-left">
               <img
@@ -361,8 +792,6 @@
             </p>
           </div>
         </div>
-
-        <!-- bottom: redes + direitos -->
         <div class="footer-bottom">
           <div class="socials">
             <a href="#" aria-label="Instagram"
