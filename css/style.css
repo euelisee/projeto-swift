@@ -101,7 +101,7 @@ h3,
   scrollbar-width: thin; /
 }
 .categories::-webkit-scrollbar {
-  height: 8px;
+  height: 8px;}
 .categories::-webkit-scrollbar-thumb {
   background: var(--neutral-200);
   border-radius: 8px;
