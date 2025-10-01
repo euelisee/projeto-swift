@@ -14,6 +14,8 @@ Este é um projeto front-end desenvolvido como parte do **Challenge FIAP** para 
 │ ├── bootstrap.min.css
 │ ├── style.css # estilos principais
 │ └── tokens.css # variáveis e tokens de design
+├── pages/ #paginas do protótipo
+│ ├── .html
 ├── img/ # imagens do projeto
 ├── js/
 │ ├── bootstrap.bundle.min.js
