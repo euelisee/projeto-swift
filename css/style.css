@@ -1497,3 +1497,147 @@ h3,
   color: var(--brand-900);
   transform: translateY(-2px);
 }
+
+
+/* RESPONSIVIDADE PARA TODO O SITE */
+/* Ajustes para Tablets */
+@media (max-width: 991.98px) {
+  /* Cabeçalho */
+  .store-chip {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  header .d-flex.align-items-center.gap-3 {
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
+
+  header .navbar-brand {
+    flex-grow: 1;
+  }
+
+  header form {
+    order: 3; 
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  /* Botões de Ação em Banners */
+  .btn-programa,
+  .swift-box {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Seção de Produtos */
+  .selection-wrap .row {
+    flex-direction: column;
+  }
+
+  .selection-wrap .col-lg-4, .selection-wrap .col-lg-8 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .selection-title {
+    font-size: 2rem;
+  }
+
+  .selection-wrap .d-flex.gap-3 {
+    justify-content: center;
+  }
+
+  /* Rodapé */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .footer-cta {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  /* Página de Entrega e Carrinho */
+  .delivery-section, .summary-section {
+    padding: 1.5rem;
+  }
+  main.container.my-5 .row {
+    flex-direction: column;
+  }
+  main.container.my-5 .col-lg-8,
+  main.container.my-5 .col-lg-4 {
+      width: 100%;
+  }
+}
+
+/* Ajustes para Celulares (telas até 767.98px) */
+@media (max-width: 767.98px) {
+  /* Cabeçalho */
+  .btn-outline-soft span.d-none.d-lg-inline {
+    display: none !important; 
+  }
+  
+  /* Rodapé */
+  .footer-top {
+    grid-template-columns: 1fr; 
+  }
+
+  /* Cards de produto menores */
+  #selectionCarousel .carousel-inner .col-12,
+  #bbqCarousel .carousel-inner .col-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .product-img, .bbq-img, .receita-img {
+    height: 150px;
+  }
+
+  /* Página de Entrega */
+  .map-container {
+    flex-direction: column;
+  }
+  .order-summary {
+    position: static;
+    margin-top: 2rem;
+  }
+  
+  /* Página do Carrinho */
+  .list-group-item .d-flex {
+      flex-wrap: wrap;
+      gap: 1rem;
+  }
+  .cart-product-image {
+    width: 60px;
+    height: 60px;
+  }
+  .quantity-stepper {
+      order: 3;
+      margin-top: 0.5rem;
+      width: 100%;
+      justify-content: center;
+  }
+  .fw-bold.fs-5.text-end {
+      order: 2;
+      margin-left: auto;
+  }
+}
+
+/* Ajustes para Telas Muito Pequenas (até 575.98px) */
+@media (max-width: 575.98px) {
+    #selectionCarousel .carousel-inner .col-12,
+    #bbqCarousel .carousel-inner .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
