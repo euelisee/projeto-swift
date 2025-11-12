@@ -1,5 +1,5 @@
 # Swift — Projeto Front-End
-Este é um projeto front-end desenvolvido como parte do **Challenge FIAP** para a **Swift**, aplican
+Este é um projeto front-end desenvolvido como parte do **Challenge FIAP** para a **Swift**, aplicando conhecimentos em classe para trazer soluções reais e práticas de redução de atrito na jornada de compras online.
 ---
 ## Tecnologias utilizadas
 - HTML5
